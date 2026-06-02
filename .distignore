@@ -1,0 +1,15 @@
+.distignore
+.gitignore
+/.git
+/.github
+/.idea
+/.phpunit.cache
+/bin
+/ploetner-dev-blocks/
+/tests
+README.md
+composer.lock
+phpcs.xml.dist
+phpstan.neon.dist
+phpunit.xml.dist
+ploetner-dev-blocks.zip

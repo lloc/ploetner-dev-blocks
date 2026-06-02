@@ -1,5 +1,7 @@
 .DS_Store
 .idea/
-/vendor/
 /.phpunit.cache/
+/vendor/
 composer.lock
+ploetner-dev-blocks.zip
+ploetner-dev-blocks/

@@ -49,6 +49,11 @@
             "@phpcs",
             "@phpstan",
             "@phpunit"
+        ],
+        "build": [
+            "@composer install --no-dev --prefer-dist --optimize-autoloader",
+            "bin/git-release.sh",
+            "@composer update --prefer-dist --optimize-autoloader"
         ]
     }
 }

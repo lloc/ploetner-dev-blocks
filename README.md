@@ -1,4 +1,4 @@
-# Plötner Dev Blocks
+# Ploetner Dev Blocks
 
 WordPress 7.0 PHP-only (`autoRegister`) blocks and their backing custom post types
 for the [Plötner Dev](https://ploetner.dev) site. Extracted from the
@@ -11,7 +11,7 @@ for the [Plötner Dev](https://ploetner.dev) site. Extracted from the
 
 ## What it provides
 
-### Blocks (category “Plötner.dev”)
+### Blocks (category “Ploetner.dev”)
 
 | Block | Content source |
 |---|---|

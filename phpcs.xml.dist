@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<ruleset name="PloetnerDevBlocks">
+	<description>Coding standard for the Plötner Dev Blocks plugin.</description>
+
+	<file>src</file>
+	<file>tests</file>
+	<file>tools</file>
+	<file>ploetner-dev-blocks.php</file>
+
+	<!-- Only scan PHP files. -->
+	<arg name="extensions" value="php"/>
+	<!-- Show sniff codes and progress, use colors. -->
+	<arg value="sp"/>
+	<arg name="colors"/>
+	<!-- Use as many processes as available cores. -->
+	<arg name="parallel" value="8"/>
+
+	<config name="testVersion" value="8.1-"/>
+	<config name="minimum_wp_version" value="7.0"/>
+
+	<rule ref="WordPress-Extra"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="ploetner-dev-blocks"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- PSR-4 class files are named ClassName.php, not class-name.php. -->
+	<rule ref="WordPress.Files.FileName">
+		<exclude-pattern>src/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<!-- CLI seeders echo plain status strings; output escaping does not apply. -->
+	<rule ref="WordPress.Security.EscapeOutput">
+		<exclude-pattern>tools/*</exclude-pattern>
+	</rule>
+
+	<!-- `wp eval-file` runs the seeders inside a method scope, so their local
+		variables do not actually clobber WordPress globals. -->
+	<rule ref="WordPress.WP.GlobalVariablesOverride">
+		<exclude-pattern>tools/*</exclude-pattern>
+	</rule>
+</ruleset>

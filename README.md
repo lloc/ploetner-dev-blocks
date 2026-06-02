@@ -44,7 +44,15 @@ equivalent presets and class styles.
 
 ## Seeding sample content
 
-Idempotent WP-CLI seeders (skip items that already exist):
+The sample content is **seeded automatically on plugin activation** — there is
+nothing to run by hand for a fresh install. Seeding is idempotent (items whose
+slug already exists are skipped) and version-aware: a `pd_blocks_seed_version`
+option records what has been written, and a future plugin version that adds new
+sample items seeds them on the next admin load. The data lives in one place,
+`src/Seeder.php`.
+
+The WP-CLI seeders remain available for re-seeding or CI. Each is a thin wrapper
+over `Seeder` and runs only its own post type:
 
 ```bash
 wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed-expertise.php

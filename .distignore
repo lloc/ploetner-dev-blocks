@@ -1,5 +1,6 @@
 .distignore
 .gitignore
+.wp-env.json
 /.git
 /.github
 /.idea

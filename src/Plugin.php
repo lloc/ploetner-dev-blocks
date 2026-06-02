@@ -19,6 +19,7 @@ use lloc\PloetnerDevBlocks\Blocks\OpenSource;
 use lloc\PloetnerDevBlocks\Blocks\Speaking;
 use lloc\PloetnerDevBlocks\PostTypes\MetaBox;
 use lloc\PloetnerDevBlocks\PostTypes\PostTypes;
+use lloc\PloetnerDevBlocks\Seeder;
 
 /**
  * Wires every component of the plugin to WordPress.
@@ -50,6 +51,10 @@ class Plugin {
 		( new PostTypes() )->register();
 		( new MetaBox() )->register();
 		( new BlockCategory() )->register();
+
+		// Catch-up seeding after a version bump (plugin updates do not fire the
+		// activation hook). Guarded by an autoloaded option, so it is cheap.
+		add_action( 'admin_init', array( new Seeder(), 'maybe_seed' ) );
 
 		foreach ( $this->blocks() as $block ) {
 			$block->register();

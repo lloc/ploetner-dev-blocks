@@ -36,9 +36,9 @@ class Community extends SectionBlock {
 	 */
 	public function defaults(): array {
 		return Section::attributes(
-			'04 / Community',
-			'Building together',
-			'WordPress is open source, and so is how I work.'
+			__( '04 / Community', 'ploetner-dev-blocks' ),
+			__( 'Building together', 'ploetner-dev-blocks' ),
+			__( 'WordPress is open source, and so is how I work.', 'ploetner-dev-blocks' )
 		);
 	}
 

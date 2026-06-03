@@ -34,9 +34,9 @@ class OpenSource extends SectionBlock {
 	 */
 	public function defaults(): array {
 		return Section::attributes(
-			'02 / Open Source',
-			'Projects I maintain',
-			'Code I build and share with the community.'
+			__( '02 / Open Source', 'ploetner-dev-blocks' ),
+			__( 'Projects I work on', 'ploetner-dev-blocks' ),
+			__( 'Code I build and share with the community.', 'ploetner-dev-blocks' )
 		);
 	}
 

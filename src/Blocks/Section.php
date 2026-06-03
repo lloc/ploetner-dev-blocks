@@ -49,7 +49,12 @@ class Section {
 
 	/**
 	 * Wrap section body markup in the standard full-width, constrained group with
-	 * label / heading / intro. Returns rendered HTML (runs do_blocks once).
+	 * label / heading / intro, followed by a "back to top" arrow link. Returns
+	 * rendered HTML (runs do_blocks once).
+	 *
+	 * The arrow links to the `#top` fragment, which browsers special-case to scroll
+	 * to the document top with a single click (no JavaScript). Smooth scrolling is
+	 * supplied by the theme via `scroll-behavior: smooth`.
 	 *
 	 * @param string $section_label Section label text.
 	 * @param string $heading       Heading text.
@@ -64,6 +69,7 @@ class Section {
 		$heading       = esc_html( $heading );
 		$intro         = esc_html( $intro );
 		$anchor        = esc_attr( $anchor );
+		$to_top_label  = esc_html( __( 'Back to top', 'ploetner-dev-blocks' ) );
 
 		$markup = <<<HTML
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"constrained","contentSize":"1100px"}} -->
@@ -78,6 +84,9 @@ class Section {
 <p class="has-text-muted-color has-text-color has-large-font-size" style="font-weight:300;line-height:1.7">{$intro}</p>
 <!-- /wp:paragraph -->
 {$body}
+<!-- wp:paragraph {"align":"right","className":"ploetner-back-to-top","fontSize":"tiny","fontFamily":"mono","textColor":"accent"} -->
+<p class="ploetner-back-to-top has-accent-color has-text-color has-mono-font-family has-tiny-font-size has-text-align-right"><a href="#top" aria-label="{$to_top_label}">&uarr; {$to_top_label}</a></p>
+<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
 HTML;

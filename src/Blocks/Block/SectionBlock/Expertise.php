@@ -37,9 +37,9 @@ class Expertise extends SectionBlock {
 	 */
 	public function defaults(): array {
 		return Section::attributes(
-			'01 / Expertise',
-			'What I do best',
-			'Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure.'
+			__( '01 / Expertise', 'ploetner-dev-blocks' ),
+			__( 'What I do best', 'ploetner-dev-blocks' ),
+			__( 'Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure.', 'ploetner-dev-blocks' ),
 		);
 	}
 

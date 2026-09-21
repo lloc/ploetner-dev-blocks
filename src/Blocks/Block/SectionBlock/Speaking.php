@@ -78,8 +78,8 @@ class Speaking extends SectionBlock {
 <div class="wp-block-columns">
 <!-- wp:column {"width":"120px"} -->
 <div class="wp-block-column" style="flex-basis:120px">
-<!-- wp:paragraph {"fontFamily":"mono","fontSize":"small","textColor":"text-dim"} -->
-<p class="has-text-dim-color has-text-color has-mono-font-family has-small-font-size">{$year}</p>
+<!-- wp:paragraph {"fontFamily":"mono","fontSize":"small","textColor":"dim"} -->
+<p class="has-dim-color has-text-color has-mono-font-family has-small-font-size">{$year}</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -92,8 +92,8 @@ class Speaking extends SectionBlock {
 <!-- /wp:column -->
 <!-- wp:column {"width":"220px"} -->
 <div class="wp-block-column" style="flex-basis:220px">
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300"}},"fontSize":"small","textColor":"text-muted"} -->
-<p class="has-text-muted-color has-text-color has-small-font-size" style="font-weight:300">{$event}</p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300"}},"fontSize":"small","textColor":"muted"} -->
+<p class="has-muted-color has-text-color has-small-font-size" style="font-weight:300">{$event}</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->

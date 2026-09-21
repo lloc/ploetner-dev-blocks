@@ -145,8 +145,8 @@ class Hero extends Block {
 		return <<<HTML
 <!-- wp:column -->
 <div class="wp-block-column">
-<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"}},"fontSize":"tiny","fontFamily":"mono","textColor":"text-dim"} -->
-<p class="has-text-dim-color has-text-color has-mono-font-family has-tiny-font-size" style="letter-spacing:0.1em;text-transform:uppercase">{$label}</p>
+<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"}},"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
+<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size" style="letter-spacing:0.1em;text-transform:uppercase">{$label}</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size">{$value}</p>
@@ -200,11 +200,11 @@ HTML;
 <!-- wp:heading {"level":1} -->
 <h1 class="wp-block-heading">{$heading}</h1>
 <!-- /wp:heading -->
-<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"small","fontFamily":"mono","textColor":"text-dim"} -->
-<p class="has-text-dim-color has-text-color has-mono-font-family has-small-font-size" style="font-style:normal;font-weight:400">{$phonetic}</p>
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"small","fontFamily":"mono","textColor":"dim"} -->
+<p class="has-dim-color has-text-color has-mono-font-family has-small-font-size" style="font-style:normal;font-weight:400">{$phonetic}</p>
 <!-- /wp:paragraph -->
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300","lineHeight":"1.7"},"layout":{"selfStretch":"fixed","flexSize":"640px"}},"fontSize":"large","textColor":"text-muted"} -->
-<p class="has-text-muted-color has-text-color has-large-font-size" style="font-weight:300;line-height:1.7">{$bio}</p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300","lineHeight":"1.7"},"layout":{"selfStretch":"fixed","flexSize":"640px"}},"fontSize":"large","textColor":"muted"} -->
+<p class="has-muted-color has-text-color has-large-font-size" style="font-weight:300;line-height:1.7">{$bio}</p>
 <!-- /wp:paragraph -->
 {$meta_block}
 </div>

@@ -37,7 +37,7 @@ link, year, event) is edited via a classic “Details” meta box.
 The blocks output the site's design-system CSS classes (`ploetner-card`,
 `ploetner-section-label`, `ploetner-expertise-grid`, `ploetner-speaking-row`,
 `ploetner-card-desc`) and rely on `theme.json` presets (colors `accent` /
-`base-card` / `border` / `text-muted`, spacing presets, the `mono` font family).
+`surface` / `border` / `muted`, spacing presets, the `mono` font family).
 Those live in the **`ploetner-dev-child` theme**. The plugin supplies structure and
 data; the theme supplies presentation. To use these blocks in another theme, provide
 equivalent presets and class styles.

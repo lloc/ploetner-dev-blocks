@@ -65,8 +65,8 @@ class OpenSource extends SectionBlock {
 		if ( '' !== $tech ) {
 			$tech       = esc_html( $tech );
 			$tech_block = <<<HTML
-<!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.05em"}},"fontSize":"tiny","fontFamily":"mono","textColor":"text-dim"} -->
-<p class="has-text-dim-color has-text-color has-mono-font-family has-tiny-font-size" style="letter-spacing:0.05em">{$tech}</p>
+<!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.05em"}},"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
+<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size" style="letter-spacing:0.05em">{$tech}</p>
 <!-- /wp:paragraph -->
 HTML;
 		}
@@ -83,8 +83,8 @@ HTML;
 		}
 
 		return <<<HTML
-<!-- wp:column {"className":"ploetner-card","style":{"border":{"width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"borderColor":"border","backgroundColor":"base-card"} -->
-<div class="wp-block-column ploetner-card has-border-color has-border-border-color has-base-card-background-color has-background" style="border-width:1px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+<!-- wp:column {"className":"ploetner-card","style":{"border":{"width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"borderColor":"border","backgroundColor":"surface"} -->
+<div class="wp-block-column ploetner-card has-border-color has-border-border-color has-surface-background-color has-background" style="border-width:1px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"400"}},"fontSize":"small","fontFamily":"mono","textColor":"accent"} -->
 <h3 class="wp-block-heading has-accent-color has-text-color has-mono-font-family has-small-font-size" style="font-weight:400">{$title}</h3>
 <!-- /wp:heading -->

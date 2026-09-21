@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - dev
   pull_request:
 
 permissions:
@@ -28,10 +28,10 @@ jobs:
         uses: ramsey/composer-install@v3
 
       - name: PHPCS
-        run: composer lint
+        run: composer phpcs
 
       - name: PHPStan
-        run: composer stan
+        run: composer phpstan
 
   tests:
     name: Tests (PHP ${{ matrix.php }})
@@ -55,4 +55,4 @@ jobs:
         uses: ramsey/composer-install@v3
 
       - name: PHPUnit
-        run: composer test
+        run: composer phpunit

@@ -26,7 +26,22 @@ All blocks render server-side via `do_blocks()` of canonical block markup, and t
 WP 7.0 editor auto-generates Inspector Controls from each block's declared
 attributes. No build step / JavaScript.
 
-### Custom post types
+### Patterns
+
+The plugin also registers block patterns (category "Plötner.dev") for the
+site chrome and layout, so they travel with the plugin instead of a theme:
+
+| Pattern | Purpose |
+|---|---|
+| `ploetner-dev/header` | Sticky header: site title, nav, contact CTA (template-part pattern) |
+| `ploetner-dev/footer` | Footer: social links and copyright (template-part pattern) |
+| `ploetner-dev/front-page` | The six section blocks, separated by rules |
+| `ploetner-dev/separator` | Section separator |
+
+Registered in `src/Patterns.php`. Build the header/footer template parts and the
+front page from these in the Site Editor.
+
+## Custom post types
 
 `pd_expertise`, `pd_project`, `pd_talk`, `pd_community` — all non-public (no archive,
 not publicly queryable, `show_ui` for editing). Per-type meta (card label, tech tags,

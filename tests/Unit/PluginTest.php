@@ -43,8 +43,8 @@ class PluginTest extends TestCase {
 	 * @covers ::register
 	 */
 	public function test_register_wires_hooks(): void {
-		// 2 (post types) + 2 (meta box: add_meta_boxes + save_post) + 1 (admin_init seed catch-up) + 6 (blocks) + 1 (assets) = 12 add_action calls.
-		Functions\expect( 'add_action' )->times( 12 );
+		// 2 (post types) + 2 (meta box: add_meta_boxes + save_post) + 1 (admin_init seed catch-up) + 6 (blocks) + 1 (assets) + 1 (patterns) = 13 add_action calls.
+		Functions\expect( 'add_action' )->times( 13 );
 		Functions\expect( 'add_filter' )->once()->with( 'block_categories_all', \Mockery::type( 'array' ) );
 
 		( new Plugin() )->register();

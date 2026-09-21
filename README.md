@@ -79,3 +79,13 @@ wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed-open-source.php
 wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed-speaking.php
 wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed-community.php
 ```
+## Branching and releases
+
+Development happens on `dev` (the default branch). Features land via pull
+request into `dev`; CI (PHPCS, PHPStan, PHPUnit on PHP 8.1/8.2/8.3) runs on
+every pull request and on pushes to `dev`.
+
+On each push to `dev`, the **Build** workflow assembles the deployable plugin
+(`composer install --no-dev`, filtered through `.distignore`) and force-pushes
+it to `main`. So `main` always holds the installable build (source plus
+`vendor/`, no dev tooling) and is never edited by hand.

@@ -51,6 +51,7 @@ class Plugin {
 		( new PostTypes() )->register();
 		( new MetaBox() )->register();
 		( new BlockCategory() )->register();
+		( new Assets() )->register();
 
 		// Catch-up seeding after a version bump (plugin updates do not fire the
 		// activation hook). Guarded by an autoloaded option, so it is cheap.

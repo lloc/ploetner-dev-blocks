@@ -32,15 +32,19 @@ attributes. No build step / JavaScript.
 not publicly queryable, `show_ui` for editing). Per-type meta (card label, tech tags,
 link, year, event) is edited via a classic “Details” meta box.
 
-## Styling dependency
+## Styling
 
-The blocks output the site's design-system CSS classes (`ploetner-card`,
-`ploetner-section-label`, `ploetner-expertise-grid`, `ploetner-speaking-row`,
-`ploetner-card-desc`) and rely on `theme.json` presets (colors `accent` /
-`surface` / `border` / `muted`, spacing presets, the `mono` font family).
-Those live in the **`ploetner-dev-child` theme**. The plugin supplies structure and
-data; the theme supplies presentation. To use these blocks in another theme, provide
-equivalent presets and class styles.
+The plugin ships its own stylesheet (`assets/blocks.css`), enqueued on the front
+end and in the editor via `enqueue_block_assets` (see `src/Assets.php`). It styles
+the plugin's own classes (`ploetner-card`, `ploetner-section-label`,
+`ploetner-expertise-grid`, `ploetner-speaking-row`, `ploetner-card-desc`) and
+depends only on the design-system tokens exposed by `theme.json` (colors `accent`
+/ `surface` / `border` / `border-hover` / `muted` / `elevated`, spacing presets,
+the `mono` font family).
+
+The plugin is therefore theme-independent: drop it onto any theme that defines
+those tokens (the `ploetner-base` family theme does) and it styles itself. It no
+longer depends on the old `ploetner-dev-child` theme.
 
 ## Seeding sample content
 

@@ -64,8 +64,8 @@ class Community extends SectionBlock {
 
 		// $description is post content (block markup); rendered by the section's do_blocks().
 		return <<<HTML
-<!-- wp:column {"className":"ploetner-card","style":{"border":{"width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"borderColor":"border","backgroundColor":"base-card"} -->
-<div class="wp-block-column ploetner-card has-border-color has-border-border-color has-base-card-background-color has-background" style="border-width:1px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+<!-- wp:column {"className":"ploetner-card","style":{"border":{"width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"borderColor":"border","backgroundColor":"surface"} -->
+<div class="wp-block-column ploetner-card has-border-color has-border-border-color has-surface-background-color has-background" style="border-width:1px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 <!-- wp:paragraph {"fontFamily":"mono","fontSize":"tiny","textColor":"accent"} -->
 <p class="has-accent-color has-text-color has-mono-font-family has-tiny-font-size">{$label}</p>
 <!-- /wp:paragraph -->

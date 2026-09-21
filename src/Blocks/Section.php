@@ -80,8 +80,8 @@ class Section {
 <!-- wp:heading {"anchor":"{$anchor}","fontSize":"x-large"} -->
 <h2 class="wp-block-heading has-x-large-font-size" id="{$anchor}">{$heading}</h2>
 <!-- /wp:heading -->
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300","lineHeight":"1.7"}},"textColor":"text-muted","fontSize":"large"} -->
-<p class="has-text-muted-color has-text-color has-large-font-size" style="font-weight:300;line-height:1.7">{$intro}</p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300","lineHeight":"1.7"}},"textColor":"muted","fontSize":"large"} -->
+<p class="has-muted-color has-text-color has-large-font-size" style="font-weight:300;line-height:1.7">{$intro}</p>
 <!-- /wp:paragraph -->
 {$body}
 <!-- wp:paragraph {"align":"right","className":"ploetner-back-to-top","fontSize":"tiny","fontFamily":"mono","textColor":"accent"} -->
@@ -105,8 +105,8 @@ HTML;
 		$text = esc_html( $text );
 
 		return <<<HTML
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300"}},"textColor":"text-muted","fontSize":"small"} -->
-<p class="has-text-muted-color has-text-color has-small-font-size" style="font-weight:300">{$text}</p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300"}},"textColor":"muted","fontSize":"small"} -->
+<p class="has-muted-color has-text-color has-small-font-size" style="font-weight:300">{$text}</p>
 <!-- /wp:paragraph -->
 HTML;
 	}

@@ -26,21 +26,40 @@ All blocks render server-side via `do_blocks()` of canonical block markup, and t
 WP 7.0 editor auto-generates Inspector Controls from each block's declared
 attributes. No build step / JavaScript.
 
-### Custom post types
+### Patterns
+
+The plugin also registers block patterns (category "Plötner.dev") for the
+site chrome and layout, so they travel with the plugin instead of a theme:
+
+| Pattern | Purpose |
+|---|---|
+| `ploetner-dev/header` | Sticky header: site title, nav, contact CTA (template-part pattern) |
+| `ploetner-dev/footer` | Footer: social links and copyright (template-part pattern) |
+| `ploetner-dev/front-page` | The six section blocks, separated by rules |
+| `ploetner-dev/separator` | Section separator |
+
+Registered in `src/Patterns.php`. Build the header/footer template parts and the
+front page from these in the Site Editor.
+
+## Custom post types
 
 `pd_expertise`, `pd_project`, `pd_talk`, `pd_community` — all non-public (no archive,
 not publicly queryable, `show_ui` for editing). Per-type meta (card label, tech tags,
 link, year, event) is edited via a classic “Details” meta box.
 
-## Styling dependency
+## Styling
 
-The blocks output the site's design-system CSS classes (`ploetner-card`,
-`ploetner-section-label`, `ploetner-expertise-grid`, `ploetner-speaking-row`,
-`ploetner-card-desc`) and rely on `theme.json` presets (colors `accent` /
-`base-card` / `border` / `text-muted`, spacing presets, the `mono` font family).
-Those live in the **`ploetner-dev-child` theme**. The plugin supplies structure and
-data; the theme supplies presentation. To use these blocks in another theme, provide
-equivalent presets and class styles.
+The plugin ships its own stylesheet (`assets/blocks.css`), enqueued on the front
+end and in the editor via `enqueue_block_assets` (see `src/Assets.php`). It styles
+the plugin's own classes (`ploetner-card`, `ploetner-section-label`,
+`ploetner-expertise-grid`, `ploetner-speaking-row`, `ploetner-card-desc`) and
+depends only on the design-system tokens exposed by `theme.json` (colors `accent`
+/ `surface` / `border` / `border-hover` / `muted` / `elevated`, spacing presets,
+the `mono` font family).
+
+The plugin is therefore theme-independent: drop it onto any theme that defines
+those tokens (the `ploetner-base` family theme does) and it styles itself. It no
+longer depends on the old `ploetner-dev-child` theme.
 
 ## Seeding sample content
 

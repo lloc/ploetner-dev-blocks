@@ -10,6 +10,7 @@
 /tests
 README.md
 composer.lock
+patchwork.json
 phpcs.xml.dist
 phpstan.neon.dist
 phpunit.xml.dist

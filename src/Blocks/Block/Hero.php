@@ -3,8 +3,10 @@
  * Hero block — ploetner-dev/hero.
  *
  * A single-instance section (no CPT): tagline, an h1 with line breaks and an
- * accent highlight, a phonetic line, a bio paragraph, and four meta columns.
- * All content lives in block attributes (auto-generated Inspector Controls).
+ * accent highlight, a phonetic line, a bio paragraph, an optional portrait, and
+ * four meta columns. All content lives in block attributes (auto-generated
+ * Inspector Controls). When an image URL is set, the intro and the portrait are
+ * placed side by side; otherwise the intro stays full width.
  *
  * @package PloetnerDevBlocks
  */
@@ -50,7 +52,7 @@ class Hero extends Block {
 				'label'   => __( 'Heading lead-in', 'ploetner-dev-blocks' ),
 			),
 			'headingName'  => array(
-				'default' => 'Dennis Ploetner.',
+				'default' => 'Dennis Plötner.',
 				'label'   => __( 'Highlighted name', 'ploetner-dev-blocks' ),
 			),
 			'phonetic'     => array(
@@ -60,6 +62,14 @@ class Hero extends Block {
 			'bio'          => array(
 				'default' => 'I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures. Programming professionally since 1997. Speaking at WordCamps across Europe and the US.',
 				'label'   => __( 'Bio', 'ploetner-dev-blocks' ),
+			),
+			'image'        => array(
+				'default' => '',
+				'label'   => __( 'Portrait image URL', 'ploetner-dev-blocks' ),
+			),
+			'imageAlt'     => array(
+				'default' => 'Dennis Plötner',
+				'label'   => __( 'Portrait alt text', 'ploetner-dev-blocks' ),
 			),
 			'meta1Label'   => array(
 				'default' => 'Current role',
@@ -163,12 +173,51 @@ HTML;
 		$tagline  = esc_html( (string) ( $attributes['tagline'] ?? '' ) );
 		$phonetic = esc_html( (string) ( $attributes['phonetic'] ?? '' ) );
 		$bio      = esc_html( (string) ( $attributes['bio'] ?? '' ) );
+		$image    = esc_url( (string) ( $attributes['image'] ?? '' ) );
 		$heading  = $this->heading(
 			(string) ( $attributes['headingLine1'] ?? '' ),
 			(string) ( $attributes['headingLine2'] ?? '' ),
 			(string) ( $attributes['headingLead'] ?? '' ),
 			(string) ( $attributes['headingName'] ?? '' )
 		);
+
+		$intro = <<<HTML
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.1em","textTransform":"uppercase"}},"fontSize":"small","fontFamily":"mono","textColor":"accent"} -->
+<p class="has-accent-color has-text-color has-mono-font-family has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:0.1em;text-transform:uppercase">{$tagline}</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">{$heading}</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"small","fontFamily":"mono","textColor":"dim"} -->
+<p class="has-dim-color has-text-color has-mono-font-family has-small-font-size" style="font-style:normal;font-weight:400">{$phonetic}</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300","lineHeight":"1.7"}},"fontSize":"large","textColor":"muted"} -->
+<p class="has-muted-color has-text-color has-large-font-size" style="font-weight:300;line-height:1.7">{$bio}</p>
+<!-- /wp:paragraph -->
+HTML;
+
+		// With a portrait, put the intro and the photo side by side.
+		if ( '' !== $image ) {
+			$alt   = esc_attr( (string) ( $attributes['imageAlt'] ?? '' ) );
+			$intro = <<<HTML
+<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|60"}}}} -->
+<div class="wp-block-columns are-vertically-aligned-center">
+<!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%">
+{$intro}
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
+<!-- wp:image {"className":"ploetner-hero-photo"} -->
+<figure class="wp-block-image ploetner-hero-photo"><img src="{$image}" alt="{$alt}"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+HTML;
+		}
 
 		$columns = '';
 		for ( $i = 1; $i <= 4; $i++ ) {
@@ -194,18 +243,7 @@ HTML;
 		$markup = <<<HTML
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|70","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"constrained","contentSize":"1100px"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50)">
-<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.1em","textTransform":"uppercase"}},"fontSize":"small","fontFamily":"mono","textColor":"accent"} -->
-<p class="has-accent-color has-text-color has-mono-font-family has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:0.1em;text-transform:uppercase">{$tagline}</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">{$heading}</h1>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"small","fontFamily":"mono","textColor":"dim"} -->
-<p class="has-dim-color has-text-color has-mono-font-family has-small-font-size" style="font-style:normal;font-weight:400">{$phonetic}</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300","lineHeight":"1.7"},"layout":{"selfStretch":"fixed","flexSize":"640px"}},"fontSize":"large","textColor":"muted"} -->
-<p class="has-muted-color has-text-color has-large-font-size" style="font-weight:300;line-height:1.7">{$bio}</p>
-<!-- /wp:paragraph -->
+{$intro}
 {$meta_block}
 </div>
 <!-- /wp:group -->

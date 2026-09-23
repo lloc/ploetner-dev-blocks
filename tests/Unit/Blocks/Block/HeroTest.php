@@ -25,7 +25,7 @@ class HeroTest extends TestCase {
 	 */
 	protected function setUp(): void {
 		parent::setUp();
-		Functions\stubs( array( 'esc_html', 'esc_url', 'do_blocks', '__' ) );
+		Functions\stubs( array( 'esc_html', 'esc_url', 'esc_attr', 'do_blocks', '__' ) );
 		$this->hero = new Hero();
 	}
 
@@ -37,6 +37,7 @@ class HeroTest extends TestCase {
 		$this->assertSame( 'ploetner-dev/hero', $this->hero->name() );
 		$this->assertArrayHasKey( 'tagline', $this->hero->defaults() );
 		$this->assertArrayHasKey( 'meta4Value', $this->hero->defaults() );
+		$this->assertArrayHasKey( 'image', $this->hero->defaults() );
 	}
 
 	/**
@@ -87,5 +88,21 @@ class HeroTest extends TestCase {
 		$html = $this->hero->render( array( 'tagline' => 'Engineer' ) );
 
 		$this->assertStringNotContainsString( 'wp:columns', $html );
+	}
+
+	/**
+	 * @covers ::render
+	 */
+	public function test_render_with_image_adds_photo_column(): void {
+		$html = $this->hero->render(
+			array(
+				'tagline' => 'Engineer',
+				'image'   => 'https://ploetner.dev/me.jpg',
+			)
+		);
+
+		$this->assertStringContainsString( 'ploetner-hero-photo', $html );
+		$this->assertStringContainsString( 'https://ploetner.dev/me.jpg', $html );
+		$this->assertStringContainsString( 'wp:columns', $html );
 	}
 }

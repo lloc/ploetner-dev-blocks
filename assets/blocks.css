@@ -1,5 +1,5 @@
 /**
- * Ploetner Dev Blocks — presentation for the plugin's blocks and patterns.
+ * Plötner Dev Blocks — presentation for the plugin's blocks and patterns.
  *
  * Moved out of the former ploetner-dev child theme's custom.css. Depends only
  * on the design-system tokens (colors, spacing, fonts) that theme.json exposes,
@@ -131,4 +131,22 @@ mark.has-inline-color.has-accent-color {
 		flex-direction: column !important;
 		gap: 0.25rem !important;
 	}
+}
+
+/* Hero portrait (set an image URL on the Hero block) */
+.ploetner-hero-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+/* Header and footer: align content to the content width, keep the full-width
+   sticky background. Applies to existing template parts, no re-insert needed. */
+.ploetner-header,
+.ploetner-footer {
+	padding-left: max(var(--wp--preset--spacing--50), calc((100% - var(--wp--style--global--content-size, 1100px)) / 2)) !important;
+	padding-right: max(var(--wp--preset--spacing--50), calc((100% - var(--wp--style--global--content-size, 1100px)) / 2)) !important;
 }

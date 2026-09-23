@@ -1,0 +1,152 @@
+/**
+ * Plötner Dev Blocks — presentation for the plugin's blocks and patterns.
+ *
+ * Moved out of the former ploetner-dev child theme's custom.css. Depends only
+ * on the design-system tokens (colors, spacing, fonts) that theme.json exposes,
+ * so the plugin styles its own output on any theme that defines them.
+ */
+
+/* Cards */
+.ploetner-card {
+	transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.ploetner-card:hover {
+	border-color: var(--wp--preset--color--border-hover) !important;
+	transform: translateY(-2px);
+}
+
+.ploetner-card-desc,
+.ploetner-card-desc p {
+	color: var(--wp--preset--color--muted);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+.ploetner-card-desc > :last-child {
+	margin-bottom: 0;
+}
+
+/* Expertise grid: seamless 1px gap */
+.ploetner-expertise-grid {
+	background: var(--wp--preset--color--border);
+	gap: 1px !important;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+.ploetner-expertise-grid > .wp-block-column {
+	transition: background 0.3s ease;
+}
+
+.ploetner-expertise-grid > .wp-block-column:hover {
+	background: var(--wp--preset--color--elevated) !important;
+}
+
+/* Speaking rows: hover tint bleeds past the content via a pseudo-element */
+.ploetner-speaking-row {
+	position: relative;
+	transition: background 0.2s ease;
+	border-radius: 2px;
+}
+
+.ploetner-speaking-row::before {
+	content: "";
+	position: absolute;
+	inset: 0 -0.75rem;
+	border-radius: 2px;
+	background: transparent;
+	transition: background 0.2s ease;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.ploetner-speaking-row > * {
+	position: relative;
+	z-index: 1;
+}
+
+.ploetner-speaking-row:hover::before {
+	background: color-mix(in srgb, var(--wp--preset--color--accent) 6%, transparent);
+}
+
+/* Accent (CTA) button hover */
+.wp-block-button__link.has-accent-background-color {
+	transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.wp-block-button__link.has-accent-background-color:hover {
+	opacity: 0.9;
+	transform: translateY(-1px);
+}
+
+/* Nav CTA (header pattern) */
+.ploetner-nav-cta .wp-block-button__link {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--tiny) !important;
+	padding: 0.4rem 1rem !important;
+	border: 1px solid var(--wp--preset--color--accent);
+	background: transparent !important;
+	color: var(--wp--preset--color--accent) !important;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ploetner-nav-cta .wp-block-button__link:hover {
+	background: var(--wp--preset--color--accent) !important;
+	color: var(--wp--preset--color--base) !important;
+}
+
+/* Section label */
+.ploetner-section-label {
+	font-family: var(--wp--preset--font-family--mono);
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}
+
+/* Inline accent mark (hero name highlight) */
+mark.has-inline-color.has-accent-color {
+	background: transparent;
+}
+
+/* Footer links (footer pattern) */
+.ploetner-footer a {
+	font-family: var(--wp--preset--font-family--mono);
+	transition: color 0.2s ease;
+}
+
+.ploetner-footer a:hover {
+	color: var(--wp--preset--color--accent) !important;
+}
+
+/* Mobile overlay menu (header pattern) */
+.ploetner-header .wp-block-navigation__responsive-container-open,
+.ploetner-header .wp-block-navigation__responsive-container-close {
+	color: var(--wp--preset--color--accent);
+}
+
+/* Responsive: speaking rows stack */
+@media (max-width: 782px) {
+	.ploetner-speaking-row .wp-block-columns {
+		flex-direction: column !important;
+		gap: 0.25rem !important;
+	}
+}
+
+/* Hero portrait (set an image URL on the Hero block) */
+.ploetner-hero-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+/* Header and footer: align content to the content width, keep the full-width
+   sticky background. Applies to existing template parts, no re-insert needed. */
+.ploetner-header,
+.ploetner-footer {
+	padding-left: max(var(--wp--preset--spacing--50), calc((100% - var(--wp--style--global--content-size, 1100px)) / 2)) !important;
+	padding-right: max(var(--wp--preset--spacing--50), calc((100% - var(--wp--style--global--content-size, 1100px)) / 2)) !important;
+}

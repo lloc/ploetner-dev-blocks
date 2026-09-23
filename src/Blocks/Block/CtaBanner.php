@@ -63,8 +63,8 @@ class CtaBanner extends Block {
 		$markup = <<<HTML
 <!-- wp:group {"align":"wide","style":{"border":{"width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|50","right":"var:preset|spacing|50"},"margin":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"borderColor":"accent","backgroundColor":"accent-soft","layout":{"type":"constrained","justifyContent":"center"}} -->
 <div class="wp-block-group alignwide has-border-color has-accent-border-color has-accent-soft-background-color has-background" style="border-width:1px;margin-top:var(--wp--preset--spacing--70);margin-bottom:var(--wp--preset--spacing--70);padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--50)">
-<!-- wp:heading {"textAlign":"center","style":{"typography":{"letterSpacing":"-0.01em"}},"fontSize":"x-large"} -->
-<h2 class="wp-block-heading has-text-align-center has-x-large-font-size" style="letter-spacing:-0.01em">{$heading}</h2>
+<!-- wp:heading {"textAlign":"center","textColor":"contrast","style":{"typography":{"letterSpacing":"-0.01em"}},"fontSize":"x-large"} -->
+<h2 class="wp-block-heading has-text-align-center has-contrast-color has-text-color has-x-large-font-size" style="letter-spacing:-0.01em">{$heading}</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"300"}},"textColor":"muted"} -->
 <p class="has-text-align-center has-muted-color has-text-color" style="font-weight:300">{$text}</p>

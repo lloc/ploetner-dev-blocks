@@ -2,6 +2,5 @@
 .idea/
 /.phpunit.cache/
 /vendor/
-composer.lock
 ploetner-dev-blocks.zip
 ploetner-dev-blocks/

@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom post types for the Plötner Dev Blocks plugin.
+ * Custom post types for the Ploetner Dev Blocks plugin.
  *
  * These CPTs back the theme's dynamic blocks. They have no public archive or
  * single output of their own — entries are surfaced only inside blocks.

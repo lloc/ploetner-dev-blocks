@@ -50,7 +50,7 @@ class Hero extends Block {
 				'label'   => __( 'Heading lead-in', 'ploetner-dev-blocks' ),
 			),
 			'headingName'  => array(
-				'default' => 'Dennis Plötner.',
+				'default' => 'Dennis Ploetner.',
 				'label'   => __( 'Highlighted name', 'ploetner-dev-blocks' ),
 			),
 			'phonetic'     => array(

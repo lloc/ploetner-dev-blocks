@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Plötner Dev Blocks 1.0.0\n"
+"Project-Id-Version: Ploetner Dev Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ploetner-dev-blocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: ploetner-dev-blocks.php
-msgid "Plötner Dev Blocks"
+msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -26,12 +26,12 @@ msgstr ""
 
 #. Description of the plugin
 #: ploetner-dev-blocks.php
-msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Plötner Dev site."
+msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
 msgstr ""
 
 #. Author of the plugin
 #: ploetner-dev-blocks.php
-msgid "Dennis Plötner"
+msgid "Dennis Ploetner"
 msgstr ""
 
 #: ploetner-dev-blocks/src/Blocks/Block/CtaBanner.php:27
@@ -192,7 +192,7 @@ msgstr ""
 
 #: ploetner-dev-blocks/src/Blocks/BlockCategory.php:41
 #: src/Blocks/BlockCategory.php:41
-msgid "Plötner.dev"
+msgid "ploetner.dev"
 msgstr ""
 
 #: ploetner-dev-blocks/src/Blocks/Section.php:33

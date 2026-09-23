@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace lloc\PloetnerDevBlocks\Blocks;
 
 /**
- * Registers the dedicated "Plötner.dev" block category.
+ * Registers the dedicated "ploetner.dev" block category.
  */
 class BlockCategory {
 
@@ -38,7 +38,7 @@ class BlockCategory {
 			$categories,
 			array(
 				'slug'  => 'ploetner-dev',
-				'title' => __( 'Plötner.dev', 'ploetner-dev-blocks' ),
+				'title' => __( 'ploetner.dev', 'ploetner-dev-blocks' ),
 				'icon'  => null,
 			)
 		);

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="PloetnerDevBlocks">
-	<description>Coding standard for the Plötner Dev Blocks plugin.</description>
+	<description>Coding standard for the Ploetner Dev Blocks plugin.</description>
 
 	<file>src</file>
 	<file>tests</file>

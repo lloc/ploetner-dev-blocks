@@ -16,7 +16,7 @@
  */
 
 if ( ! function_exists( 'post_type_exists' ) || ! post_type_exists( 'pd_project' ) ) {
-	echo "Error: the 'pd_project' post type is not registered. Is the Plötner Dev Blocks plugin active?\n";
+	echo "Error: the 'pd_project' post type is not registered. Is the Ploetner Dev Blocks plugin active?\n";
 	return;
 }
 

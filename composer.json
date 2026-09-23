@@ -1,11 +1,11 @@
 {
     "name": "lloc/ploetner-dev-blocks",
-    "description": "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Plötner Dev site.",
+    "description": "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "Dennis Plötner",
+            "name": "Dennis Ploetner",
             "homepage": "https://ploetner.dev"
         }
     ],

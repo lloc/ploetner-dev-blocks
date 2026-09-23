@@ -1,6 +1,6 @@
 <?php
 /**
- * Shared section helpers for the Plötner Dev Blocks plugin.
+ * Shared section helpers for the Ploetner Dev Blocks plugin.
  *
  * @package PloetnerDevBlocks
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Block pattern registration for the Plötner Dev site.
+ * Block pattern registration for the Ploetner Dev site.
  *
  * Provides the site's header, footer, front-page composition and section
  * separator as block patterns, so they live with the plugin (theme-switch
@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace lloc\PloetnerDevBlocks;
 
 /**
- * Registers the "Plötner.dev" pattern category and its patterns.
+ * Registers the "ploetner.dev" pattern category and its patterns.
  */
 class Patterns {
 
@@ -40,7 +40,7 @@ class Patterns {
 	public function register_patterns(): void {
 		register_block_pattern_category(
 			self::CATEGORY,
-			array( 'label' => __( 'Plötner.dev', 'ploetner-dev-blocks' ) )
+			array( 'label' => __( 'ploetner.dev', 'ploetner-dev-blocks' ) )
 		);
 
 		foreach ( $this->patterns() as $slug => $pattern ) {

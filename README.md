@@ -1,7 +1,7 @@
 # Ploetner Dev Blocks
 
 WordPress 7.0 PHP-only (`autoRegister`) blocks and their backing custom post types
-for the [Plötner Dev](https://ploetner.dev) site. Extracted from the
+for the [Ploetner Dev](https://ploetner.dev) site. Extracted from the
 `ploetner-dev-child` theme so the content survives theme switches.
 
 ## Requirements
@@ -28,7 +28,7 @@ attributes. No build step / JavaScript.
 
 ### Patterns
 
-The plugin also registers block patterns (category "Plötner.dev") for the
+The plugin also registers block patterns (category "ploetner.dev") for the
 site chrome and layout, so they travel with the plugin instead of a theme:
 
 | Pattern | Purpose |

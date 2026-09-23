@@ -69,8 +69,8 @@ class Community extends SectionBlock {
 <!-- wp:paragraph {"fontFamily":"mono","fontSize":"tiny","textColor":"accent"} -->
 <p class="has-accent-color has-text-color has-mono-font-family has-tiny-font-size">{$label}</p>
 <!-- /wp:paragraph -->
-<!-- wp:heading {"level":3,"fontSize":"medium"} -->
-<h3 class="wp-block-heading has-medium-font-size">{$title}</h3>
+<!-- wp:heading {"level":3,"textColor":"contrast","fontSize":"medium"} -->
+<h3 class="wp-block-heading has-contrast-color has-text-color has-medium-font-size">{$title}</h3>
 <!-- /wp:heading -->
 <div class="ploetner-card-desc">{$description}</div>
 </div>

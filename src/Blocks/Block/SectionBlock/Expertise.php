@@ -64,8 +64,8 @@ class Expertise extends SectionBlock {
 		return <<<HTML
 <!-- wp:column {"backgroundColor":"surface","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-column has-surface-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-<!-- wp:heading {"level":3,"fontSize":"medium"} -->
-<h3 class="wp-block-heading has-medium-font-size"><mark style="background-color:transparent" class="has-inline-color has-accent-color">▸</mark> {$title}</h3>
+<!-- wp:heading {"level":3,"textColor":"contrast","fontSize":"medium"} -->
+<h3 class="wp-block-heading has-contrast-color has-text-color has-medium-font-size"><mark style="background-color:transparent" class="has-inline-color has-accent-color">▸</mark> {$title}</h3>
 <!-- /wp:heading -->
 <div class="ploetner-card-desc">{$description}</div>
 </div>

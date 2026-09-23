@@ -85,8 +85,8 @@ class Speaking extends SectionBlock {
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">{$title}</p>
+<!-- wp:paragraph {"fontSize":"small","textColor":"contrast"} -->
+<p class="has-contrast-color has-text-color has-small-font-size">{$title}</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->

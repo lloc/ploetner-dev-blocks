@@ -3,7 +3,7 @@
  * Plugin Name:       Ploetner Dev Blocks
  * Plugin URI:        https://ploetner.dev
  * Description:       Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 7.0
  * Requires PHP:      8.1
  * Author:            Dennis Ploetner

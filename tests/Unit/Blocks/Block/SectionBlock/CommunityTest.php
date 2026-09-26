@@ -27,7 +27,7 @@ class CommunityTest extends TestCase {
 	 */
 	protected function setUp(): void {
 		parent::setUp();
-		Functions\stubs( array( 'esc_html', 'esc_attr', 'do_blocks', '__' ) );
+		Functions\stubs( array( 'esc_html', 'esc_attr', 'esc_url', 'do_blocks', '__' ) );
 		Functions\when( 'get_the_title' )->alias( static fn ( WP_Post $post ): string => $post->post_title );
 		WP_Query::reset();
 		$this->block = new Community();
@@ -42,6 +42,26 @@ class CommunityTest extends TestCase {
 		$this->assertStringContainsString( 'Meetup Organizer', $html );
 		$this->assertStringContainsString( 'Milan', $html );
 		$this->assertStringContainsString( '<p>desc</p>', $html );
+	}
+
+	/**
+	 * @covers ::community_card
+	 */
+	public function test_card_without_url_has_no_link(): void {
+		$html = $this->block->community_card( 'Label', 'Title', '' );
+
+		$this->assertStringNotContainsString( '<a ', $html );
+	}
+
+	/**
+	 * @covers ::community_card
+	 */
+	public function test_card_with_url_renders_link_with_text_or_fallback(): void {
+		$custom   = $this->block->community_card( 'Label', 'Title', '', 'https://scuolawp.it', 'Visit ↗' );
+		$fallback = $this->block->community_card( 'Label', 'Title', '', 'https://scuolawp.it' );
+
+		$this->assertStringContainsString( '<a href="https://scuolawp.it" target="_blank" rel="noopener">Visit ↗</a>', $custom );
+		$this->assertStringContainsString( '>Learn more ↗</a>', $fallback );
 	}
 
 	/**

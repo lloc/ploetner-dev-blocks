@@ -48,8 +48,16 @@ class PostTypesTest extends TestCase {
 			array_keys( $fields['pd_project'] )
 		);
 		$this->assertSame( 'esc_url_raw', $fields['pd_project']['_pd_project_url']['sanitize'] );
-		$this->assertArrayHasKey( '_pd_talk_year', $fields['pd_talk'] );
-		$this->assertArrayHasKey( '_pd_community_label', $fields['pd_community'] );
+		$this->assertSame(
+			array( '_pd_talk_year', '_pd_talk_event', '_pd_talk_url' ),
+			array_keys( $fields['pd_talk'] )
+		);
+		$this->assertSame( 'esc_url_raw', $fields['pd_talk']['_pd_talk_url']['sanitize'] );
+		$this->assertSame(
+			array( '_pd_community_label', '_pd_community_url', '_pd_community_link_text' ),
+			array_keys( $fields['pd_community'] )
+		);
+		$this->assertSame( 'esc_url_raw', $fields['pd_community']['_pd_community_url']['sanitize'] );
 	}
 
 	/**
@@ -77,7 +85,7 @@ class PostTypesTest extends TestCase {
 	 */
 	public function test_register_meta_registers_each_meta_key(): void {
 		Functions\when( 'current_user_can' )->justReturn( true );
-		Functions\expect( 'register_post_meta' )->times( 6 );
+		Functions\expect( 'register_post_meta' )->times( 9 );
 
 		( new PostTypes() )->register_meta();
 	}

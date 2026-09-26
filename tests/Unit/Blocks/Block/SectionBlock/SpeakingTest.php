@@ -27,7 +27,7 @@ class SpeakingTest extends TestCase {
 	 */
 	protected function setUp(): void {
 		parent::setUp();
-		Functions\stubs( array( 'esc_html', 'esc_attr', 'do_blocks', '__' ) );
+		Functions\stubs( array( 'esc_html', 'esc_attr', 'esc_url', 'do_blocks', '__' ) );
 		Functions\when( 'get_the_title' )->alias( static fn ( WP_Post $post ): string => $post->post_title );
 		WP_Query::reset();
 		$this->block = new Speaking();
@@ -42,6 +42,17 @@ class SpeakingTest extends TestCase {
 
 		$this->assertStringNotContainsString( 'border-bottom-width:1px', $row );
 		$this->assertStringContainsString( 'border-bottom-width:1px', $last );
+	}
+
+	/**
+	 * @covers ::speaking_row
+	 */
+	public function test_title_is_linked_only_with_url(): void {
+		$plain  = $this->block->speaking_row( '2026', 'Talk', 'WordCamp', false );
+		$linked = $this->block->speaking_row( '2026', 'Talk', 'WordCamp', false, 'https://example.com/slides' );
+
+		$this->assertStringNotContainsString( '<a ', $plain );
+		$this->assertStringContainsString( '<a href="https://example.com/slides" target="_blank" rel="noopener">Talk</a>', $linked );
 	}
 
 	/**

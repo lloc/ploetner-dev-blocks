@@ -71,6 +71,20 @@
 	background: color-mix(in srgb, var(--wp--preset--color--accent) 6%, transparent);
 }
 
+/* Speaking rows: linked talk title keeps the row colour, accent on hover */
+.ploetner-speaking-row a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.ploetner-speaking-row a:hover,
+.ploetner-speaking-row a:focus-visible {
+	color: var(--wp--preset--color--accent);
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
 /* Accent (CTA) button hover */
 .wp-block-button__link.has-accent-background-color {
 	transition: opacity 0.2s ease, transform 0.2s ease;

@@ -3,7 +3,8 @@
  * Community block — ploetner-dev/community.
  *
  * Heading/label/intro are block attributes; the cards come from the
- * `pd_community` post type. Card description is the post content (block markup).
+ * `pd_community` post type. Card description is the post content (block markup);
+ * an optional link (URL + text) comes from post meta.
  *
  * @package PloetnerDevBlocks
  */
@@ -55,12 +56,25 @@ class Community extends SectionBlock {
 	 * @param string $label       Card label.
 	 * @param string $title       Card title.
 	 * @param string $description Card description (block markup).
+	 * @param string $url         Optional link URL.
+	 * @param string $link_text   Optional link text (falls back to a default).
 	 *
 	 * @return string
 	 */
-	public function community_card( string $label, string $title, string $description ): string {
+	public function community_card( string $label, string $title, string $description, string $url = '', string $link_text = '' ): string {
 		$label = esc_html( $label );
 		$title = esc_html( $title );
+
+		$link_block = '';
+		if ( '' !== $url ) {
+			$href       = esc_url( $url );
+			$text       = esc_html( '' !== $link_text ? $link_text : __( 'Learn more ↗', 'ploetner-dev-blocks' ) );
+			$link_block = <<<HTML
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><a href="{$href}" target="_blank" rel="noopener">{$text}</a></p>
+<!-- /wp:paragraph -->
+HTML;
+		}
 
 		// $description is post content (block markup); rendered by the section's do_blocks().
 		return <<<HTML
@@ -73,6 +87,7 @@ class Community extends SectionBlock {
 <h3 class="wp-block-heading has-contrast-color has-text-color has-medium-font-size">{$title}</h3>
 <!-- /wp:heading -->
 <div class="ploetner-card-desc">{$description}</div>
+{$link_block}
 </div>
 <!-- /wp:column -->
 HTML;
@@ -87,7 +102,9 @@ HTML;
 			$cards .= $this->community_card(
 				(string) get_post_meta( $post->ID, '_pd_community_label', true ),
 				get_the_title( $post ),
-				(string) $post->post_content
+				(string) $post->post_content,
+				(string) get_post_meta( $post->ID, '_pd_community_url', true ),
+				(string) get_post_meta( $post->ID, '_pd_community_link_text', true )
 			);
 		}
 

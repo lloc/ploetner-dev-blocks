@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace lloc\PloetnerDevBlocks;
 
+use lloc\PloetnerDevBlocks\PostTypes\PostTypes;
 use WP_Query;
 
 /**
@@ -113,9 +114,12 @@ class Seeder {
 			return;
 		}
 
+		$fields = PostTypes::meta_fields()[ $post_type ] ?? array();
 		foreach ( $item['meta'] ?? array() as $key => $value ) {
-			$sanitized = '_pd_project_url' === $key ? esc_url_raw( $value ) : sanitize_text_field( $value );
-			update_post_meta( $post_id, $key, $sanitized );
+			$sanitize = $fields[ $key ]['sanitize'] ?? 'sanitize_text_field';
+			if ( is_callable( $sanitize ) ) {
+				update_post_meta( $post_id, $key, $sanitize( $value ) );
+			}
 		}
 
 		++$counts['created'];

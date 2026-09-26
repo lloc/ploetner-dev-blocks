@@ -112,6 +112,30 @@ HTML;
 	}
 
 	/**
+	 * Build a card link paragraph (block markup). Empty URL yields no markup.
+	 *
+	 * @param string $url      Link URL.
+	 * @param string $text     Link text (empty falls back to $fallback).
+	 * @param string $fallback Fallback link text.
+	 *
+	 * @return string
+	 */
+	public static function link_block( string $url, string $text, string $fallback ): string {
+		if ( '' === $url ) {
+			return '';
+		}
+
+		$href = esc_url( $url );
+		$text = esc_html( '' !== $text ? $text : $fallback );
+
+		return <<<HTML
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><a href="{$href}" target="_blank" rel="noopener">{$text}</a></p>
+<!-- /wp:paragraph -->
+HTML;
+	}
+
+	/**
 	 * Shared query for a section's items, ordered by menu_order.
 	 *
 	 * @param string $post_type Post type slug.

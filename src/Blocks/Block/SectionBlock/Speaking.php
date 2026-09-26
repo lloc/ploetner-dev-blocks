@@ -3,8 +3,9 @@
  * Speaking block — ploetner-dev/speaking.
  *
  * Timeline rows from the `pd_talk` post type: year + talk title + event.
- * Title = post title, year/event come from post meta. The last row gets an
- * extra bottom border to close the timeline (matching the original pattern).
+ * Title = post title, year/event/link URL come from post meta. With a URL the
+ * title is rendered as a link. The last row gets an extra bottom border to
+ * close the timeline (matching the original pattern).
  *
  * @package PloetnerDevBlocks
  */
@@ -55,13 +56,18 @@ class Speaking extends SectionBlock {
 	 * @param string $title Talk title.
 	 * @param string $event Event name.
 	 * @param bool   $last  Whether this is the last row (adds a bottom border).
+	 * @param string $url   Optional link URL for the title.
 	 *
 	 * @return string
 	 */
-	public function speaking_row( string $year, string $title, string $event, bool $last ): string {
+	public function speaking_row( string $year, string $title, string $event, bool $last, string $url = '' ): string {
 		$year  = esc_html( $year );
 		$title = esc_html( $title );
 		$event = esc_html( $event );
+
+		if ( '' !== $url ) {
+			$title = sprintf( '<a href="%1$s" target="_blank" rel="noopener">%2$s</a>', esc_url( $url ), $title );
+		}
 
 		if ( $last ) {
 			$attrs = '{"className":"ploetner-speaking-row","style":{"border":{"top":{"color":"var:preset|color|border","width":"1px"},"bottom":{"color":"var:preset|color|border","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"layout":{"type":"default"}}';
@@ -115,7 +121,8 @@ HTML;
 				(string) get_post_meta( $post->ID, '_pd_talk_year', true ),
 				get_the_title( $post ),
 				(string) get_post_meta( $post->ID, '_pd_talk_event', true ),
-				$index === $count - 1
+				$index === $count - 1,
+				(string) get_post_meta( $post->ID, '_pd_talk_url', true )
 			);
 		}
 

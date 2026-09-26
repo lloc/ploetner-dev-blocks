@@ -87,12 +87,29 @@ class PostTypes {
 					'label'       => __( 'Event', 'ploetner-dev-blocks' ),
 					'placeholder' => 'WordCamp Europe',
 				),
+				'_pd_talk_url'   => array(
+					'label'       => __( 'Link URL', 'ploetner-dev-blocks' ),
+					'input'       => 'url',
+					'placeholder' => 'https://…',
+					'description' => __( 'Links the talk title (slides, video, event page).', 'ploetner-dev-blocks' ),
+					'sanitize'    => 'esc_url_raw',
+				),
 			),
 			'pd_community' => array(
-				'_pd_community_label' => array(
+				'_pd_community_label'     => array(
 					'label'       => __( 'Card Label', 'ploetner-dev-blocks' ),
 					'placeholder' => 'Meetup Organizer',
 					'description' => __( 'Short label shown above the card title.', 'ploetner-dev-blocks' ),
+				),
+				'_pd_community_url'       => array(
+					'label'       => __( 'Link URL', 'ploetner-dev-blocks' ),
+					'input'       => 'url',
+					'placeholder' => 'https://…',
+					'sanitize'    => 'esc_url_raw',
+				),
+				'_pd_community_link_text' => array(
+					'label'       => __( 'Link text', 'ploetner-dev-blocks' ),
+					'placeholder' => 'Learn more ↗',
 				),
 			),
 		);

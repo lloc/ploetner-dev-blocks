@@ -44,8 +44,21 @@ front page from these in the Site Editor.
 ## Custom post types
 
 `pd_expertise`, `pd_project`, `pd_talk`, `pd_community` — all non-public (no archive,
-not publicly queryable, `show_ui` for editing). Per-type meta (card label, tech tags,
-link, year, event) is edited via a classic “Details” meta box.
+not publicly queryable, `show_ui` for editing). Per-type meta is edited via a
+classic “Details” meta box:
+
+| Post type | Meta |
+|---|---|
+| `pd_project` | tech tags, link URL, link text |
+| `pd_talk` | year, event, link URL (links the talk title) |
+| `pd_community` | card label, link URL, link text |
+
+Links open in a new tab. Without a link text, cards fall back to a default
+label ("View project ↗" / "Learn more ↗").
+
+The admin list tables sort like the blocks (`menu_order`, then date) unless a
+column header is clicked, and show a sortable “Order” column. Talks also show
+their year and event.
 
 ## Styling
 

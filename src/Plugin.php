@@ -17,6 +17,7 @@ use lloc\PloetnerDevBlocks\Blocks\Expertise;
 use lloc\PloetnerDevBlocks\Blocks\Hero;
 use lloc\PloetnerDevBlocks\Blocks\OpenSource;
 use lloc\PloetnerDevBlocks\Blocks\Speaking;
+use lloc\PloetnerDevBlocks\PostTypes\AdminList;
 use lloc\PloetnerDevBlocks\PostTypes\MetaBox;
 use lloc\PloetnerDevBlocks\PostTypes\PostTypes;
 use lloc\PloetnerDevBlocks\Seeder;
@@ -50,6 +51,7 @@ class Plugin {
 	public function register(): void {
 		( new PostTypes() )->register();
 		( new MetaBox() )->register();
+		( new AdminList() )->register();
 		( new BlockCategory() )->register();
 		( new Assets() )->register();
 		( new Patterns() )->register();

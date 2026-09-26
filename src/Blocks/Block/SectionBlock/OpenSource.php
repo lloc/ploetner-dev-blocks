@@ -71,16 +71,7 @@ class OpenSource extends SectionBlock {
 HTML;
 		}
 
-		$link_block = '';
-		if ( '' !== $url ) {
-			$href       = esc_url( $url );
-			$text       = esc_html( '' !== $link_text ? $link_text : __( 'View project ↗', 'ploetner-dev-blocks' ) );
-			$link_block = <<<HTML
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><a href="{$href}" target="_blank" rel="noopener">{$text}</a></p>
-<!-- /wp:paragraph -->
-HTML;
-		}
+		$link_block = Section::link_block( $url, $link_text, __( 'View project ↗', 'ploetner-dev-blocks' ) );
 
 		return <<<HTML
 <!-- wp:column {"className":"ploetner-card","style":{"border":{"width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"borderColor":"border","backgroundColor":"surface"} -->

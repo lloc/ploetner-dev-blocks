@@ -65,16 +65,7 @@ class Community extends SectionBlock {
 		$label = esc_html( $label );
 		$title = esc_html( $title );
 
-		$link_block = '';
-		if ( '' !== $url ) {
-			$href       = esc_url( $url );
-			$text       = esc_html( '' !== $link_text ? $link_text : __( 'Learn more ↗', 'ploetner-dev-blocks' ) );
-			$link_block = <<<HTML
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><a href="{$href}" target="_blank" rel="noopener">{$text}</a></p>
-<!-- /wp:paragraph -->
-HTML;
-		}
+		$link_block = Section::link_block( $url, $link_text, __( 'Learn more ↗', 'ploetner-dev-blocks' ) );
 
 		// $description is post content (block markup); rendered by the section's do_blocks().
 		return <<<HTML

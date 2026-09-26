@@ -103,8 +103,7 @@ class AdminList {
 			}
 		}
 
-		// No title column (unlikely): append at the end.
-		return $result + $extra;
+		return $result;
 	}
 
 	/**
@@ -134,11 +133,9 @@ class AdminList {
 			return;
 		}
 
-		foreach ( self::meta_columns() as $columns ) {
-			if ( isset( $columns[ $column ] ) ) {
-				echo esc_html( (string) get_post_meta( $post_id, $columns[ $column ], true ) );
-				return;
-			}
+		$meta_keys = array_merge( ...array_values( self::meta_columns() ) );
+		if ( isset( $meta_keys[ $column ] ) ) {
+			echo esc_html( (string) get_post_meta( $post_id, $meta_keys[ $column ], true ) );
 		}
 	}
 }

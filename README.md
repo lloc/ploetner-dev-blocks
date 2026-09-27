@@ -63,8 +63,10 @@ their year and event.
 ## Languages / Multisite
 
 All user-facing strings use the `ploetner-dev-blocks` text domain. The plugin
-ships German translations (`languages/*-de_DE.{po,mo,l10n.php}`) and loads them
-on `init` (priority 1), before blocks, post types and patterns are registered.
+ships German translations (`languages/*-de_DE.{po,mo,l10n.php}`). WordPress
+6.8+ loads them just in time via the `Text Domain` and `Domain Path` headers,
+so there is no `load_plugin_textdomain()` call. Keep all `__()` calls on or
+after `init`, otherwise core triggers a "called too early" notice.
 
 What follows the **site language** of each network site (e.g. `ploetner.dev/de/`
 with `de_DE`):

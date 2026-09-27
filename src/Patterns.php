@@ -99,7 +99,11 @@ HTML;
 	 * @return string
 	 */
 	public function header(): string {
-		return <<<'HTML'
+		$nav      = $this->navigation_links();
+		$cta_text = esc_html( __( 'Hire me →', 'ploetner-dev-blocks' ) );
+		$cta_url  = esc_url( 'https://ploetner.cloud' );
+
+		return <<<HTML
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"position":{"type":"sticky","top":"0px"}},"backgroundColor":"base","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"},"className":"ploetner-header"} -->
 <div class="wp-block-group alignfull ploetner-header has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
 	<!-- wp:site-title {"level":0} /-->
@@ -107,16 +111,13 @@ HTML;
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
 	<div class="wp-block-group">
 		<!-- wp:navigation {"overlayMenu":"mobile","overlayBackgroundColor":"base","overlayTextColor":"contrast","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"fontSize":"small","fontFamily":"display"} -->
-		<!-- wp:navigation-link {"label":"Expertise","url":"#expertise"} /-->
-		<!-- wp:navigation-link {"label":"Open Source","url":"#open-source"} /-->
-		<!-- wp:navigation-link {"label":"Speaking","url":"#speaking"} /-->
-		<!-- wp:navigation-link {"label":"Community","url":"#community"} /-->
+{$nav}
 		<!-- /wp:navigation -->
 
 		<!-- wp:buttons {"className":"ploetner-nav-cta"} -->
 		<div class="wp-block-buttons ploetner-nav-cta">
 			<!-- wp:button {"fontSize":"tiny","fontFamily":"mono"} -->
-			<div class="wp-block-button has-custom-font-size has-mono-font-family has-tiny-font-size"><a class="wp-block-button__link wp-element-button" href="https://ploetner.cloud">Hire me &rarr;</a></div>
+			<div class="wp-block-button has-custom-font-size has-mono-font-family has-tiny-font-size"><a class="wp-block-button__link wp-element-button" href="{$cta_url}">{$cta_text}</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -128,12 +129,50 @@ HTML;
 	}
 
 	/**
+	 * Header navigation links to the front-page section anchors. Labels are
+	 * translated, the anchors stay stable across languages.
+	 *
+	 * @return string
+	 */
+	public function navigation_links(): string {
+		$links = array(
+			'expertise'   => __( 'Expertise', 'ploetner-dev-blocks' ),
+			'open-source' => __( 'Open Source', 'ploetner-dev-blocks' ),
+			'speaking'    => __( 'Speaking', 'ploetner-dev-blocks' ),
+			'community'   => __( 'Community', 'ploetner-dev-blocks' ),
+		);
+
+		$markup = array();
+		foreach ( $links as $anchor => $label ) {
+			$attrs    = (string) wp_json_encode(
+				array(
+					'label' => $label,
+					'url'   => '#' . $anchor,
+				),
+				JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP
+			);
+			$markup[] = "\t\t<!-- wp:navigation-link {$attrs} /-->";
+		}
+
+		return implode( "\n", $markup );
+	}
+
+	/**
 	 * Footer: social links and copyright.
 	 *
 	 * @return string
 	 */
 	public function footer(): string {
-		return <<<'HTML'
+		$copyright = esc_html(
+			sprintf(
+				/* translators: 1: year, 2: VAT number. */
+				__( '© %1$s Dennis Plötner, VAT number %2$s', 'ploetner-dev-blocks' ),
+				'2026',
+				'IT13913110964'
+			)
+		);
+
+		return <<<HTML
 <!-- wp:group {"align":"full","style":{"border":{"top":{"color":"var:preset|color|border","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"},"className":"ploetner-footer"} -->
 <div class="wp-block-group alignfull ploetner-footer" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
@@ -157,7 +196,7 @@ HTML;
 	<!-- /wp:group -->
 
 	<!-- wp:paragraph {"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
-	<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size">&copy; 2026 Dennis Pl&ouml;tner, VAT number IT13913110964</p>
+	<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size">{$copyright}</p>
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

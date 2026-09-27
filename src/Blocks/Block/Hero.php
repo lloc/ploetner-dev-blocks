@@ -40,15 +40,15 @@ class Hero extends Block {
 				'label'   => __( 'Tagline', 'ploetner-dev-blocks' ),
 			),
 			'headingLine1' => array(
-				'default' => 'Born in Germany.',
+				'default' => __( 'Born in Germany.', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Heading line 1', 'ploetner-dev-blocks' ),
 			),
 			'headingLine2' => array(
-				'default' => 'Reborn in Italy.',
+				'default' => __( 'Reborn in Italy.', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Heading line 2', 'ploetner-dev-blocks' ),
 			),
 			'headingLead'  => array(
-				'default' => 'I’m',
+				'default' => __( 'I’m', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Heading lead-in', 'ploetner-dev-blocks' ),
 			),
 			'headingName'  => array(
@@ -60,7 +60,7 @@ class Hero extends Block {
 				'label'   => __( 'Phonetic', 'ploetner-dev-blocks' ),
 			),
 			'bio'          => array(
-				'default' => 'I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures. Programming professionally since 1997. Speaking at WordCamps across Europe and the US.',
+				'default' => __( 'I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures. Programming professionally since 1997. Speaking at WordCamps across Europe and the US.', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Bio', 'ploetner-dev-blocks' ),
 			),
 			'image'        => array(
@@ -72,23 +72,23 @@ class Hero extends Block {
 				'label'   => __( 'Portrait alt text', 'ploetner-dev-blocks' ),
 			),
 			'meta1Label'   => array(
-				'default' => 'Current role',
+				'default' => __( 'Current role', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Meta 1 label', 'ploetner-dev-blocks' ),
 			),
 			'meta1Value'   => array(
-				'default' => 'Senior Web Engineer at Syde',
+				'default' => __( 'Senior Web Engineer at Syde', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Meta 1 value', 'ploetner-dev-blocks' ),
 			),
 			'meta2Label'   => array(
-				'default' => 'Based in',
+				'default' => __( 'Based in', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Meta 2 label', 'ploetner-dev-blocks' ),
 			),
 			'meta2Value'   => array(
-				'default' => 'Italy',
+				'default' => __( 'Italy', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Meta 2 value', 'ploetner-dev-blocks' ),
 			),
 			'meta3Label'   => array(
-				'default' => 'Languages',
+				'default' => __( 'Languages', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Meta 3 label', 'ploetner-dev-blocks' ),
 			),
 			'meta3Value'   => array(
@@ -96,7 +96,7 @@ class Hero extends Block {
 				'label'   => __( 'Meta 3 value', 'ploetner-dev-blocks' ),
 			),
 			'meta4Label'   => array(
-				'default' => 'Building since',
+				'default' => __( 'Building since', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Meta 4 label', 'ploetner-dev-blocks' ),
 			),
 			'meta4Value'   => array(

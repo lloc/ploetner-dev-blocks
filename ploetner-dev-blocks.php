@@ -11,6 +11,7 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       ploetner-dev-blocks
+ * Domain Path:       /languages
  *
  * @package PloetnerDevBlocks
  */
@@ -26,3 +27,13 @@ require_once __DIR__ . '/vendor/autoload.php';
 register_activation_hook( __FILE__, static fn () => ( new Seeder() )->maybe_seed() );
 
 add_action( 'plugins_loaded', static fn () => ( new Plugin() )->register() );
+
+// Bundled translations. Priority 1: block defaults, post type labels and
+// patterns are built on `init` (priority 10) and must already be translated.
+add_action(
+	'init',
+	static function (): void {
+		load_plugin_textdomain( 'ploetner-dev-blocks', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	},
+	1
+);

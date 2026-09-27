@@ -36,9 +36,9 @@ class Speaking extends SectionBlock {
 	 */
 	public function defaults(): array {
 		return Section::attributes(
-			'03 / Speaking',
-			'Talks & appearances',
-			'Sharing knowledge at WordCamps and meetups across Europe and the US.'
+			__( '03 / Speaking', 'ploetner-dev-blocks' ),
+			__( 'Talks & appearances', 'ploetner-dev-blocks' ),
+			__( 'Sharing knowledge at WordCamps and meetups across Europe and the US.', 'ploetner-dev-blocks' )
 		);
 	}
 

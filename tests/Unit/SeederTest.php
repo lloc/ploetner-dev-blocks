@@ -25,6 +25,8 @@ class SeederTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 		Functions\stubs( array( 'esc_html', '__' ) );
+		Functions\when( 'get_locale' )->justReturn( 'de_DE' );
+		Functions\when( 'switch_to_locale' )->justReturn( false );
 		WP_Query::reset();
 	}
 
@@ -115,5 +117,23 @@ class SeederTest extends TestCase {
 
 		$this->assertSame( 0, $counts['created'] );
 		$this->assertSame( 6, $counts['skipped'] );
+	}
+
+	/**
+	 * @covers ::seed
+	 */
+	public function test_seed_switches_to_site_locale_and_restores(): void {
+		Functions\when( 'switch_to_locale' )->justReturn( true );
+		Functions\expect( 'restore_previous_locale' )->once();
+		Functions\when( 'sanitize_title' )->returnArg();
+		Functions\when( 'sanitize_text_field' )->returnArg();
+		Functions\when( 'esc_url_raw' )->returnArg();
+		Functions\when( 'wp_insert_post' )->justReturn( 1 );
+		Functions\when( 'is_wp_error' )->justReturn( false );
+		Functions\when( 'update_post_meta' )->justReturn( true );
+
+		$counts = ( new Seeder() )->seed( 'pd_talk' );
+
+		$this->assertSame( 3, $counts['created'] );
 	}
 }

@@ -33,15 +33,15 @@ class CtaBanner extends Block {
 	public function defaults(): array {
 		return array(
 			'heading'    => array(
-				'default' => 'Need a WordPress technical audit?',
+				'default' => __( 'Need a WordPress technical audit?', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Heading', 'ploetner-dev-blocks' ),
 			),
 			'text'       => array(
-				'default' => 'I help enterprise teams find and fix critical issues in their WordPress infrastructure. Fast turnaround, structured results.',
+				'default' => __( 'I help enterprise teams find and fix critical issues in their WordPress infrastructure. Fast turnaround, structured results.', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Text', 'ploetner-dev-blocks' ),
 			),
 			'buttonText' => array(
-				'default' => 'Learn more at ploetner.cloud →',
+				'default' => __( 'Learn more at ploetner.cloud →', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Button text', 'ploetner-dev-blocks' ),
 			),
 			'buttonUrl'  => array(

@@ -24,7 +24,8 @@ class PatternsTest extends TestCase {
 	 */
 	protected function setUp(): void {
 		parent::setUp();
-		Functions\stubs( array( '__' ) );
+		Functions\stubs( array( '__', 'esc_html', 'esc_url' ) );
+		Functions\when( 'wp_json_encode' )->alias( 'json_encode' );
 	}
 
 	/**
@@ -74,5 +75,33 @@ class PatternsTest extends TestCase {
 		foreach ( array( 'hero', 'expertise', 'open-source', 'speaking', 'community', 'cta-banner' ) as $block ) {
 			$this->assertStringContainsString( "wp:ploetner-dev/{$block}", $html );
 		}
+	}
+
+	/**
+	 * @covers ::navigation_links
+	 * @covers ::header
+	 */
+	public function test_header_uses_translated_labels_with_stable_anchors(): void {
+		Functions\when( '__' )->alias(
+			static fn ( string $text ): string => array(
+				'Speaking'  => 'Vorträge',
+				'Hire me →' => 'Projekt anfragen →',
+			)[ $text ] ?? $text
+		);
+
+		$html = ( new Patterns() )->header();
+
+		$this->assertStringContainsString( '<!-- wp:navigation-link {"label":"Vorträge","url":"#speaking"} /-->', $html );
+		$this->assertStringContainsString( '<!-- wp:navigation-link {"label":"Expertise","url":"#expertise"} /-->', $html );
+		$this->assertStringContainsString( '>Projekt anfragen →</a>', $html );
+	}
+
+	/**
+	 * @covers ::footer
+	 */
+	public function test_footer_copyright_is_translatable(): void {
+		Functions\when( '__' )->justReturn( '© %1$s Dennis Plötner, USt-IdNr. %2$s' );
+
+		$this->assertStringContainsString( '© 2026 Dennis Plötner, USt-IdNr. IT13913110964', ( new Patterns() )->footer() );
 	}
 }

@@ -54,6 +54,10 @@ class Seeder {
 	 * Insert any missing sample entries. Idempotent: items whose slug already
 	 * exists are skipped, so it is always safe to re-run.
 	 *
+	 * Titles and texts are translated into the site language. Slugs derive
+	 * from the translated title, so re-seeding a site after changing its
+	 * language creates a second, translated set.
+	 *
 	 * @param string|null $only Limit seeding to a single post type, or null for all.
 	 *
 	 * @return array{created: int, skipped: int, failed: int}
@@ -65,6 +69,10 @@ class Seeder {
 			'failed'  => 0,
 		);
 
+		// Seed in the site language, not the (admin) user language, so a German
+		// site in the network gets German sample content.
+		$switched = switch_to_locale( get_locale() );
+
 		foreach ( self::data() as $post_type => $items ) {
 			if ( null !== $only && $only !== $post_type ) {
 				continue;
@@ -73,6 +81,10 @@ class Seeder {
 			foreach ( $items as $item ) {
 				$this->seed_item( $post_type, $item, $counts );
 			}
+		}
+
+		if ( $switched ) {
+			restore_previous_locale();
 		}
 
 		return $counts;
@@ -172,64 +184,64 @@ class Seeder {
 			'pd_expertise' => array(
 				array(
 					'title'      => 'WordPress Multisite',
-					'content'    => self::paragraph( 'Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies. Contributor to wp-multi-network.' ),
+					'content'    => self::paragraph( __( 'Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies. Contributor to wp-multi-network.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 0,
 				),
 				array(
 					'title'      => 'Enterprise Plugins',
-					'content'    => self::paragraph( 'Scalable plugin architectures using the Modularity framework. REST APIs, Block Editor integration, custom database layers, extension systems.' ),
+					'content'    => self::paragraph( __( 'Scalable plugin architectures using the Modularity framework. REST APIs, Block Editor integration, custom database layers, extension systems.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 1,
 				),
 				array(
 					'title'      => 'Block Editor',
-					'content'    => self::paragraph( 'Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging PHP backends with modern JavaScript frontends.' ),
+					'content'    => self::paragraph( __( 'Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging PHP backends with modern JavaScript frontends.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 2,
 				),
 				array(
-					'title'      => 'Code Quality & CI/CD',
-					'content'    => self::paragraph( 'PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer workflows. Automated pipelines that catch problems before they ship.' ),
+					'title'      => __( 'Code Quality & CI/CD', 'ploetner-dev-blocks' ),
+					'content'    => self::paragraph( __( 'PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer workflows. Automated pipelines that catch problems before they ship.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 3,
 				),
 				array(
-					'title'      => 'SSO & Authentication',
-					'content'    => self::paragraph( 'OIDC/OAuth2 integrations, Auth0, Keycloak. Secure authentication flows for enterprise WordPress installations.' ),
+					'title'      => __( 'SSO & Authentication', 'ploetner-dev-blocks' ),
+					'content'    => self::paragraph( __( 'OIDC/OAuth2 integrations, Auth0, Keycloak. Secure authentication flows for enterprise WordPress installations.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 4,
 				),
 				array(
-					'title'      => 'Open-Source Maintenance',
-					'content'    => self::paragraph( '14+ years maintaining public plugins. Community stewardship, backwards compatibility, responsible release cycles.' ),
+					'title'      => __( 'Open-Source Maintenance', 'ploetner-dev-blocks' ),
+					'content'    => self::paragraph( __( '14+ years maintaining public plugins. Community stewardship, backwards compatibility, responsible release cycles.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 5,
 				),
 			),
 			'pd_project'   => array(
 				array(
 					'title'      => 'Multisite Language Switcher',
-					'content'    => self::paragraph( 'A multilingual plugin for WordPress Multisite, actively maintained since 2011. Helps thousands of sites run in multiple languages.' ),
+					'content'    => self::paragraph( __( 'A multilingual plugin for WordPress Multisite, actively maintained since 2011. Helps thousands of sites run in multiple languages.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 0,
 					'meta'       => array(
 						'_pd_project_tech'      => 'WordPress · Multisite · i18n',
 						'_pd_project_url'       => 'https://wordpress.org/plugins/multisite-language-switcher/',
-						'_pd_project_link_text' => 'View on WordPress.org ↗',
+						'_pd_project_link_text' => __( 'View on WordPress.org ↗', 'ploetner-dev-blocks' ),
 					),
 				),
 				array(
 					'title'      => 'composer-i18n-scripts',
-					'content'    => self::paragraph( 'A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n commands directly through Composer scripts.' ),
+					'content'    => self::paragraph( __( 'A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n commands directly through Composer scripts.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 1,
 					'meta'       => array(
 						'_pd_project_tech'      => 'Composer · PHP · wp-cli',
 						'_pd_project_url'       => 'https://github.com/lloc/composer-i18n-scripts',
-						'_pd_project_link_text' => 'View on GitHub ↗',
+						'_pd_project_link_text' => __( 'View on GitHub ↗', 'ploetner-dev-blocks' ),
 					),
 				),
 				array(
 					'title'      => 'wp-multi-network',
-					'content'    => self::paragraph( 'Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple networks within a single WordPress installation.' ),
+					'content'    => self::paragraph( __( 'Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple networks within a single WordPress installation.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 2,
 					'meta'       => array(
 						'_pd_project_tech'      => 'WordPress · Multisite · PHPStan',
 						'_pd_project_url'       => 'https://github.com/lloc/wp-multi-network',
-						'_pd_project_link_text' => 'View on GitHub ↗',
+						'_pd_project_link_text' => __( 'View on GitHub ↗', 'ploetner-dev-blocks' ),
 					),
 				),
 			),
@@ -251,7 +263,7 @@ class Seeder {
 					),
 				),
 				array(
-					'title'      => 'Regular speaker & attendee',
+					'title'      => __( 'Regular speaker & attendee', 'ploetner-dev-blocks' ),
 					'menu_order' => 2,
 					'meta'       => array(
 						'_pd_talk_year'  => '2017 –',
@@ -261,27 +273,27 @@ class Seeder {
 			),
 			'pd_community' => array(
 				array(
-					'title'      => 'WordPress Meetup Milan',
-					'content'    => self::paragraph( 'Co-organizing the local WordPress community in Milan. Regular events, knowledge sharing, and connecting developers with the broader ecosystem.' ),
+					'title'      => __( 'WordPress Meetup Milan', 'ploetner-dev-blocks' ),
+					'content'    => self::paragraph( __( 'Co-organizing the local WordPress community in Milan. Regular events, knowledge sharing, and connecting developers with the broader ecosystem.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 0,
 					'meta'       => array(
-						'_pd_community_label' => 'Meetup Organizer',
+						'_pd_community_label' => __( 'Meetup Organizer', 'ploetner-dev-blocks' ),
 					),
 				),
 				array(
 					'title'      => 'ScuolaWP',
-					'content'    => self::paragraph( 'Co-founder of an Italian-language blog for WordPress developers. Technical article series covering Git, Composer, CI/CD, static analysis, and testing.' ),
+					'content'    => self::paragraph( __( 'Co-founder of an Italian-language blog for WordPress developers. Technical article series covering Git, Composer, CI/CD, static analysis, and testing.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 1,
 					'meta'       => array(
-						'_pd_community_label' => 'Education',
+						'_pd_community_label' => __( 'Education', 'ploetner-dev-blocks' ),
 					),
 				),
 				array(
 					'title'      => 'WordPress VIP',
-					'content'    => self::paragraph( 'Advanced Professional WordPress Developer Certification. Recognized expertise in enterprise-grade WordPress development.' ),
+					'content'    => self::paragraph( __( 'Advanced Professional WordPress Developer Certification. Recognized expertise in enterprise-grade WordPress development.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 2,
 					'meta'       => array(
-						'_pd_community_label' => 'Certification',
+						'_pd_community_label' => __( 'Certification', 'ploetner-dev-blocks' ),
 					),
 				),
 			),

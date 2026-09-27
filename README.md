@@ -60,6 +60,40 @@ The admin list tables sort like the blocks (`menu_order`, then date) unless a
 column header is clicked, and show a sortable “Order” column. Talks also show
 their year and event.
 
+## Languages / Multisite
+
+All user-facing strings use the `ploetner-dev-blocks` text domain. The plugin
+ships German translations (`languages/*-de_DE.{po,mo,l10n.php}`). WordPress
+6.8+ loads them just in time via the `Text Domain` and `Domain Path` headers,
+so there is no `load_plugin_textdomain()` call. Keep all `__()` calls on or
+after `init`, otherwise core triggers a "called too early" notice.
+
+What follows the **site language** of each network site (e.g. `ploetner.dev/de/`
+with `de_DE`):
+
+- Block attribute defaults (Hero, section labels/headings/intros, CTA banner).
+  Blocks inserted without custom attributes render in the site language.
+- Patterns: header navigation labels and CTA, footer copyright line. The
+  section anchors (`#expertise`, `#open-source`, `#speaking`, `#community`) stay
+  identical in every language.
+- Sample content from the seeder. Seeding switches to the site locale, so a
+  German site gets German titles and texts even when the admin user runs
+  WordPress in English. Slugs derive from the translated titles; items seeded
+  earlier in another language are not replaced.
+
+Header, footer and front page live in the Site Editor per site. On a new
+language site, build them from the plugin patterns there once the site
+language is set.
+
+Update translations after changing strings:
+
+```bash
+vendor/bin/wp i18n make-pot . languages/ploetner-dev-blocks.pot --exclude=vendor,tests,tools,bin --skip-js
+vendor/bin/wp i18n update-po languages/ploetner-dev-blocks.pot languages/
+vendor/bin/wp i18n make-mo languages/
+vendor/bin/wp i18n make-php languages/
+```
+
 ## Styling
 
 The plugin ships its own stylesheet (`assets/blocks.css`), enqueued on the front

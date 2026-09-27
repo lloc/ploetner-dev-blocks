@@ -24,9 +24,12 @@ class Seeder {
 
 	/**
 	 * Current seed version. Bump whenever new items are added to data() so
-	 * existing installs pick them up on the next activation or admin load.
+	 * existing sites pick them up on their next admin load.
+	 *
+	 * 2: talks with links (WCEU Basel, WCUS Portland), talk list in sync with
+	 *    the live site.
 	 */
-	public const SEED_VERSION = 1;
+	public const SEED_VERSION = 2;
 
 	/**
 	 * Option recording the last seed version written to this site.
@@ -184,7 +187,7 @@ class Seeder {
 			'pd_expertise' => array(
 				array(
 					'title'      => 'WordPress Multisite',
-					'content'    => self::paragraph( __( 'Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies. Contributor to wp-multi-network.', 'ploetner-dev-blocks' ) ),
+					'content'    => self::paragraph( __( 'Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 0,
 				),
 				array(
@@ -247,27 +250,39 @@ class Seeder {
 			),
 			'pd_talk'      => array(
 				array(
-					'title'      => 'Dynamic Blocks from 0 to 100 in 30 Minutes',
+					'title'      => 'Multilingual WordPress for developers',
 					'menu_order' => 0,
+					'meta'       => array(
+						'_pd_talk_year'  => '2025',
+						'_pd_talk_event' => 'WordCamp Europe, Basel (CH)',
+						'_pd_talk_url'   => 'https://wordpress.tv/2025/06/07/multilingual-wordpress-for-developers/',
+					),
+				),
+				array(
+					'title'      => 'Improving WordPress Multisite: Simplifying Features and Enhancing the User Experience',
+					'menu_order' => 1,
+					'meta'       => array(
+						'_pd_talk_year'  => '2025',
+						'_pd_talk_event' => 'WordCamp US, Portland (OR)',
+						'_pd_talk_url'   => 'https://wordpress.tv/2025/09/03/improving-wordpress-multisite-simplifying-features-and-enhancing-the-user-experience/',
+					),
+				),
+				array(
+					'title'      => 'Dynamic Blocks from 0 to 100 in 30 Minutes',
+					'menu_order' => 2,
 					'meta'       => array(
 						'_pd_talk_year'  => '2026',
 						'_pd_talk_event' => 'WordCamp Vienna',
+						'_pd_talk_url'   => 'https://wordpress.tv/2026/04/25/dynamic-blocks-from-0-to-100-in-30-minutes/',
 					),
 				),
 				array(
 					'title'      => 'Contributor Day Table Lead',
-					'menu_order' => 1,
+					'menu_order' => 3,
 					'meta'       => array(
 						'_pd_talk_year'  => '2026',
 						'_pd_talk_event' => 'WordCamp Europe, Kraków',
-					),
-				),
-				array(
-					'title'      => __( 'Regular speaker & attendee', 'ploetner-dev-blocks' ),
-					'menu_order' => 2,
-					'meta'       => array(
-						'_pd_talk_year'  => '2017 –',
-						'_pd_talk_event' => 'WordCamp Europe',
+						'_pd_talk_url'   => 'https://europe.wordcamp.org/2026/community/contributor-day/',
 					),
 				),
 			),

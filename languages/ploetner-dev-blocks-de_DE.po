@@ -1,37 +1,43 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Ploetner Dev Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ploetner-dev-blocks\n"
+"POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
+"PO-Revision-Date: 2026-09-27T20:01:20+00:00\n"
 "Last-Translator: Dennis Plötner <re@lloc.de>\n"
 "Language-Team: Deutsch\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-27 10:00+0200\n"
-"Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: ploetner-dev-blocks\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
 #. Plugin Name of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:3
 msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:4 ploetner-dev-blocks.php:10
 msgid "https://ploetner.dev"
 msgstr ""
 
 #. Description of the plugin
-#: ploetner-dev-blocks.php
-msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
-msgstr "Dynamische Inhaltsblöcke (Hero, Expertise, Open Source, Vorträge, Community, CTA-Banner) und die zugehörigen Custom Post Types für die Ploetner-Dev-Website."
+#: ploetner-dev-blocks.php:5
+msgid ""
+"Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, "
+"CTA Banner) and their backing custom post types for the Ploetner Dev site."
+msgstr ""
+"Dynamische Inhaltsblöcke (Hero, Expertise, Open Source, Vorträge, Community,"
+" CTA-Banner) und die zugehörigen Custom Post Types für die Ploetner-Dev-"
+"Website."
 
 #. Author of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:9
 msgid "Dennis Ploetner"
 msgstr ""
 
@@ -43,14 +49,18 @@ msgstr "CTA-Banner"
 msgid "Need a WordPress technical audit?"
 msgstr "Brauchst du ein technisches WordPress-Audit?"
 
-#: src/Blocks/Block/CtaBanner.php:37
-#: src/Blocks/Section.php:37
+#: src/Blocks/Block/CtaBanner.php:37 src/Blocks/Section.php:37
 msgid "Heading"
 msgstr "Überschrift"
 
 #: src/Blocks/Block/CtaBanner.php:40
-msgid "I help enterprise teams find and fix critical issues in their WordPress infrastructure. Fast turnaround, structured results."
-msgstr "Ich helfe Enterprise-Teams, kritische Probleme in ihrer WordPress-Infrastruktur zu finden und zu beheben. Schnell, mit strukturierten Ergebnissen."
+msgid ""
+"I help enterprise teams find and fix critical issues in their WordPress "
+"infrastructure. Fast turnaround, structured results."
+msgstr ""
+"Ich helfe Enterprise-Teams, kritische Probleme in ihrer WordPress-"
+"Infrastruktur zu finden und zu beheben. Schnell, mit strukturierten "
+"Ergebnissen."
 
 #: src/Blocks/Block/CtaBanner.php:41
 msgid "Text"
@@ -109,8 +119,16 @@ msgid "Phonetic"
 msgstr "Lautschrift"
 
 #: src/Blocks/Block/Hero.php:63
-msgid "I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures. Programming professionally since 1997. Speaking at WordCamps across Europe and the US."
-msgstr "Ich baue WordPress-Lösungen für Unternehmen, pflege Open-Source-Projekte, die tausende Websites nutzen, und helfe Teams, robuste und skalierbare Architekturen auszuliefern. Ich programmiere beruflich seit 1997 und spreche auf WordCamps in Europa und den USA."
+msgid ""
+"I build enterprise WordPress solutions, maintain open-source projects used "
+"by thousands, and help teams ship robust, scalable architectures. "
+"Programming professionally since 1997. Speaking at WordCamps across Europe "
+"and the US."
+msgstr ""
+"Ich baue WordPress-Lösungen für Unternehmen, pflege Open-Source-Projekte, "
+"die tausende Websites nutzen, und helfe Teams, robuste und skalierbare "
+"Architekturen auszuliefern. Ich programmiere beruflich seit 1997 und spreche"
+" auf WordCamps in Europa und den USA."
 
 #: src/Blocks/Block/Hero.php:64
 msgid "Bio"
@@ -180,8 +198,7 @@ msgstr "Meta 4 Bezeichnung"
 msgid "Meta 4 value"
 msgstr "Meta 4 Wert"
 
-#: src/Blocks/Block/SectionBlock/Community.php:32
-#: src/Patterns.php:142
+#: src/Blocks/Block/SectionBlock/Community.php:32 src/Patterns.php:142
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr "Community"
@@ -206,8 +223,7 @@ msgstr "Community-Einträge im Dashboard anlegen."
 msgid "Learn more ↗"
 msgstr "Mehr erfahren ↗"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:32
-#: src/Patterns.php:139
+#: src/Blocks/Block/SectionBlock/Expertise.php:32 src/Patterns.php:139
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr "Expertise"
@@ -221,15 +237,18 @@ msgid "What I do best"
 msgstr "Was ich am besten kann"
 
 #: src/Blocks/Block/SectionBlock/Expertise.php:42
-msgid "Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure."
-msgstr "Tiefe Spezialisierung auf WordPress im Enterprise-Maßstab, von der Plugin-Architektur bis zur Multisite-Infrastruktur."
+msgid ""
+"Deep specialization in WordPress at enterprise scale, from plugin "
+"architecture to multisite infrastructure."
+msgstr ""
+"Tiefe Spezialisierung auf WordPress im Enterprise-Maßstab, von der Plugin-"
+"Architektur bis zur Multisite-Infrastruktur."
 
 #: src/Blocks/Block/SectionBlock/Expertise.php:50
 msgid "Add expertise items in the dashboard."
 msgstr "Expertise-Einträge im Dashboard anlegen."
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:29
-#: src/Patterns.php:140
+#: src/Blocks/Block/SectionBlock/OpenSource.php:29 src/Patterns.php:140
 msgid "Open Source"
 msgstr "Open Source"
 
@@ -253,8 +272,7 @@ msgstr "Projekte im Dashboard anlegen."
 msgid "View project ↗"
 msgstr "Projekt ansehen ↗"
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:31
-#: src/Patterns.php:141
+#: src/Blocks/Block/SectionBlock/Speaking.php:31 src/Patterns.php:141
 msgid "Speaking"
 msgstr "Vorträge"
 
@@ -274,8 +292,7 @@ msgstr "Wissen teilen auf WordCamps und Meetups in Europa und den USA."
 msgid "Add talks in the dashboard."
 msgstr "Vorträge im Dashboard anlegen."
 
-#: src/Blocks/BlockCategory.php:41
-#: src/Patterns.php:43
+#: src/Blocks/BlockCategory.php:41 src/Patterns.php:43
 msgid "ploetner.dev"
 msgstr "ploetner.dev"
 
@@ -361,14 +378,12 @@ msgstr "Tech-Tags"
 msgid "Separated by · (middot)."
 msgstr "Getrennt durch · (Mittelpunkt)."
 
-#: src/PostTypes/PostTypes.php:71
-#: src/PostTypes/PostTypes.php:91
+#: src/PostTypes/PostTypes.php:71 src/PostTypes/PostTypes.php:91
 #: src/PostTypes/PostTypes.php:105
 msgid "Link URL"
 msgstr "Link-URL"
 
-#: src/PostTypes/PostTypes.php:77
-#: src/PostTypes/PostTypes.php:111
+#: src/PostTypes/PostTypes.php:77 src/PostTypes/PostTypes.php:111
 msgid "Link text"
 msgstr "Linktext"
 
@@ -404,91 +419,136 @@ msgstr "%s hinzufügen"
 msgid "Edit %s"
 msgstr "%s bearbeiten"
 
-#: src/Seeder.php:187
-msgid "Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies. Contributor to wp-multi-network."
-msgstr "Komplexe Multisite-Architekturen für Enterprise-Kunden. Netzwerkverwaltung, Site-Scaffolding, Datenstrategien über Sites hinweg. Contributor bei wp-multi-network."
+#: src/Seeder.php:190
+msgid ""
+"Complex multisite architectures for enterprise clients. Network management, "
+"site scaffolding, cross-site data strategies."
+msgstr ""
+"Komplexe Multisite-Architekturen für Enterprise-Kunden. Netzwerkverwaltung, "
+"Site-Scaffolding, Datenstrategien über Sites hinweg."
 
-#: src/Seeder.php:192
-msgid "Scalable plugin architectures using the Modularity framework. REST APIs, Block Editor integration, custom database layers, extension systems."
-msgstr "Skalierbare Plugin-Architekturen mit dem Modularity-Framework. REST-APIs, Block-Editor-Integration, eigene Datenbankschichten, Erweiterungssysteme."
+#: src/Seeder.php:195
+msgid ""
+"Scalable plugin architectures using the Modularity framework. REST APIs, "
+"Block Editor integration, custom database layers, extension systems."
+msgstr ""
+"Skalierbare Plugin-Architekturen mit dem Modularity-Framework. REST-APIs, "
+"Block-Editor-Integration, eigene Datenbankschichten, Erweiterungssysteme."
 
-#: src/Seeder.php:197
-msgid "Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging PHP backends with modern JavaScript frontends."
-msgstr "Dynamische Blöcke, DataViews, DataForms, eigene Editor-Erlebnisse. Die Brücke zwischen PHP-Backends und modernen JavaScript-Frontends."
+#: src/Seeder.php:200
+msgid ""
+"Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging "
+"PHP backends with modern JavaScript frontends."
+msgstr ""
+"Dynamische Blöcke, DataViews, DataForms, eigene Editor-Erlebnisse. Die "
+"Brücke zwischen PHP-Backends und modernen JavaScript-Frontends."
 
-#: src/Seeder.php:201
+#: src/Seeder.php:204
 msgid "Code Quality & CI/CD"
 msgstr "Codequalität & CI/CD"
 
-#: src/Seeder.php:202
-msgid "PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer workflows. Automated pipelines that catch problems before they ship."
-msgstr "PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer-Workflows. Automatisierte Pipelines, die Probleme finden, bevor sie live gehen."
+#: src/Seeder.php:205
+msgid ""
+"PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer workflows. "
+"Automated pipelines that catch problems before they ship."
+msgstr ""
+"PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer-Workflows. "
+"Automatisierte Pipelines, die Probleme finden, bevor sie live gehen."
 
-#: src/Seeder.php:206
+#: src/Seeder.php:209
 msgid "SSO & Authentication"
 msgstr "SSO & Authentifizierung"
 
-#: src/Seeder.php:207
-msgid "OIDC/OAuth2 integrations, Auth0, Keycloak. Secure authentication flows for enterprise WordPress installations."
-msgstr "OIDC/OAuth2-Integrationen, Auth0, Keycloak. Sichere Anmeldeabläufe für WordPress-Installationen im Enterprise-Umfeld."
+#: src/Seeder.php:210
+msgid ""
+"OIDC/OAuth2 integrations, Auth0, Keycloak. Secure authentication flows for "
+"enterprise WordPress installations."
+msgstr ""
+"OIDC/OAuth2-Integrationen, Auth0, Keycloak. Sichere Anmeldeabläufe für "
+"WordPress-Installationen im Enterprise-Umfeld."
 
-#: src/Seeder.php:211
+#: src/Seeder.php:214
 msgid "Open-Source Maintenance"
 msgstr "Open-Source-Pflege"
 
-#: src/Seeder.php:212
-msgid "14+ years maintaining public plugins. Community stewardship, backwards compatibility, responsible release cycles."
-msgstr "Über 14 Jahre Pflege öffentlicher Plugins. Verantwortung für die Community, Rückwärtskompatibilität, verlässliche Release-Zyklen."
+#: src/Seeder.php:215
+msgid ""
+"14+ years maintaining public plugins. Community stewardship, backwards "
+"compatibility, responsible release cycles."
+msgstr ""
+"Über 14 Jahre Pflege öffentlicher Plugins. Verantwortung für die Community, "
+"Rückwärtskompatibilität, verlässliche Release-Zyklen."
 
-#: src/Seeder.php:219
-msgid "A multilingual plugin for WordPress Multisite, actively maintained since 2011. Helps thousands of sites run in multiple languages."
-msgstr "Ein Mehrsprachigkeits-Plugin für WordPress Multisite, aktiv gepflegt seit 2011. Tausende Websites laufen damit in mehreren Sprachen."
+#: src/Seeder.php:222
+msgid ""
+"A multilingual plugin for WordPress Multisite, actively maintained since "
+"2011. Helps thousands of sites run in multiple languages."
+msgstr ""
+"Ein Mehrsprachigkeits-Plugin für WordPress Multisite, aktiv gepflegt seit "
+"2011. Tausende Websites laufen damit in mehreren Sprachen."
 
-#: src/Seeder.php:224
+#: src/Seeder.php:227
 msgid "View on WordPress.org ↗"
 msgstr "Auf WordPress.org ansehen ↗"
 
-#: src/Seeder.php:229
-msgid "A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n commands directly through Composer scripts."
-msgstr "Ein Composer-Plugin rund um wp-cli/i18n-command. Stellt die WordPress-i18n-Befehle direkt als Composer-Scripts bereit."
+#: src/Seeder.php:232
+msgid ""
+"A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n "
+"commands directly through Composer scripts."
+msgstr ""
+"Ein Composer-Plugin rund um wp-cli/i18n-command. Stellt die "
+"WordPress-i18n-Befehle direkt als Composer-Scripts bereit."
 
-#: src/Seeder.php:234
-#: src/Seeder.php:244
+#: src/Seeder.php:237 src/Seeder.php:247
 msgid "View on GitHub ↗"
 msgstr "Auf GitHub ansehen ↗"
 
-#: src/Seeder.php:239
-msgid "Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple networks within a single WordPress installation."
-msgstr "Contributor. PHPStan Level 8 und PHPCS-Konformität. Mehrere Netzwerke in einer einzigen WordPress-Installation."
+#: src/Seeder.php:242
+msgid ""
+"Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple "
+"networks within a single WordPress installation."
+msgstr ""
+"Contributor. PHPStan Level 8 und PHPCS-Konformität. Mehrere Netzwerke in "
+"einer einzigen WordPress-Installation."
 
-#: src/Seeder.php:266
-msgid "Regular speaker & attendee"
-msgstr "Regelmäßig als Speaker & Teilnehmer dabei"
-
-#: src/Seeder.php:276
+#: src/Seeder.php:291
 msgid "WordPress Meetup Milan"
 msgstr "WordPress Meetup Mailand"
 
-#: src/Seeder.php:277
-msgid "Co-organizing the local WordPress community in Milan. Regular events, knowledge sharing, and connecting developers with the broader ecosystem."
-msgstr "Mitorganisator der lokalen WordPress-Community in Mailand. Regelmäßige Events, Wissensaustausch und die Vernetzung von Entwicklern mit dem großen Ökosystem."
+#: src/Seeder.php:292
+msgid ""
+"Co-organizing the local WordPress community in Milan. Regular events, "
+"knowledge sharing, and connecting developers with the broader ecosystem."
+msgstr ""
+"Mitorganisator der lokalen WordPress-Community in Mailand. Regelmäßige "
+"Events, Wissensaustausch und die Vernetzung von Entwicklern mit dem großen "
+"Ökosystem."
 
-#: src/Seeder.php:280
+#: src/Seeder.php:295
 msgid "Meetup Organizer"
 msgstr "Meetup-Organisator"
 
-#: src/Seeder.php:285
-msgid "Co-founder of an Italian-language blog for WordPress developers. Technical article series covering Git, Composer, CI/CD, static analysis, and testing."
-msgstr "Mitgründer eines italienischsprachigen Blogs für WordPress-Entwickler. Technische Artikelserien zu Git, Composer, CI/CD, statischer Analyse und Testing."
+#: src/Seeder.php:300
+msgid ""
+"Co-founder of an Italian-language blog for WordPress developers. Technical "
+"article series covering Git, Composer, CI/CD, static analysis, and testing."
+msgstr ""
+"Mitgründer eines italienischsprachigen Blogs für WordPress-Entwickler. "
+"Technische Artikelserien zu Git, Composer, CI/CD, statischer Analyse und "
+"Testing."
 
-#: src/Seeder.php:288
+#: src/Seeder.php:303
 msgid "Education"
 msgstr "Bildung"
 
-#: src/Seeder.php:293
-msgid "Advanced Professional WordPress Developer Certification. Recognized expertise in enterprise-grade WordPress development."
-msgstr "Zertifizierung als Advanced Professional WordPress Developer. Anerkannte Expertise in WordPress-Entwicklung auf Enterprise-Niveau."
+#: src/Seeder.php:308
+msgid ""
+"Advanced Professional WordPress Developer Certification. Recognized "
+"expertise in enterprise-grade WordPress development."
+msgstr ""
+"Zertifizierung als Advanced Professional WordPress Developer. Anerkannte "
+"Expertise in WordPress-Entwicklung auf Enterprise-Niveau."
 
-#: src/Seeder.php:296
+#: src/Seeder.php:311
 msgid "Certification"
 msgstr "Zertifizierung"

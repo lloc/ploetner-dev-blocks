@@ -110,12 +110,18 @@ longer depends on the old `ploetner-dev-child` theme.
 
 ## Seeding sample content
 
-The sample content is **seeded automatically on plugin activation** — there is
-nothing to run by hand for a fresh install. Seeding is idempotent (items whose
-slug already exists are skipped) and version-aware: a `pd_blocks_seed_version`
-option records what has been written, and a future plugin version that adds new
-sample items seeds them on the next admin load. The data lives in one place,
-`src/Seeder.php`.
+The sample content is **seeded automatically on the first admin request of each
+site** (`admin_init`), which right after activation is the redirect to
+`plugins.php`. There is nothing to run by hand for a fresh install or a new
+network site. It deliberately does not run on the activation hook: in that
+request the plugin is not active yet, so its post types are unregistered and
+its translations are not found.
+
+Seeding is idempotent (items whose slug already exists, in any status except
+trash, are skipped) and version-aware: a per-site `pd_blocks_seed_version`
+option records what has been written. Bump `Seeder::SEED_VERSION` when the
+sample data changes; every site picks up missing items on its next admin load.
+The data lives in one place, `src/Seeder.php`.
 
 The WP-CLI seeders remain available for re-seeding or CI. Each is a thin wrapper
 over `Seeder` and runs only its own post type:

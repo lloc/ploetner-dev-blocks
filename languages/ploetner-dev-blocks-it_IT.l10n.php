@@ -1,2 +1,2 @@
 <?php
-return ['domain'=>'ploetner-dev-blocks','plural-forms'=>NULL,'language'=>'','project-id-version'=>'Ploetner Dev Blocks 1.0.0','pot-creation-date'=>'2026-06-03T09:10:52+00:00','po-revision-date'=>'2026-09-27T10:46:50+00:00','x-generator'=>'WP-CLI 2.11.0','messages'=>[]];
+return ['domain'=>'ploetner-dev-blocks','plural-forms'=>NULL,'language'=>'','project-id-version'=>'Ploetner Dev Blocks 1.0.0','pot-creation-date'=>'2026-06-03T09:10:52+00:00','po-revision-date'=>'2026-09-27T20:01:20+00:00','x-generator'=>'WP-CLI 2.11.0','messages'=>[]];

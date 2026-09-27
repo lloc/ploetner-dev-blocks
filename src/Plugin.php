@@ -56,8 +56,12 @@ class Plugin {
 		( new Assets() )->register();
 		( new Patterns() )->register();
 
-		// Catch-up seeding after a version bump (plugin updates do not fire the
-		// activation hook). Guarded by an autoloaded option, so it is cheap.
+		// Seeding runs on admin_init, not on the activation hook: during the
+		// activation request the plugin is not active yet, so its post types are
+		// not registered and core has not registered the Domain Path for
+		// just-in-time translations (seeded content would be English). The
+		// redirect to plugins.php right after activation triggers it instead.
+		// Guarded by an autoloaded option per site, so it is cheap.
 		add_action( 'admin_init', array( new Seeder(), 'maybe_seed' ) );
 
 		foreach ( $this->blocks() as $block ) {

@@ -42,7 +42,7 @@ class SeederTest extends TestCase {
 		);
 		$this->assertCount( 6, $data['pd_expertise'] );
 		$this->assertCount( 3, $data['pd_project'] );
-		$this->assertCount( 3, $data['pd_talk'] );
+		$this->assertCount( 4, $data['pd_talk'] );
 		$this->assertCount( 3, $data['pd_community'] );
 
 		// Projects carry the three meta keys; talks carry no content.
@@ -51,6 +51,11 @@ class SeederTest extends TestCase {
 			array_keys( $data['pd_project'][0]['meta'] )
 		);
 		$this->assertArrayNotHasKey( 'content', $data['pd_talk'][0] );
+
+		// Every talk links its title.
+		foreach ( $data['pd_talk'] as $talk ) {
+			$this->assertStringStartsWith( 'https://', $talk['meta']['_pd_talk_url'] );
+		}
 	}
 
 	/**
@@ -98,7 +103,7 @@ class SeederTest extends TestCase {
 
 		$counts = ( new Seeder() )->seed();
 
-		$this->assertSame( 15, $counts['created'] );
+		$this->assertSame( 16, $counts['created'] );
 		$this->assertSame( 0, $counts['skipped'] );
 		$this->assertSame( 0, $counts['failed'] );
 	}
@@ -134,6 +139,6 @@ class SeederTest extends TestCase {
 
 		$counts = ( new Seeder() )->seed( 'pd_talk' );
 
-		$this->assertSame( 3, $counts['created'] );
+		$this->assertSame( 4, $counts['created'] );
 	}
 }

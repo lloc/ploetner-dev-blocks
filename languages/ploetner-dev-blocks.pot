@@ -9,29 +9,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-27T11:17:53+00:00\n"
+"POT-Creation-Date: 2026-09-27T20:01:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ploetner-dev-blocks\n"
 
 #. Plugin Name of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:3
 msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:4
+#: ploetner-dev-blocks.php:10
 msgid "https://ploetner.dev"
 msgstr ""
 
 #. Description of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:5
 msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
 msgstr ""
 
 #. Author of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:9
 msgid "Dennis Ploetner"
 msgstr ""
 
@@ -404,91 +405,87 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: src/Seeder.php:187
-msgid "Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies. Contributor to wp-multi-network."
+#: src/Seeder.php:190
+msgid "Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies."
 msgstr ""
 
-#: src/Seeder.php:192
+#: src/Seeder.php:195
 msgid "Scalable plugin architectures using the Modularity framework. REST APIs, Block Editor integration, custom database layers, extension systems."
 msgstr ""
 
-#: src/Seeder.php:197
+#: src/Seeder.php:200
 msgid "Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging PHP backends with modern JavaScript frontends."
 msgstr ""
 
-#: src/Seeder.php:201
+#: src/Seeder.php:204
 msgid "Code Quality & CI/CD"
 msgstr ""
 
-#: src/Seeder.php:202
+#: src/Seeder.php:205
 msgid "PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer workflows. Automated pipelines that catch problems before they ship."
 msgstr ""
 
-#: src/Seeder.php:206
+#: src/Seeder.php:209
 msgid "SSO & Authentication"
 msgstr ""
 
-#: src/Seeder.php:207
+#: src/Seeder.php:210
 msgid "OIDC/OAuth2 integrations, Auth0, Keycloak. Secure authentication flows for enterprise WordPress installations."
 msgstr ""
 
-#: src/Seeder.php:211
+#: src/Seeder.php:214
 msgid "Open-Source Maintenance"
 msgstr ""
 
-#: src/Seeder.php:212
+#: src/Seeder.php:215
 msgid "14+ years maintaining public plugins. Community stewardship, backwards compatibility, responsible release cycles."
 msgstr ""
 
-#: src/Seeder.php:219
+#: src/Seeder.php:222
 msgid "A multilingual plugin for WordPress Multisite, actively maintained since 2011. Helps thousands of sites run in multiple languages."
 msgstr ""
 
-#: src/Seeder.php:224
+#: src/Seeder.php:227
 msgid "View on WordPress.org ↗"
 msgstr ""
 
-#: src/Seeder.php:229
+#: src/Seeder.php:232
 msgid "A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n commands directly through Composer scripts."
 msgstr ""
 
-#: src/Seeder.php:234
-#: src/Seeder.php:244
+#: src/Seeder.php:237
+#: src/Seeder.php:247
 msgid "View on GitHub ↗"
 msgstr ""
 
-#: src/Seeder.php:239
+#: src/Seeder.php:242
 msgid "Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple networks within a single WordPress installation."
 msgstr ""
 
-#: src/Seeder.php:266
-msgid "Regular speaker & attendee"
-msgstr ""
-
-#: src/Seeder.php:276
+#: src/Seeder.php:291
 msgid "WordPress Meetup Milan"
 msgstr ""
 
-#: src/Seeder.php:277
+#: src/Seeder.php:292
 msgid "Co-organizing the local WordPress community in Milan. Regular events, knowledge sharing, and connecting developers with the broader ecosystem."
 msgstr ""
 
-#: src/Seeder.php:280
+#: src/Seeder.php:295
 msgid "Meetup Organizer"
 msgstr ""
 
-#: src/Seeder.php:285
+#: src/Seeder.php:300
 msgid "Co-founder of an Italian-language blog for WordPress developers. Technical article series covering Git, Composer, CI/CD, static analysis, and testing."
 msgstr ""
 
-#: src/Seeder.php:288
+#: src/Seeder.php:303
 msgid "Education"
 msgstr ""
 
-#: src/Seeder.php:293
+#: src/Seeder.php:308
 msgid "Advanced Professional WordPress Developer Certification. Recognized expertise in enterprise-grade WordPress development."
 msgstr ""
 
-#: src/Seeder.php:296
+#: src/Seeder.php:311
 msgid "Certification"
 msgstr ""

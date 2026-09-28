@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-28T15:34:32+00:00\n"
+"PO-Revision-Date: 2026-09-28T15:51:49+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -64,7 +64,15 @@ msgstr ""
 msgid "Button text"
 msgstr ""
 
+#. translators: Default link target of the CTA banner. Point it to the ploetner.cloud version in your language once it exists.
+#. translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists.
 #: src/Blocks/Block/CtaBanner.php:49
+#: src/Patterns.php:106
+msgctxt "ploetner.cloud URL"
+msgid "https://ploetner.cloud/"
+msgstr ""
+
+#: src/Blocks/Block/CtaBanner.php:50
 msgid "Button URL"
 msgstr ""
 
@@ -109,7 +117,7 @@ msgid "Phonetic"
 msgstr ""
 
 #: src/Blocks/Block/Hero.php:63
-msgid "I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures. Programming professionally since 1997. Speaking at WordCamps across Europe and the US."
+msgid "I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures."
 msgstr ""
 
 #: src/Blocks/Block/Hero.php:64
@@ -189,7 +197,7 @@ msgid "Choose language"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Community.php:32
-#: src/Patterns.php:144
+#: src/Patterns.php:147
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr ""
@@ -215,7 +223,7 @@ msgid "Learn more ↗"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Expertise.php:32
-#: src/Patterns.php:141
+#: src/Patterns.php:144
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr ""
@@ -237,7 +245,7 @@ msgid "Add expertise items in the dashboard."
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/OpenSource.php:29
-#: src/Patterns.php:142
+#: src/Patterns.php:145
 msgid "Open Source"
 msgstr ""
 
@@ -262,7 +270,7 @@ msgid "View project ↗"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Speaking.php:31
-#: src/Patterns.php:143
+#: src/Patterns.php:146
 msgid "Speaking"
 msgstr ""
 
@@ -324,7 +332,7 @@ msgid "Need help? →"
 msgstr ""
 
 #. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:171
+#: src/Patterns.php:174
 #, php-format
 msgid "© %1$s Dennis Plötner, VAT number %2$s"
 msgstr ""

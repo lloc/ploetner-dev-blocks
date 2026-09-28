@@ -60,7 +60,7 @@ class Hero extends Block {
 				'label'   => __( 'Phonetic', 'ploetner-dev-blocks' ),
 			),
 			'bio'          => array(
-				'default' => __( 'I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures. Programming professionally since 1997. Speaking at WordCamps across Europe and the US.', 'ploetner-dev-blocks' ),
+				'default' => __( 'I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures.', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Bio', 'ploetner-dev-blocks' ),
 			),
 			'image'        => array(

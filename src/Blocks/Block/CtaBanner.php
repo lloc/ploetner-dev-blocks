@@ -45,7 +45,8 @@ class CtaBanner extends Block {
 				'label'   => __( 'Button text', 'ploetner-dev-blocks' ),
 			),
 			'buttonUrl'  => array(
-				'default' => 'https://ploetner.cloud',
+				/* translators: Default link target of the CTA banner. Point it to the ploetner.cloud version in your language once it exists. */
+				'default' => _x( 'https://ploetner.cloud/', 'ploetner.cloud URL', 'ploetner-dev-blocks' ),
 				'label'   => __( 'Button URL', 'ploetner-dev-blocks' ),
 			),
 		);

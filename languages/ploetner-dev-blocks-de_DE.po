@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Ploetner Dev Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ploetner-dev-blocks\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-27T20:01:20+00:00\n"
+"PO-Revision-Date: 2026-09-28T14:59:51+00:00\n"
 "Last-Translator: Dennis Plötner <re@lloc.de>\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -88,7 +88,7 @@ msgstr "Tagline"
 
 #: src/Blocks/Block/Hero.php:43
 msgid "Born in Germany."
-msgstr "Geboren in Deutschland."
+msgstr "Born in Germany."
 
 #: src/Blocks/Block/Hero.php:44
 msgid "Heading line 1"
@@ -96,7 +96,7 @@ msgstr "Überschrift Zeile 1"
 
 #: src/Blocks/Block/Hero.php:47
 msgid "Reborn in Italy."
-msgstr "Wiedergeboren in Italien."
+msgstr "Reborn in Italy."
 
 #: src/Blocks/Block/Hero.php:48
 msgid "Heading line 2"
@@ -125,10 +125,8 @@ msgid ""
 "Programming professionally since 1997. Speaking at WordCamps across Europe "
 "and the US."
 msgstr ""
-"Ich baue WordPress-Lösungen für Unternehmen, pflege Open-Source-Projekte, "
-"die tausende Websites nutzen, und helfe Teams, robuste und skalierbare "
-"Architekturen auszuliefern. Ich programmiere beruflich seit 1997 und spreche"
-" auf WordCamps in Europa und den USA."
+"Ich entwickle WordPress-Lösungen für Unternehmen und pflege Open-Source-"
+"Projekte, die von Tausenden von Websites genutzt werden."
 
 #: src/Blocks/Block/Hero.php:64
 msgid "Bio"
@@ -241,7 +239,7 @@ msgid ""
 "Deep specialization in WordPress at enterprise scale, from plugin "
 "architecture to multisite infrastructure."
 msgstr ""
-"Tiefe Spezialisierung auf WordPress im Enterprise-Maßstab, von der Plugin-"
+"Spezialisierung auf WordPress im Enterprise-Maßstab, von der Plugin-"
 "Architektur bis zur Multisite-Infrastruktur."
 
 #: src/Blocks/Block/SectionBlock/Expertise.php:50
@@ -421,27 +419,32 @@ msgstr "%s bearbeiten"
 
 #: src/Seeder.php:190
 msgid ""
-"Complex multisite architectures for enterprise clients. Network management, "
-"site scaffolding, cross-site data strategies."
+"Complex multisite architectures for enterprise clients. Multi-network "
+"installations, network management, automated site provisioning, cross-site "
+"data strategies."
 msgstr ""
-"Komplexe Multisite-Architekturen für Enterprise-Kunden. Netzwerkverwaltung, "
-"Site-Scaffolding, Datenstrategien über Sites hinweg."
+"Komplexe Multisite-Architekturen für Enterprise-Kunden. Multi-Network-"
+"Installationen, Netzwerkverwaltung, automatisierte Site-Erstellung, "
+"Datenstrategien über Sites hinweg."
 
 #: src/Seeder.php:195
 msgid ""
-"Scalable plugin architectures using the Modularity framework. REST APIs, "
-"Block Editor integration, custom database layers, extension systems."
+"Scalable plugin architectures that stay maintainable for years. Modular, "
+"testable, extensible. REST APIs, Block Editor integration, custom database "
+"layers, extension systems."
 msgstr ""
-"Skalierbare Plugin-Architekturen mit dem Modularity-Framework. REST-APIs, "
-"Block-Editor-Integration, eigene Datenbankschichten, Erweiterungssysteme."
+"Skalierbare Plugin-Architekturen, die über Jahre wartbar bleiben. Modular, "
+"testbar, erweiterbar. REST-APIs, Block-Editor-Integration, eigene "
+"Datenbankschichten, Erweiterungssysteme."
 
 #: src/Seeder.php:200
 msgid ""
 "Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging "
 "PHP backends with modern JavaScript frontends."
 msgstr ""
-"Dynamische Blöcke, DataViews, DataForms, eigene Editor-Erlebnisse. Die "
-"Brücke zwischen PHP-Backends und modernen JavaScript-Frontends."
+"Dynamische Blöcke, DataViews, DataForms und maßgeschneiderte Oberflächen im "
+"Editor. PHP im Backend und modernes JavaScript im Frontend, sauber "
+"verbunden."
 
 #: src/Seeder.php:204
 msgid "Code Quality & CI/CD"
@@ -449,11 +452,13 @@ msgstr "Codequalität & CI/CD"
 
 #: src/Seeder.php:205
 msgid ""
-"PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer workflows. "
-"Automated pipelines that catch problems before they ship."
+"Static analysis with PHPStan, coding standards with PHPCS/WPCS, tests with "
+"PHPUnit, automation with GitHub Actions and Composer. Pipelines that catch "
+"problems before they ship."
 msgstr ""
-"PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer-Workflows. "
-"Automatisierte Pipelines, die Probleme finden, bevor sie live gehen."
+"Statische Analyse mit PHPStan, Coding Standards mit PHPCS/WPCS, Tests mit "
+"PHPUnit, Automatisierung mit GitHub Actions und Composer. Pipelines, die "
+"Probleme finden, bevor sie live gehen."
 
 #: src/Seeder.php:209
 msgid "SSO & Authentication"
@@ -461,11 +466,13 @@ msgstr "SSO & Authentifizierung"
 
 #: src/Seeder.php:210
 msgid ""
-"OIDC/OAuth2 integrations, Auth0, Keycloak. Secure authentication flows for "
-"enterprise WordPress installations."
+"Single sign-on for WordPress in the enterprise. OpenID Connect and OAuth "
+"2.0, connected to existing identity providers. Secure, centrally managed, no"
+" extra passwords."
 msgstr ""
-"OIDC/OAuth2-Integrationen, Auth0, Keycloak. Sichere Anmeldeabläufe für "
-"WordPress-Installationen im Enterprise-Umfeld."
+"Single Sign-on für WordPress im Unternehmen. OpenID Connect und OAuth 2.0, "
+"angebunden an bestehende Identity Provider. Sicher, zentral verwaltet, ohne "
+"zusätzliche Passwörter."
 
 #: src/Seeder.php:214
 msgid "Open-Source Maintenance"
@@ -473,11 +480,13 @@ msgstr "Open-Source-Pflege"
 
 #: src/Seeder.php:215
 msgid ""
-"14+ years maintaining public plugins. Community stewardship, backwards "
-"compatibility, responsible release cycles."
+"Maintaining public plugins used by thousands of sites since 2011. Updates "
+"that don't break things, an open ear for the community and releases you can "
+"rely on."
 msgstr ""
-"Über 14 Jahre Pflege öffentlicher Plugins. Verantwortung für die Community, "
-"Rückwärtskompatibilität, verlässliche Release-Zyklen."
+"Seit 2011 pflege ich öffentliche Plugins, die tausende Websites nutzen. "
+"Updates, die nichts kaputt machen, ein offenes Ohr für die Community und "
+"Releases, auf die man sich verlassen kann."
 
 #: src/Seeder.php:222
 msgid ""

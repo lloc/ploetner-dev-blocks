@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-27T20:01:20+00:00\n"
+"PO-Revision-Date: 2026-09-28T14:59:51+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -405,11 +405,11 @@ msgid "Edit %s"
 msgstr ""
 
 #: src/Seeder.php:190
-msgid "Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies."
+msgid "Complex multisite architectures for enterprise clients. Multi-network installations, network management, automated site provisioning, cross-site data strategies."
 msgstr ""
 
 #: src/Seeder.php:195
-msgid "Scalable plugin architectures using the Modularity framework. REST APIs, Block Editor integration, custom database layers, extension systems."
+msgid "Scalable plugin architectures that stay maintainable for years. Modular, testable, extensible. REST APIs, Block Editor integration, custom database layers, extension systems."
 msgstr ""
 
 #: src/Seeder.php:200
@@ -421,7 +421,7 @@ msgid "Code Quality & CI/CD"
 msgstr ""
 
 #: src/Seeder.php:205
-msgid "PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer workflows. Automated pipelines that catch problems before they ship."
+msgid "Static analysis with PHPStan, coding standards with PHPCS/WPCS, tests with PHPUnit, automation with GitHub Actions and Composer. Pipelines that catch problems before they ship."
 msgstr ""
 
 #: src/Seeder.php:209
@@ -429,7 +429,7 @@ msgid "SSO & Authentication"
 msgstr ""
 
 #: src/Seeder.php:210
-msgid "OIDC/OAuth2 integrations, Auth0, Keycloak. Secure authentication flows for enterprise WordPress installations."
+msgid "Single sign-on for WordPress in the enterprise. OpenID Connect and OAuth 2.0, connected to existing identity providers. Secure, centrally managed, no extra passwords."
 msgstr ""
 
 #: src/Seeder.php:214
@@ -437,7 +437,7 @@ msgid "Open-Source Maintenance"
 msgstr ""
 
 #: src/Seeder.php:215
-msgid "14+ years maintaining public plugins. Community stewardship, backwards compatibility, responsible release cycles."
+msgid "Maintaining public plugins used by thousands of sites since 2011. Updates that don't break things, an open ear for the community and releases you can rely on."
 msgstr ""
 
 #: src/Seeder.php:222

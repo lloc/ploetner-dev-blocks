@@ -63,10 +63,13 @@ their year and event.
 ## Languages / Multisite
 
 All user-facing strings use the `ploetner-dev-blocks` text domain. The plugin
-ships German translations (`languages/*-de_DE.{po,mo,l10n.php}`). WordPress
-6.8+ loads them just in time via the `Text Domain` and `Domain Path` headers,
-so there is no `load_plugin_textdomain()` call. Keep all `__()` calls on or
-after `init`, otherwise core triggers a "called too early" notice.
+ships German translations (`languages/*-de_DE.{po,mo,l10n.php}`). The main
+plugin file calls `load_plugin_textdomain()` to register the `languages/` path.
+WordPress 6.8+ derives it from the `Domain Path` header on its own, but only for
+plugins activated per site. When the plugin is **network-activated**, core
+skips that step and the translations are never found. The call only records the
+path; strings are still loaded just in time. Keep all `__()` calls on or after
+`init`, otherwise core triggers a "called too early" notice.
 
 What follows the **site language** of each network site (e.g. `ploetner.dev/de/`
 with `de_DE`):

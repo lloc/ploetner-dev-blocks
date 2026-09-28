@@ -21,6 +21,7 @@ for the [Ploetner Dev](https://ploetner.dev) site. Extracted from the
 | `ploetner-dev/open-source` | `pd_project` posts |
 | `ploetner-dev/speaking` | `pd_talk` posts |
 | `ploetner-dev/community` | `pd_community` posts |
+| `ploetner-dev/language-switcher` | Sites of the network via the Multisite Language Switcher |
 
 All blocks render server-side via `do_blocks()` of canonical block markup, and the
 WP 7.0 editor auto-generates Inspector Controls from each block's declared
@@ -40,6 +41,23 @@ site chrome and layout, so they travel with the plugin instead of a theme:
 
 Registered in `src/Patterns.php`. Build the header/footer template parts and the
 front page from these in the Site Editor.
+
+### Language switcher
+
+`ploetner-dev/language-switcher` shows a minimal globe in the header. A click
+opens the list of languages, one per network site known to the
+[Multisite Language Switcher](https://wordpress.org/plugins/multisite-language-switcher/)
+(MLS), in the order configured there. Each link points to the translation of the
+current content when MLS has one, otherwise to that site's home page. The current
+language is marked with `aria-current`.
+
+- Built on `<details>`/`<summary>`: works without JavaScript. A small deferred
+  script (`assets/language-switcher.js`) only closes it on outside click or Escape.
+- Renders nothing when MLS is inactive or fewer than two languages exist.
+- The header pattern includes it between navigation and CTA. Headers already
+  saved in the Site Editor need the block inserted once by hand.
+- MLS is an optional runtime dependency. PHPStan reads its API from
+  `tests/phpstan/msls-stubs.php`.
 
 ## Custom post types
 

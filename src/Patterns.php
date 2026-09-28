@@ -94,7 +94,7 @@ HTML;
 	}
 
 	/**
-	 * Sticky header: site title, primary navigation, contact CTA.
+	 * Sticky header: site title, primary navigation, language switcher, contact CTA.
 	 *
 	 * @return string
 	 */
@@ -113,6 +113,8 @@ HTML;
 		<!-- wp:navigation {"overlayMenu":"mobile","overlayBackgroundColor":"base","overlayTextColor":"contrast","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"fontSize":"small","fontFamily":"display"} -->
 {$nav}
 		<!-- /wp:navigation -->
+
+		<!-- wp:ploetner-dev/language-switcher /-->
 
 		<!-- wp:buttons {"className":"ploetner-nav-cta"} -->
 		<div class="wp-block-buttons ploetner-nav-cta">

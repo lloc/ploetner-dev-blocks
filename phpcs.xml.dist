@@ -7,6 +7,9 @@
 	<file>tools</file>
 	<file>ploetner-dev-blocks.php</file>
 
+	<!-- Third-party API stubs for PHPStan, mirror foreign signatures. -->
+	<exclude-pattern>tests/phpstan/*</exclude-pattern>
+
 	<!-- Only scan PHP files. -->
 	<arg name="extensions" value="php"/>
 	<!-- Show sniff codes and progress, use colors. -->

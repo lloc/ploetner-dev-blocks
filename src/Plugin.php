@@ -15,6 +15,7 @@ use lloc\PloetnerDevBlocks\Blocks\Community;
 use lloc\PloetnerDevBlocks\Blocks\CtaBanner;
 use lloc\PloetnerDevBlocks\Blocks\Expertise;
 use lloc\PloetnerDevBlocks\Blocks\Hero;
+use lloc\PloetnerDevBlocks\Blocks\LanguageSwitcher;
 use lloc\PloetnerDevBlocks\Blocks\OpenSource;
 use lloc\PloetnerDevBlocks\Blocks\Speaking;
 use lloc\PloetnerDevBlocks\PostTypes\AdminList;
@@ -28,7 +29,7 @@ use lloc\PloetnerDevBlocks\Seeder;
 class Plugin {
 
 	/**
-	 * The plugin's six blocks.
+	 * The plugin's blocks.
 	 *
 	 * @return array<int, Block>
 	 */
@@ -40,6 +41,7 @@ class Plugin {
 			new OpenSource(),
 			new Speaking(),
 			new Community(),
+			new LanguageSwitcher(),
 		);
 	}
 

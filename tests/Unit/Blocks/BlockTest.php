@@ -25,6 +25,7 @@ class BlockTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 		Functions\stubs( array( '__' ) );
+		Functions\when( '_x' )->returnArg();
 	}
 
 	/**

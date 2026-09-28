@@ -25,6 +25,7 @@ class PatternsTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 		Functions\stubs( array( '__', 'esc_html', 'esc_url' ) );
+		Functions\when( '_x' )->returnArg();
 		Functions\when( 'wp_json_encode' )->alias( 'json_encode' );
 	}
 
@@ -103,5 +104,16 @@ class PatternsTest extends TestCase {
 		Functions\when( '__' )->justReturn( '© %1$s Dennis Plötner, USt-IdNr. %2$s' );
 
 		$this->assertStringContainsString( '© 2026 Dennis Plötner, USt-IdNr. IT13913110964', ( new Patterns() )->footer() );
+	}
+
+	/**
+	 * @covers ::header
+	 */
+	public function test_header_cta_url_is_translatable_with_context(): void {
+		Functions\when( '_x' )->alias(
+			static fn ( string $text, string $context ): string => 'ploetner.cloud URL' === $context ? 'https://ploetner.cloud/de/' : $text
+		);
+
+		$this->assertStringContainsString( 'href="https://ploetner.cloud/de/"', ( new Patterns() )->header() );
 	}
 }

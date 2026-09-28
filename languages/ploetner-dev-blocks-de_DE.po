@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Ploetner Dev Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ploetner-dev-blocks\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-28T15:49:19+00:00\n"
+"PO-Revision-Date: 2026-09-28T15:51:49+00:00\n"
 "Last-Translator: Dennis Plötner <re@lloc.de>\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -74,7 +74,16 @@ msgstr "Mehr auf ploetner.cloud →"
 msgid "Button text"
 msgstr "Button-Text"
 
-#: src/Blocks/Block/CtaBanner.php:49
+#. translators: Default link target of the CTA banner. Point it to the
+#. ploetner.cloud version in your language once it exists.
+#. translators: Link target of the header button. Point it to the
+#. ploetner.cloud version in your language once it exists.
+#: src/Blocks/Block/CtaBanner.php:49 src/Patterns.php:106
+msgctxt "ploetner.cloud URL"
+msgid "https://ploetner.cloud/"
+msgstr "https://ploetner.cloud/"
+
+#: src/Blocks/Block/CtaBanner.php:50
 msgid "Button URL"
 msgstr "Button-URL"
 
@@ -202,7 +211,7 @@ msgstr "Sprachumschalter"
 msgid "Choose language"
 msgstr "Sprache wählen"
 
-#: src/Blocks/Block/SectionBlock/Community.php:32 src/Patterns.php:144
+#: src/Blocks/Block/SectionBlock/Community.php:32 src/Patterns.php:147
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr "Community"
@@ -227,7 +236,7 @@ msgstr "Community-Einträge im Dashboard anlegen."
 msgid "Learn more ↗"
 msgstr "Mehr erfahren ↗"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:32 src/Patterns.php:141
+#: src/Blocks/Block/SectionBlock/Expertise.php:32 src/Patterns.php:144
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr "Expertise"
@@ -252,7 +261,7 @@ msgstr ""
 msgid "Add expertise items in the dashboard."
 msgstr "Expertise-Einträge im Dashboard anlegen."
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:29 src/Patterns.php:142
+#: src/Blocks/Block/SectionBlock/OpenSource.php:29 src/Patterns.php:145
 msgid "Open Source"
 msgstr "Open Source"
 
@@ -276,7 +285,7 @@ msgstr "Projekte im Dashboard anlegen."
 msgid "View project ↗"
 msgstr "Projekt ansehen ↗"
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:31 src/Patterns.php:143
+#: src/Blocks/Block/SectionBlock/Speaking.php:31 src/Patterns.php:146
 msgid "Speaking"
 msgstr "Vorträge"
 
@@ -337,7 +346,7 @@ msgid "Need help? →"
 msgstr "Hilfe gebraucht? →"
 
 #. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:171
+#: src/Patterns.php:174
 #, php-format
 msgid "© %1$s Dennis Plötner, VAT number %2$s"
 msgstr "© %1$s Dennis Plötner, USt-IdNr. %2$s"

@@ -101,7 +101,10 @@ HTML;
 	public function header(): string {
 		$nav      = $this->navigation_links();
 		$cta_text = esc_html( __( 'Need help? →', 'ploetner-dev-blocks' ) );
-		$cta_url  = esc_url( 'https://ploetner.cloud' );
+		$cta_url  = esc_url(
+			/* translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists. */
+			_x( 'https://ploetner.cloud/', 'ploetner.cloud URL', 'ploetner-dev-blocks' )
+		);
 
 		return <<<HTML
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"position":{"type":"sticky","top":"0px"}},"backgroundColor":"base","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"},"className":"ploetner-header"} -->

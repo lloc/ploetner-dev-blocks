@@ -187,12 +187,12 @@ class Seeder {
 			'pd_expertise' => array(
 				array(
 					'title'      => 'WordPress Multisite',
-					'content'    => self::paragraph( __( 'Complex multisite architectures for enterprise clients. Network management, site scaffolding, cross-site data strategies.', 'ploetner-dev-blocks' ) ),
+					'content'    => self::paragraph( __( 'Complex multisite architectures for enterprise clients. Multi-network installations, network management, automated site provisioning, cross-site data strategies.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 0,
 				),
 				array(
 					'title'      => 'Enterprise Plugins',
-					'content'    => self::paragraph( __( 'Scalable plugin architectures using the Modularity framework. REST APIs, Block Editor integration, custom database layers, extension systems.', 'ploetner-dev-blocks' ) ),
+					'content'    => self::paragraph( __( 'Scalable plugin architectures that stay maintainable for years. Modular, testable, extensible. REST APIs, Block Editor integration, custom database layers, extension systems.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 1,
 				),
 				array(
@@ -202,17 +202,17 @@ class Seeder {
 				),
 				array(
 					'title'      => __( 'Code Quality & CI/CD', 'ploetner-dev-blocks' ),
-					'content'    => self::paragraph( __( 'PHPStan Level 8, PHPCS/WPCS, PHPUnit, GitHub Actions, Composer workflows. Automated pipelines that catch problems before they ship.', 'ploetner-dev-blocks' ) ),
+					'content'    => self::paragraph( __( 'Static analysis with PHPStan, coding standards with PHPCS/WPCS, tests with PHPUnit, automation with GitHub Actions and Composer. Pipelines that catch problems before they ship.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 3,
 				),
 				array(
 					'title'      => __( 'SSO & Authentication', 'ploetner-dev-blocks' ),
-					'content'    => self::paragraph( __( 'OIDC/OAuth2 integrations, Auth0, Keycloak. Secure authentication flows for enterprise WordPress installations.', 'ploetner-dev-blocks' ) ),
+					'content'    => self::paragraph( __( 'Single sign-on for WordPress in the enterprise. OpenID Connect and OAuth 2.0, connected to existing identity providers. Secure, centrally managed, no extra passwords.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 4,
 				),
 				array(
 					'title'      => __( 'Open-Source Maintenance', 'ploetner-dev-blocks' ),
-					'content'    => self::paragraph( __( '14+ years maintaining public plugins. Community stewardship, backwards compatibility, responsible release cycles.', 'ploetner-dev-blocks' ) ),
+					'content'    => self::paragraph( __( 'Maintaining public plugins used by thousands of sites since 2011. Updates that don\'t break things, an open ear for the community and releases you can rely on.', 'ploetner-dev-blocks' ) ),
 					'menu_order' => 5,
 				),
 			),

@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-28T15:24:29+00:00\n"
+"PO-Revision-Date: 2026-09-28T15:34:32+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -320,7 +320,7 @@ msgid "Front page sections"
 msgstr ""
 
 #: src/Patterns.php:103
-msgid "Hire me →"
+msgid "Need help? →"
 msgstr ""
 
 #. translators: 1: year, 2: VAT number.

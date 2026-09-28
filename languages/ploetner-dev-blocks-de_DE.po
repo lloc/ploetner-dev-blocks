@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Ploetner Dev Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ploetner-dev-blocks\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-28T15:24:29+00:00\n"
+"PO-Revision-Date: 2026-09-28T15:34:32+00:00\n"
 "Last-Translator: Dennis Plötner <re@lloc.de>\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -335,8 +335,8 @@ msgid "Front page sections"
 msgstr "Startseiten-Abschnitte"
 
 #: src/Patterns.php:103
-msgid "Hire me →"
-msgstr "Projekt anfragen →"
+msgid "Need help? →"
+msgstr "Hilfe gebraucht? →"
 
 #. translators: 1: year, 2: VAT number.
 #: src/Patterns.php:171

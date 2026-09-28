@@ -100,7 +100,7 @@ HTML;
 	 */
 	public function header(): string {
 		$nav      = $this->navigation_links();
-		$cta_text = esc_html( __( 'Hire me →', 'ploetner-dev-blocks' ) );
+		$cta_text = esc_html( __( 'Need help? →', 'ploetner-dev-blocks' ) );
 		$cta_url  = esc_url( 'https://ploetner.cloud' );
 
 		return <<<HTML

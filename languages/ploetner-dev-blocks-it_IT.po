@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-28T15:34:32+00:00\n"
+"PO-Revision-Date: 2026-09-28T15:49:19+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -109,7 +109,7 @@ msgid "Phonetic"
 msgstr ""
 
 #: src/Blocks/Block/Hero.php:63
-msgid "I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures. Programming professionally since 1997. Speaking at WordCamps across Europe and the US."
+msgid "I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures."
 msgstr ""
 
 #: src/Blocks/Block/Hero.php:64

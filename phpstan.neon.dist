@@ -6,3 +6,5 @@ parameters:
 	paths:
 		- src
 		- ploetner-dev-blocks.php
+	scanFiles:
+		- tests/phpstan/msls-stubs.php

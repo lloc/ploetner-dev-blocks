@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-28T14:59:51+00:00\n"
+"POT-Creation-Date: 2026-09-28T15:34:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -181,8 +181,16 @@ msgstr ""
 msgid "Meta 4 value"
 msgstr ""
 
+#: src/Blocks/Block/LanguageSwitcher.php:48
+msgid "Language switcher"
+msgstr ""
+
+#: src/Blocks/Block/LanguageSwitcher.php:82
+msgid "Choose language"
+msgstr ""
+
 #: src/Blocks/Block/SectionBlock/Community.php:32
-#: src/Patterns.php:142
+#: src/Patterns.php:144
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr ""
@@ -208,7 +216,7 @@ msgid "Learn more ↗"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Expertise.php:32
-#: src/Patterns.php:139
+#: src/Patterns.php:141
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr ""
@@ -230,7 +238,7 @@ msgid "Add expertise items in the dashboard."
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/OpenSource.php:29
-#: src/Patterns.php:140
+#: src/Patterns.php:142
 msgid "Open Source"
 msgstr ""
 
@@ -255,7 +263,7 @@ msgid "View project ↗"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Speaking.php:31
-#: src/Patterns.php:141
+#: src/Patterns.php:143
 msgid "Speaking"
 msgstr ""
 
@@ -313,11 +321,11 @@ msgid "Front page sections"
 msgstr ""
 
 #: src/Patterns.php:103
-msgid "Hire me →"
+msgid "Need help? →"
 msgstr ""
 
 #. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:169
+#: src/Patterns.php:171
 #, php-format
 msgid "© %1$s Dennis Plötner, VAT number %2$s"
 msgstr ""

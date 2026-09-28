@@ -84,8 +84,8 @@ class PatternsTest extends TestCase {
 	public function test_header_uses_translated_labels_with_stable_anchors(): void {
 		Functions\when( '__' )->alias(
 			static fn ( string $text ): string => array(
-				'Speaking'  => 'Vorträge',
-				'Hire me →' => 'Projekt anfragen →',
+				'Speaking'     => 'Vorträge',
+				'Need help? →' => 'Hilfe gebraucht? →',
 			)[ $text ] ?? $text
 		);
 
@@ -93,7 +93,7 @@ class PatternsTest extends TestCase {
 
 		$this->assertStringContainsString( '<!-- wp:navigation-link {"label":"Vorträge","url":"#speaking"} /-->', $html );
 		$this->assertStringContainsString( '<!-- wp:navigation-link {"label":"Expertise","url":"#expertise"} /-->', $html );
-		$this->assertStringContainsString( '>Projekt anfragen →</a>', $html );
+		$this->assertStringContainsString( '>Hilfe gebraucht? →</a>', $html );
 	}
 
 	/**

@@ -14,279 +14,278 @@ msgstr ""
 "X-Domain: ploetner-dev-blocks\n"
 
 #. Plugin Name of the plugin
-#: ploetner-dev-blocks.php:3
+#: ploetner-dev-blocks.php
 msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: ploetner-dev-blocks.php:4
-#: ploetner-dev-blocks.php:10
+#: ploetner-dev-blocks.php
 msgid "https://ploetner.dev"
 msgstr ""
 
 #. Description of the plugin
-#: ploetner-dev-blocks.php:5
+#: ploetner-dev-blocks.php
 msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
 msgstr ""
 
 #. Author of the plugin
-#: ploetner-dev-blocks.php:9
+#: ploetner-dev-blocks.php
 msgid "Dennis Ploetner"
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:27
+#: src/Blocks/CtaBanner.php:27
 msgid "CTA Banner"
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:36
+#: src/Blocks/CtaBanner.php:36
 msgid "Need a WordPress technical audit?"
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:37
-#: src/Blocks/Section.php:37
+#: src/Blocks/CtaBanner.php:37
+#: src/Blocks/Section.php:47
 msgid "Heading"
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:40
+#: src/Blocks/CtaBanner.php:40
 msgid "I help enterprise teams find and fix critical issues in their WordPress infrastructure. Fast turnaround, structured results."
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:41
+#: src/Blocks/CtaBanner.php:41
 msgid "Text"
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:44
+#: src/Blocks/CtaBanner.php:44
 msgid "Learn more at ploetner.cloud →"
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:45
+#: src/Blocks/CtaBanner.php:45
 msgid "Button text"
 msgstr ""
 
 #. translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists.
-#: src/Blocks/Block/CtaBanner.php:49
+#: src/Blocks/CtaBanner.php:49
 #: src/Patterns.php:114
 msgctxt "ploetner.cloud URL"
 msgid "https://ploetner.cloud/"
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:50
+#: src/Blocks/CtaBanner.php:50
 msgid "Button URL"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:30
+#: src/Blocks/Hero.php:30
 msgid "Hero"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:40
+#: src/Blocks/Hero.php:40
 msgid "Tagline"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:43
+#: src/Blocks/Hero.php:43
 msgid "Born in Germany."
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:44
+#: src/Blocks/Hero.php:44
 msgid "Heading line 1"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:47
+#: src/Blocks/Hero.php:47
 msgid "Reborn in Italy."
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:48
+#: src/Blocks/Hero.php:48
 msgid "Heading line 2"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:51
+#: src/Blocks/Hero.php:51
 msgid "I’m"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:52
+#: src/Blocks/Hero.php:52
 msgid "Heading lead-in"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:56
+#: src/Blocks/Hero.php:56
 msgid "Highlighted name"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:60
+#: src/Blocks/Hero.php:60
 msgid "Phonetic"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:63
+#: src/Blocks/Hero.php:63
 msgid "I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures."
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:64
+#: src/Blocks/Hero.php:64
 msgid "Bio"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:68
+#: src/Blocks/Hero.php:68
 msgid "Portrait image URL"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:72
+#: src/Blocks/Hero.php:72
 msgid "Portrait alt text"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:75
+#: src/Blocks/Hero.php:75
 msgid "Current role"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:76
+#: src/Blocks/Hero.php:76
 msgid "Meta 1 label"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:79
+#: src/Blocks/Hero.php:79
 msgid "Senior Web Engineer at Syde"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:80
+#: src/Blocks/Hero.php:80
 msgid "Meta 1 value"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:83
+#: src/Blocks/Hero.php:83
 msgid "Based in"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:84
+#: src/Blocks/Hero.php:84
 msgid "Meta 2 label"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:87
+#: src/Blocks/Hero.php:87
 #: src/Contact.php:37
 msgid "Italy"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:88
+#: src/Blocks/Hero.php:88
 msgid "Meta 2 value"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:91
+#: src/Blocks/Hero.php:91
 msgid "Languages"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:92
+#: src/Blocks/Hero.php:92
 msgid "Meta 3 label"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:96
+#: src/Blocks/Hero.php:96
 msgid "Meta 3 value"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:99
+#: src/Blocks/Hero.php:99
 msgid "Building since"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:100
+#: src/Blocks/Hero.php:100
 msgid "Meta 4 label"
 msgstr ""
 
-#: src/Blocks/Block/Hero.php:104
+#: src/Blocks/Hero.php:104
 msgid "Meta 4 value"
 msgstr ""
 
-#: src/Blocks/Block/LanguageSwitcher.php:48
+#: src/Blocks/LanguageSwitcher.php:49
 msgid "Language switcher"
 msgstr ""
 
-#: src/Blocks/Block/LanguageSwitcher.php:82
+#: src/Blocks/LanguageSwitcher.php:83
 msgid "Choose language"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Community.php:32
+#: src/Blocks/Community.php:32
 #: src/Patterns.php:155
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Community.php:40
+#: src/Blocks/Community.php:40
 msgid "04 / Community"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Community.php:41
+#: src/Blocks/Community.php:41
 msgid "Building together"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Community.php:42
+#: src/Blocks/Community.php:42
 msgid "WordPress is open source, and so is how I work."
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Community.php:50
+#: src/Blocks/Community.php:50
 msgid "Add community items in the dashboard."
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Community.php:68
+#: src/Blocks/Community.php:68
 msgid "Learn more ↗"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:33
+#: src/Blocks/Expertise.php:33
 #: src/Patterns.php:152
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:41
+#: src/Blocks/Expertise.php:41
 msgid "01 / Expertise"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:42
+#: src/Blocks/Expertise.php:42
 msgid "What I do best"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:43
+#: src/Blocks/Expertise.php:43
 msgid "Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure."
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:51
+#: src/Blocks/Expertise.php:51
 msgid "Add expertise items in the dashboard."
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:29
+#: src/Blocks/OpenSource.php:29
 #: src/Patterns.php:153
 msgid "Open Source"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:37
+#: src/Blocks/OpenSource.php:37
 msgid "02 / Open Source"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:38
+#: src/Blocks/OpenSource.php:38
 msgid "Projects I work on"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:39
+#: src/Blocks/OpenSource.php:39
 msgid "Code I build and share with the community."
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:47
+#: src/Blocks/OpenSource.php:47
 msgid "Add projects in the dashboard."
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:74
+#: src/Blocks/OpenSource.php:74
 msgid "View project ↗"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:31
+#: src/Blocks/Speaking.php:31
 #: src/Patterns.php:154
 msgid "Speaking"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:39
+#: src/Blocks/Speaking.php:39
 msgid "03 / Speaking"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:40
+#: src/Blocks/Speaking.php:40
 msgid "Talks & appearances"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:41
+#: src/Blocks/Speaking.php:41
 msgid "Sharing knowledge at WordCamps and meetups across Europe and the US."
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:49
+#: src/Blocks/Speaking.php:49
 msgid "Add talks in the dashboard."
 msgstr ""
 
@@ -295,23 +294,23 @@ msgstr ""
 msgid "ploetner.dev"
 msgstr ""
 
-#: src/Blocks/Section.php:33
+#: src/Blocks/Section.php:43
 msgid "Section label"
 msgstr ""
 
-#: src/Blocks/Section.php:41
+#: src/Blocks/Section.php:51
 msgid "Intro text"
 msgstr ""
 
-#: src/Blocks/Section.php:45
+#: src/Blocks/Section.php:55
 msgid "Max items (0 = all)"
 msgstr ""
 
-#: src/Blocks/Section.php:72
+#: src/Blocks/Section.php:82
 msgid "Back to top"
 msgstr ""
 
-#: src/Blocks/Section.php:121
+#: src/Blocks/Section.php:131
 msgid "(opens in a new tab)"
 msgstr ""
 
@@ -465,7 +464,7 @@ msgstr ""
 msgid "Legal notice & privacy"
 msgstr ""
 
-#: src/PostTypes/AdminList.php:96
+#: src/PostTypes/AdminList.php:91
 msgid "Order"
 msgstr ""
 
@@ -537,98 +536,98 @@ msgid "Short label shown above the card title."
 msgstr ""
 
 #. translators: %s: singular post type name.
-#: src/PostTypes/PostTypes.php:142
+#: src/PostTypes/PostTypes.php:157
 #, php-format
 msgid "Add %s"
 msgstr ""
 
 #. translators: %s: singular post type name.
-#: src/PostTypes/PostTypes.php:144
+#: src/PostTypes/PostTypes.php:159
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
-#: src/Seeder.php:190
+#: src/Seeder.php:187
 msgid "Complex multisite architectures for enterprise clients. Multi-network installations, network management, automated site provisioning, cross-site data strategies."
 msgstr ""
 
-#: src/Seeder.php:195
+#: src/Seeder.php:192
 msgid "Scalable plugin architectures that stay maintainable for years. Modular, testable, extensible. REST APIs, Block Editor integration, custom database layers, extension systems."
 msgstr ""
 
-#: src/Seeder.php:200
+#: src/Seeder.php:197
 msgid "Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging PHP backends with modern JavaScript frontends."
 msgstr ""
 
-#: src/Seeder.php:204
+#: src/Seeder.php:201
 msgid "Code Quality & CI/CD"
 msgstr ""
 
-#: src/Seeder.php:205
+#: src/Seeder.php:202
 msgid "Static analysis with PHPStan, coding standards with PHPCS/WPCS, tests with PHPUnit, automation with GitHub Actions and Composer. Pipelines that catch problems before they ship."
 msgstr ""
 
-#: src/Seeder.php:209
+#: src/Seeder.php:206
 msgid "SSO & Authentication"
 msgstr ""
 
-#: src/Seeder.php:210
+#: src/Seeder.php:207
 msgid "Single sign-on for WordPress in the enterprise. OpenID Connect and OAuth 2.0, connected to existing identity providers. Secure, centrally managed, no extra passwords."
 msgstr ""
 
-#: src/Seeder.php:214
+#: src/Seeder.php:211
 msgid "Open-Source Maintenance"
 msgstr ""
 
-#: src/Seeder.php:215
+#: src/Seeder.php:212
 msgid "Maintaining public plugins used by thousands of sites since 2011. Updates that don't break things, an open ear for the community and releases you can rely on."
 msgstr ""
 
-#: src/Seeder.php:222
+#: src/Seeder.php:219
 msgid "A multilingual plugin for WordPress Multisite, actively maintained since 2011. Helps thousands of sites run in multiple languages."
 msgstr ""
 
-#: src/Seeder.php:227
+#: src/Seeder.php:224
 msgid "View on WordPress.org ↗"
 msgstr ""
 
-#: src/Seeder.php:232
+#: src/Seeder.php:229
 msgid "A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n commands directly through Composer scripts."
 msgstr ""
 
-#: src/Seeder.php:237
-#: src/Seeder.php:247
+#: src/Seeder.php:234
+#: src/Seeder.php:244
 msgid "View on GitHub ↗"
 msgstr ""
 
-#: src/Seeder.php:242
+#: src/Seeder.php:239
 msgid "Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple networks within a single WordPress installation."
 msgstr ""
 
-#: src/Seeder.php:291
+#: src/Seeder.php:288
 msgid "WordPress Meetup Milan"
 msgstr ""
 
-#: src/Seeder.php:292
+#: src/Seeder.php:289
 msgid "Co-organizing the local WordPress community in Milan. Regular events, knowledge sharing, and connecting developers with the broader ecosystem."
 msgstr ""
 
-#: src/Seeder.php:295
+#: src/Seeder.php:292
 msgid "Meetup Organizer"
 msgstr ""
 
-#: src/Seeder.php:300
+#: src/Seeder.php:297
 msgid "Co-founder of an Italian-language blog for WordPress developers. Technical article series covering Git, Composer, CI/CD, static analysis, and testing."
 msgstr ""
 
-#: src/Seeder.php:303
+#: src/Seeder.php:300
 msgid "Education"
 msgstr ""
 
-#: src/Seeder.php:308
+#: src/Seeder.php:305
 msgid "Advanced Professional WordPress Developer Certification. Recognized expertise in enterprise-grade WordPress development."
 msgstr ""
 
-#: src/Seeder.php:311
+#: src/Seeder.php:308
 msgid "Certification"
 msgstr ""

@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace lloc\PloetnerDevBlocks\PostTypes;
 
+use lloc\PloetnerDevBlocks\Blocks\Section;
 use WP_Query;
 
 /**
@@ -69,13 +70,7 @@ class AdminList {
 
 		$orderby = $query->get( 'orderby' );
 		if ( '' === $orderby || null === $orderby ) {
-			$query->set(
-				'orderby',
-				array(
-					'menu_order' => 'ASC',
-					'date'       => 'ASC',
-				)
-			);
+			$query->set( 'orderby', Section::ORDER_BY );
 		}
 	}
 
@@ -133,9 +128,9 @@ class AdminList {
 			return;
 		}
 
-		$meta_keys = array_merge( ...array_values( self::meta_columns() ) );
-		if ( isset( $meta_keys[ $column ] ) ) {
-			echo esc_html( (string) get_post_meta( $post_id, $meta_keys[ $column ], true ) );
+		$meta_key = self::meta_columns()[ (string) get_post_type( $post_id ) ][ $column ] ?? '';
+		if ( '' !== $meta_key ) {
+			echo esc_html( (string) get_post_meta( $post_id, $meta_key, true ) );
 		}
 	}
 }

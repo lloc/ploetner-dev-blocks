@@ -119,16 +119,15 @@ class MetaBox {
 			return;
 		}
 
-		foreach ( $fields as $key => $field ) {
-			if ( ! isset( $_POST[ $key ] ) ) {
+		foreach ( array_keys( $fields ) as $key ) {
+			// Scalar check first: sanitize_text_field() silently returns '' for an
+			// array, and esc_url_raw() fatals on one (ltrim(): array given).
+			if ( ! isset( $_POST[ $key ] ) || ! is_scalar( $_POST[ $key ] ) ) {
 				continue;
 			}
-			$sanitize = $field['sanitize'] ?? 'sanitize_text_field';
-			if ( ! is_callable( $sanitize ) ) {
-				continue;
-			}
-			// Value is sanitized by the configured callback above.
-			update_post_meta( $post_id, $key, call_user_func( $sanitize, wp_unslash( $_POST[ $key ] ) ) );
+			$sanitize = PostTypes::sanitizer( $post->post_type, $key );
+			// Value is sanitized by the configured callback.
+			update_post_meta( $post_id, $key, $sanitize( wp_unslash( $_POST[ $key ] ) ) );
 		}
 	}
 }

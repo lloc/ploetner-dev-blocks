@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 namespace lloc\PloetnerDevBlocks\Blocks;
 
+use lloc\PloetnerDevBlocks\Assets;
 use lloc\PloetnerDevBlocks\Language\LanguageLinks;
 
 /**
@@ -122,14 +123,13 @@ HTML;
 	 * @return void
 	 */
 	private function enqueue_script(): void {
-		$main = dirname( __DIR__, 3 ) . '/ploetner-dev-blocks.php';
-		$file = dirname( __DIR__, 3 ) . '/assets/language-switcher.js';
+		list( $url, $ver ) = Assets::asset( 'assets/language-switcher.js' );
 
 		wp_enqueue_script(
 			self::SCRIPT,
-			plugins_url( 'assets/language-switcher.js', $main ),
+			$url,
 			array(),
-			is_readable( $file ) ? (string) filemtime( $file ) : false,
+			$ver,
 			array(
 				'in_footer' => true,
 				'strategy'  => 'defer',

@@ -129,12 +129,9 @@ class Seeder {
 			return;
 		}
 
-		$fields = PostTypes::meta_fields()[ $post_type ] ?? array();
 		foreach ( $item['meta'] ?? array() as $key => $value ) {
-			$sanitize = $fields[ $key ]['sanitize'] ?? 'sanitize_text_field';
-			if ( is_callable( $sanitize ) ) {
-				update_post_meta( $post_id, $key, $sanitize( $value ) );
-			}
+			$sanitize = PostTypes::sanitizer( $post_type, $key );
+			update_post_meta( $post_id, $key, $sanitize( $value ) );
 		}
 
 		++$counts['created'];

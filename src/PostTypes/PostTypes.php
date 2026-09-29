@@ -116,6 +116,21 @@ class PostTypes {
 	}
 
 	/**
+	 * The sanitize callback configured for a meta field, falling back to
+	 * sanitize_text_field() when none is set or the configured one is not callable.
+	 *
+	 * @param string $post_type Post type the field belongs to.
+	 * @param string $key       Meta key.
+	 *
+	 * @return callable-string
+	 */
+	public static function sanitizer( string $post_type, string $key ): string {
+		$sanitize = self::meta_fields()[ $post_type ][ $key ]['sanitize'] ?? '';
+
+		return is_callable( $sanitize ) ? $sanitize : 'sanitize_text_field';
+	}
+
+	/**
 	 * Hook post type and meta registration into `init`.
 	 *
 	 * @return void
@@ -166,8 +181,7 @@ class PostTypes {
 	 */
 	public function register_meta(): void {
 		foreach ( self::meta_fields() as $post_type => $fields ) {
-			foreach ( $fields as $key => $field ) {
-				$sanitize = $field['sanitize'] ?? 'sanitize_text_field';
+			foreach ( array_keys( $fields ) as $key ) {
 				register_post_meta(
 					$post_type,
 					$key,
@@ -175,7 +189,7 @@ class PostTypes {
 						'type'              => 'string',
 						'single'            => true,
 						'show_in_rest'      => true,
-						'sanitize_callback' => is_callable( $sanitize ) ? $sanitize : 'sanitize_text_field',
+						'sanitize_callback' => self::sanitizer( $post_type, $key ),
 						'auth_callback'     => static fn (): bool => current_user_can( 'edit_posts' ),
 					)
 				);

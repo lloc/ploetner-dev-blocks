@@ -99,12 +99,6 @@ HTML;
 			);
 		}
 
-		return <<<HTML
-<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"}}}} -->
-<div class="wp-block-columns">
-{$cards}
-</div>
-<!-- /wp:columns -->
-HTML;
+		return Section::columns( $cards );
 	}
 }

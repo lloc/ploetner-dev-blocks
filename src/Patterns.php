@@ -181,7 +181,7 @@ HTML;
 			sprintf(
 				/* translators: 1: year, 2: VAT number. */
 				__( '© %1$s Dennis Plötner, VAT number %2$s', 'ploetner-dev-blocks' ),
-				'2026',
+				gmdate( 'Y' ),
 				Contact::VAT
 			)
 		);

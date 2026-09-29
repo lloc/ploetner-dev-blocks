@@ -26,10 +26,7 @@
     "autoload": {
         "psr-4": {
             "lloc\\PloetnerDevBlocks\\": "src/"
-        },
-        "classmap": [
-            "src/Blocks/Block/"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {

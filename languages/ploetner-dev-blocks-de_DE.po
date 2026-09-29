@@ -1,329 +1,317 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Ploetner Dev Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ploetner-dev-blocks\n"
-"POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-29T11:40:14+00:00\n"
 "Last-Translator: Dennis Plötner <re@lloc.de>\n"
 "Language-Team: Deutsch\n"
-"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
+"PO-Revision-Date: 2026-09-29T11:40:14+00:00\n"
+"Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: ploetner-dev-blocks\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
 #. Plugin Name of the plugin
-#: ploetner-dev-blocks.php:3
+#: ploetner-dev-blocks.php
 msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: ploetner-dev-blocks.php:4 ploetner-dev-blocks.php:10
+#: ploetner-dev-blocks.php
 msgid "https://ploetner.dev"
 msgstr ""
 
 #. Description of the plugin
-#: ploetner-dev-blocks.php:5
-msgid ""
-"Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, "
-"CTA Banner) and their backing custom post types for the Ploetner Dev site."
-msgstr ""
-"Dynamische Inhaltsblöcke (Hero, Expertise, Open Source, Vorträge, Community,"
-" CTA-Banner) und die zugehörigen Custom Post Types für die Ploetner-Dev-"
-"Website."
+#: ploetner-dev-blocks.php
+msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
+msgstr "Dynamische Inhaltsblöcke (Hero, Expertise, Open Source, Vorträge, Community, CTA-Banner) und die zugehörigen Custom Post Types für die Ploetner-Dev-Website."
 
 #. Author of the plugin
-#: ploetner-dev-blocks.php:9
+#: ploetner-dev-blocks.php
 msgid "Dennis Ploetner"
 msgstr ""
 
-#: src/Blocks/Block/CtaBanner.php:27
+#: src/Blocks/CtaBanner.php:27
 msgid "CTA Banner"
 msgstr "CTA-Banner"
 
-#: src/Blocks/Block/CtaBanner.php:36
+#: src/Blocks/CtaBanner.php:36
 msgid "Need a WordPress technical audit?"
 msgstr "Brauchst du ein technisches WordPress-Audit?"
 
-#: src/Blocks/Block/CtaBanner.php:37 src/Blocks/Section.php:37
+#: src/Blocks/CtaBanner.php:37
+#: src/Blocks/Section.php:47
 msgid "Heading"
 msgstr "Überschrift"
 
-#: src/Blocks/Block/CtaBanner.php:40
-msgid ""
-"I help enterprise teams find and fix critical issues in their WordPress "
-"infrastructure. Fast turnaround, structured results."
-msgstr ""
-"Ich helfe Enterprise-Teams, kritische Probleme in ihrer WordPress-"
-"Infrastruktur zu finden und zu beheben. Schnell, mit strukturierten "
-"Ergebnissen."
+#: src/Blocks/CtaBanner.php:40
+msgid "I help enterprise teams find and fix critical issues in their WordPress infrastructure. Fast turnaround, structured results."
+msgstr "Ich helfe Enterprise-Teams, kritische Probleme in ihrer WordPress-Infrastruktur zu finden und zu beheben. Schnell, mit strukturierten Ergebnissen."
 
-#: src/Blocks/Block/CtaBanner.php:41
+#: src/Blocks/CtaBanner.php:41
 msgid "Text"
 msgstr "Text"
 
-#: src/Blocks/Block/CtaBanner.php:44
+#: src/Blocks/CtaBanner.php:44
 msgid "Learn more at ploetner.cloud →"
 msgstr "Mehr auf ploetner.cloud →"
 
-#: src/Blocks/Block/CtaBanner.php:45
+#: src/Blocks/CtaBanner.php:45
 msgid "Button text"
 msgstr "Button-Text"
 
-#. translators: Link target of the header button. Point it to the
-#. ploetner.cloud version in your language once it exists.
-#: src/Blocks/Block/CtaBanner.php:49 src/Patterns.php:114
+#. translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists.
+#: src/Blocks/CtaBanner.php:49
+#: src/Patterns.php:114
 msgctxt "ploetner.cloud URL"
 msgid "https://ploetner.cloud/"
 msgstr "https://ploetner.cloud/"
 
-#: src/Blocks/Block/CtaBanner.php:50
+#: src/Blocks/CtaBanner.php:50
 msgid "Button URL"
 msgstr "Button-URL"
 
-#: src/Blocks/Block/Hero.php:30
+#: src/Blocks/Hero.php:30
 msgid "Hero"
 msgstr "Hero"
 
-#: src/Blocks/Block/Hero.php:40
+#: src/Blocks/Hero.php:40
 msgid "Tagline"
 msgstr "Tagline"
 
-#: src/Blocks/Block/Hero.php:43
+#: src/Blocks/Hero.php:43
 msgid "Born in Germany."
 msgstr "Born in Germany."
 
-#: src/Blocks/Block/Hero.php:44
+#: src/Blocks/Hero.php:44
 msgid "Heading line 1"
 msgstr "Überschrift Zeile 1"
 
-#: src/Blocks/Block/Hero.php:47
+#: src/Blocks/Hero.php:47
 msgid "Reborn in Italy."
 msgstr "Reborn in Italy."
 
-#: src/Blocks/Block/Hero.php:48
+#: src/Blocks/Hero.php:48
 msgid "Heading line 2"
 msgstr "Überschrift Zeile 2"
 
-#: src/Blocks/Block/Hero.php:51
+#: src/Blocks/Hero.php:51
 msgid "I’m"
 msgstr "Ich bin"
 
-#: src/Blocks/Block/Hero.php:52
+#: src/Blocks/Hero.php:52
 msgid "Heading lead-in"
 msgstr "Überschrift Einleitung"
 
-#: src/Blocks/Block/Hero.php:56
+#: src/Blocks/Hero.php:56
 msgid "Highlighted name"
 msgstr "Hervorgehobener Name"
 
-#: src/Blocks/Block/Hero.php:60
+#: src/Blocks/Hero.php:60
 msgid "Phonetic"
 msgstr "Lautschrift"
 
-#: src/Blocks/Block/Hero.php:63
-msgid ""
-"I build enterprise WordPress solutions, maintain open-source projects used "
-"by thousands, and help teams ship robust, scalable architectures."
-msgstr ""
-"Ich entwickle WordPress-Lösungen für Unternehmen und pflege Open-Source-"
-"Projekte, die von Tausenden von Websites genutzt werden."
+#: src/Blocks/Hero.php:63
+msgid "I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures."
+msgstr "Ich entwickle WordPress-Lösungen für Unternehmen und pflege Open-Source-Projekte, die von Tausenden von Websites genutzt werden."
 
-#: src/Blocks/Block/Hero.php:64
+#: src/Blocks/Hero.php:64
 msgid "Bio"
 msgstr "Bio"
 
-#: src/Blocks/Block/Hero.php:68
+#: src/Blocks/Hero.php:68
 msgid "Portrait image URL"
 msgstr "Porträtbild-URL"
 
-#: src/Blocks/Block/Hero.php:72
+#: src/Blocks/Hero.php:72
 msgid "Portrait alt text"
 msgstr "Alt-Text des Porträts"
 
-#: src/Blocks/Block/Hero.php:75
+#: src/Blocks/Hero.php:75
 msgid "Current role"
 msgstr "Aktuelle Rolle"
 
-#: src/Blocks/Block/Hero.php:76
+#: src/Blocks/Hero.php:76
 msgid "Meta 1 label"
 msgstr "Meta 1 Bezeichnung"
 
-#: src/Blocks/Block/Hero.php:79
+#: src/Blocks/Hero.php:79
 msgid "Senior Web Engineer at Syde"
 msgstr "Senior Web Engineer bei Syde"
 
-#: src/Blocks/Block/Hero.php:80
+#: src/Blocks/Hero.php:80
 msgid "Meta 1 value"
 msgstr "Meta 1 Wert"
 
-#: src/Blocks/Block/Hero.php:83
+#: src/Blocks/Hero.php:83
 msgid "Based in"
 msgstr "Wohnhaft in"
 
-#: src/Blocks/Block/Hero.php:84
+#: src/Blocks/Hero.php:84
 msgid "Meta 2 label"
 msgstr "Meta 2 Bezeichnung"
 
-#: src/Blocks/Block/Hero.php:87 src/Contact.php:37
+#: src/Blocks/Hero.php:87
+#: src/Contact.php:37
 msgid "Italy"
 msgstr "Italien"
 
-#: src/Blocks/Block/Hero.php:88
+#: src/Blocks/Hero.php:88
 msgid "Meta 2 value"
 msgstr "Meta 2 Wert"
 
-#: src/Blocks/Block/Hero.php:91
+#: src/Blocks/Hero.php:91
 msgid "Languages"
 msgstr "Sprachen"
 
-#: src/Blocks/Block/Hero.php:92
+#: src/Blocks/Hero.php:92
 msgid "Meta 3 label"
 msgstr "Meta 3 Bezeichnung"
 
-#: src/Blocks/Block/Hero.php:96
+#: src/Blocks/Hero.php:96
 msgid "Meta 3 value"
 msgstr "Meta 3 Wert"
 
-#: src/Blocks/Block/Hero.php:99
+#: src/Blocks/Hero.php:99
 msgid "Building since"
 msgstr "Programmiere seit"
 
-#: src/Blocks/Block/Hero.php:100
+#: src/Blocks/Hero.php:100
 msgid "Meta 4 label"
 msgstr "Meta 4 Bezeichnung"
 
-#: src/Blocks/Block/Hero.php:104
+#: src/Blocks/Hero.php:104
 msgid "Meta 4 value"
 msgstr "Meta 4 Wert"
 
-#: src/Blocks/Block/LanguageSwitcher.php:48
+#: src/Blocks/LanguageSwitcher.php:49
 msgid "Language switcher"
 msgstr "Sprachumschalter"
 
-#: src/Blocks/Block/LanguageSwitcher.php:82
+#: src/Blocks/LanguageSwitcher.php:83
 msgid "Choose language"
 msgstr "Sprache wählen"
 
-#: src/Blocks/Block/SectionBlock/Community.php:32 src/Patterns.php:155
+#: src/Blocks/Community.php:32
+#: src/Patterns.php:155
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr "Community"
 
-#: src/Blocks/Block/SectionBlock/Community.php:40
+#: src/Blocks/Community.php:40
 msgid "04 / Community"
 msgstr "04 / Community"
 
-#: src/Blocks/Block/SectionBlock/Community.php:41
+#: src/Blocks/Community.php:41
 msgid "Building together"
 msgstr "Gemeinsam bauen"
 
-#: src/Blocks/Block/SectionBlock/Community.php:42
+#: src/Blocks/Community.php:42
 msgid "WordPress is open source, and so is how I work."
 msgstr "WordPress ist Open Source. Meine Arbeitsweise auch."
 
-#: src/Blocks/Block/SectionBlock/Community.php:50
+#: src/Blocks/Community.php:50
 msgid "Add community items in the dashboard."
 msgstr "Community-Einträge im Dashboard anlegen."
 
-#: src/Blocks/Block/SectionBlock/Community.php:68
+#: src/Blocks/Community.php:68
 msgid "Learn more ↗"
 msgstr "Mehr erfahren ↗"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:33 src/Patterns.php:152
+#: src/Blocks/Expertise.php:33
+#: src/Patterns.php:152
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr "Expertise"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:41
+#: src/Blocks/Expertise.php:41
 msgid "01 / Expertise"
 msgstr "01 / Expertise"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:42
+#: src/Blocks/Expertise.php:42
 msgid "What I do best"
 msgstr "Was ich am besten kann"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:43
-msgid ""
-"Deep specialization in WordPress at enterprise scale, from plugin "
-"architecture to multisite infrastructure."
-msgstr ""
-"Spezialisierung auf WordPress im Enterprise-Maßstab, von der Plugin-"
-"Architektur bis zur Multisite-Infrastruktur."
+#: src/Blocks/Expertise.php:43
+msgid "Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure."
+msgstr "Spezialisierung auf WordPress im Enterprise-Maßstab, von der Plugin-Architektur bis zur Multisite-Infrastruktur."
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:51
+#: src/Blocks/Expertise.php:51
 msgid "Add expertise items in the dashboard."
 msgstr "Expertise-Einträge im Dashboard anlegen."
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:29 src/Patterns.php:153
+#: src/Blocks/OpenSource.php:29
+#: src/Patterns.php:153
 msgid "Open Source"
 msgstr "Open Source"
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:37
+#: src/Blocks/OpenSource.php:37
 msgid "02 / Open Source"
 msgstr "02 / Open Source"
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:38
+#: src/Blocks/OpenSource.php:38
 msgid "Projects I work on"
 msgstr "Projekte, an denen ich arbeite"
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:39
+#: src/Blocks/OpenSource.php:39
 msgid "Code I build and share with the community."
 msgstr "Code, den ich baue und mit der Community teile."
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:47
+#: src/Blocks/OpenSource.php:47
 msgid "Add projects in the dashboard."
 msgstr "Projekte im Dashboard anlegen."
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:74
+#: src/Blocks/OpenSource.php:74
 msgid "View project ↗"
 msgstr "Projekt ansehen ↗"
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:31 src/Patterns.php:154
+#: src/Blocks/Speaking.php:31
+#: src/Patterns.php:154
 msgid "Speaking"
 msgstr "Vorträge"
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:39
+#: src/Blocks/Speaking.php:39
 msgid "03 / Speaking"
 msgstr "03 / Vorträge"
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:40
+#: src/Blocks/Speaking.php:40
 msgid "Talks & appearances"
 msgstr "Talks & Auftritte"
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:41
+#: src/Blocks/Speaking.php:41
 msgid "Sharing knowledge at WordCamps and meetups across Europe and the US."
 msgstr "Wissen teilen auf WordCamps und Meetups in Europa und den USA."
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:49
+#: src/Blocks/Speaking.php:49
 msgid "Add talks in the dashboard."
 msgstr "Vorträge im Dashboard anlegen."
 
-#: src/Blocks/BlockCategory.php:41 src/Patterns.php:45
+#: src/Blocks/BlockCategory.php:41
+#: src/Patterns.php:45
 msgid "ploetner.dev"
 msgstr "ploetner.dev"
 
-#: src/Blocks/Section.php:33
+#: src/Blocks/Section.php:43
 msgid "Section label"
 msgstr "Abschnittslabel"
 
-#: src/Blocks/Section.php:41
+#: src/Blocks/Section.php:51
 msgid "Intro text"
 msgstr "Einleitungstext"
 
-#: src/Blocks/Section.php:45
+#: src/Blocks/Section.php:55
 msgid "Max items (0 = all)"
 msgstr "Max. Einträge (0 = alle)"
 
-#: src/Blocks/Section.php:72
+#: src/Blocks/Section.php:82
 msgid "Back to top"
 msgstr "Nach oben"
 
-#: src/Blocks/Section.php:121
+#: src/Blocks/Section.php:131
 msgid "(opens in a new tab)"
 msgstr "(öffnet in neuem Tab)"
 
@@ -337,8 +325,7 @@ msgstr "%1$s (Serverstandort: %2$s)"
 msgid "Frankfurt am Main, Germany"
 msgstr "Frankfurt am Main, Deutschland"
 
-#. translators: Slug of the page with legal notice and privacy policy on the
-#. site in your language.
+#. translators: Slug of the page with legal notice and privacy policy on the site in your language.
 #: src/Contact.php:61
 msgctxt "legal page slug"
 msgid "legal"
@@ -361,12 +348,8 @@ msgid "VAT number (Partita IVA): %s"
 msgstr "USt-IdNr. (Partita IVA): %s"
 
 #: src/LegalPage.php:59
-msgid ""
-"Responsible for the content of this website: Dennis Plötner, address as "
-"above."
-msgstr ""
-"Verantwortlich für den Inhalt dieser Website: Dennis Plötner, Anschrift wie "
-"oben."
+msgid "Responsible for the content of this website: Dennis Plötner, address as above."
+msgstr "Verantwortlich für den Inhalt dieser Website: Dennis Plötner, Anschrift wie oben."
 
 #: src/LegalPage.php:77
 msgid "Privacy policy"
@@ -379,108 +362,54 @@ msgstr "Verantwortlicher"
 #. translators: %s: email address link.
 #: src/LegalPage.php:82
 #, php-format
-msgid ""
-"The controller within the meaning of the GDPR is Dennis Plötner, address as "
-"in the legal notice above, email %s."
-msgstr ""
-"Verantwortlicher im Sinne der DSGVO ist Dennis Plötner, Anschrift wie im "
-"Impressum oben, E-Mail %s."
+msgid "The controller within the meaning of the GDPR is Dennis Plötner, address as in the legal notice above, email %s."
+msgstr "Verantwortlicher im Sinne der DSGVO ist Dennis Plötner, Anschrift wie im Impressum oben, E-Mail %s."
 
 #: src/LegalPage.php:85
 msgid "Visiting this website: server logs"
 msgstr "Besuch dieser Website: Server-Logs"
 
 #: src/LegalPage.php:87
-msgid ""
-"Each time you open a page, the web server records technical data: IP "
-"address, date and time, the requested address, the referring page, browser "
-"and operating system (user agent) and the status code. This is needed to "
-"deliver the website and to keep it secure (Art. 6(1)(f) GDPR, legitimate "
-"interest)."
-msgstr ""
-"Bei jedem Seitenaufruf speichert der Webserver technische Daten: IP-Adresse,"
-" Datum und Uhrzeit, die aufgerufene Adresse, die verweisende Seite, Browser "
-"und Betriebssystem (User Agent) sowie den Statuscode. Das ist nötig, um die "
-"Website auszuliefern und sicher zu betreiben (Art. 6 Abs. 1 lit. f DSGVO, "
-"berechtigtes Interesse)."
+msgid "Each time you open a page, the web server records technical data: IP address, date and time, the requested address, the referring page, browser and operating system (user agent) and the status code. This is needed to deliver the website and to keep it secure (Art. 6(1)(f) GDPR, legitimate interest)."
+msgstr "Bei jedem Seitenaufruf speichert der Webserver technische Daten: IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse, die verweisende Seite, Browser und Betriebssystem (User Agent) sowie den Statuscode. Das ist nötig, um die Website auszuliefern und sicher zu betreiben (Art. 6 Abs. 1 lit. f DSGVO, berechtigtes Interesse)."
 
 #. translators: 1: number of days, 2: hosting provider and country.
 #: src/LegalPage.php:93
 #, php-format
-msgid ""
-"The logs are deleted after %1$d days at the latest, unless an incident has "
-"to be investigated. The server is operated by %2$s, which processes the data"
-" on my behalf (Art. 28 GDPR)."
-msgstr ""
-"Die Logs werden spätestens nach %1$d Tagen gelöscht, außer ein Vorfall muss "
-"untersucht werden. Betreiber des Servers ist %2$s, der die Daten in meinem "
-"Auftrag verarbeitet (Art. 28 DSGVO)."
+msgid "The logs are deleted after %1$d days at the latest, unless an incident has to be investigated. The server is operated by %2$s, which processes the data on my behalf (Art. 28 GDPR)."
+msgstr "Die Logs werden spätestens nach %1$d Tagen gelöscht, außer ein Vorfall muss untersucht werden. Betreiber des Servers ist %2$s, der die Daten in meinem Auftrag verarbeitet (Art. 28 DSGVO)."
 
 #: src/LegalPage.php:100
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
 #: src/LegalPage.php:102
-msgid ""
-"The website is delivered through Cloudflare (Cloudflare, Inc., San "
-"Francisco, USA), which protects it against attacks and speeds up delivery. "
-"Cloudflare processes your IP address and technical request data and may set "
-"technically necessary cookies to tell people from bots. Legal basis is Art. "
-"6(1)(f) GDPR. Cloudflare is certified under the EU-U.S. Data Privacy "
-"Framework; transfers to the USA are based on it."
-msgstr ""
-"Die Website wird über Cloudflare (Cloudflare, Inc., San Francisco, USA) "
-"ausgeliefert, das sie vor Angriffen schützt und die Auslieferung "
-"beschleunigt. Cloudflare verarbeitet dabei deine IP-Adresse und technische "
-"Anfragedaten und kann technisch notwendige Cookies setzen, um Menschen von "
-"Bots zu unterscheiden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. "
-"Cloudflare ist nach dem EU-U.S. Data Privacy Framework zertifiziert; "
-"Übermittlungen in die USA stützen sich darauf."
+msgid "The website is delivered through Cloudflare (Cloudflare, Inc., San Francisco, USA), which protects it against attacks and speeds up delivery. Cloudflare processes your IP address and technical request data and may set technically necessary cookies to tell people from bots. Legal basis is Art. 6(1)(f) GDPR. Cloudflare is certified under the EU-U.S. Data Privacy Framework; transfers to the USA are based on it."
+msgstr "Die Website wird über Cloudflare (Cloudflare, Inc., San Francisco, USA) ausgeliefert, das sie vor Angriffen schützt und die Auslieferung beschleunigt. Cloudflare verarbeitet dabei deine IP-Adresse und technische Anfragedaten und kann technisch notwendige Cookies setzen, um Menschen von Bots zu unterscheiden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Cloudflare ist nach dem EU-U.S. Data Privacy Framework zertifiziert; Übermittlungen in die USA stützen sich darauf."
 
 #: src/LegalPage.php:105
 msgid "Cookies and tracking"
 msgstr "Cookies und Tracking"
 
 #: src/LegalPage.php:107
-msgid ""
-"This website only uses technically necessary cookies (see Cloudflare). There"
-" is no analytics, no tracking and no advertising, which is why you do not "
-"see a cookie banner. Fonts are served from this server; no third-party "
-"content is loaded."
-msgstr ""
-"Diese Website verwendet nur technisch notwendige Cookies (siehe Cloudflare)."
-" Es gibt keine Analyse, kein Tracking und keine Werbung, deshalb siehst du "
-"auch keinen Cookie-Banner. Schriften kommen von diesem Server; Inhalte von "
-"Dritten werden nicht geladen."
+msgid "This website only uses technically necessary cookies (see Cloudflare). There is no analytics, no tracking and no advertising, which is why you do not see a cookie banner. Fonts are served from this server; no third-party content is loaded."
+msgstr "Diese Website verwendet nur technisch notwendige Cookies (siehe Cloudflare). Es gibt keine Analyse, kein Tracking und keine Werbung, deshalb siehst du auch keinen Cookie-Banner. Schriften kommen von diesem Server; Inhalte von Dritten werden nicht geladen."
 
 #: src/LegalPage.php:110
 msgid "External links"
 msgstr "Externe Links"
 
 #: src/LegalPage.php:112
-msgid ""
-"Links to other websites (e.g. GitHub, LinkedIn, Mastodon) only transfer data"
-" once you click them. From then on, the privacy policy of that website "
-"applies."
-msgstr ""
-"Links zu anderen Websites (z. B. GitHub, LinkedIn, Mastodon) übertragen erst"
-" Daten, wenn du sie anklickst. Ab dann gilt die Datenschutzerklärung der "
-"jeweiligen Website."
+msgid "Links to other websites (e.g. GitHub, LinkedIn, Mastodon) only transfer data once you click them. From then on, the privacy policy of that website applies."
+msgstr "Links zu anderen Websites (z. B. GitHub, LinkedIn, Mastodon) übertragen erst Daten, wenn du sie anklickst. Ab dann gilt die Datenschutzerklärung der jeweiligen Website."
 
 #: src/LegalPage.php:115
 msgid "Contact by email"
 msgstr "Kontakt per E-Mail"
 
 #: src/LegalPage.php:117
-msgid ""
-"If you write to me, I use your address and message only to answer and to "
-"handle your request (Art. 6(1)(b) and (f) GDPR). I delete them when they are"
-" no longer needed, unless legal retention periods apply."
-msgstr ""
-"Wenn du mir schreibst, nutze ich deine Adresse und Nachricht nur, um zu "
-"antworten und dein Anliegen zu bearbeiten (Art. 6 Abs. 1 lit. b und f "
-"DSGVO). Ich lösche sie, sobald sie nicht mehr gebraucht werden, sofern keine"
-" gesetzlichen Aufbewahrungspflichten bestehen."
+msgid "If you write to me, I use your address and message only to answer and to handle your request (Art. 6(1)(b) and (f) GDPR). I delete them when they are no longer needed, unless legal retention periods apply."
+msgstr "Wenn du mir schreibst, nutze ich deine Adresse und Nachricht nur, um zu antworten und dein Anliegen zu bearbeiten (Art. 6 Abs. 1 lit. b und f DSGVO). Ich lösche sie, sobald sie nicht mehr gebraucht werden, sofern keine gesetzlichen Aufbewahrungspflichten bestehen."
 
 #: src/LegalPage.php:120
 msgid "Your rights"
@@ -489,24 +418,14 @@ msgstr "Deine Rechte"
 #. translators: %s: email address link.
 #: src/LegalPage.php:123
 #, php-format
-msgid ""
-"You have the right to access, rectification, erasure, restriction of "
-"processing, data portability and to object to processing (Art. 15 to 21 "
-"GDPR). Just write to %s."
-msgstr ""
-"Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der "
-"Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO). "
-"Schreib mir einfach an %s."
+msgid "You have the right to access, rectification, erasure, restriction of processing, data portability and to object to processing (Art. 15 to 21 GDPR). Just write to %s."
+msgstr "Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO). Schreib mir einfach an %s."
 
 #. translators: %s: name and link of the Italian data protection authority.
 #: src/LegalPage.php:127
 #, php-format
-msgid ""
-"You can also lodge a complaint with a supervisory authority, in Italy the "
-"%s."
-msgstr ""
-"Außerdem kannst du dich bei einer Aufsichtsbehörde beschweren, in Italien "
-"beim %s."
+msgid "You can also lodge a complaint with a supervisory authority, in Italy the %s."
+msgstr "Außerdem kannst du dich bei einer Aufsichtsbehörde beschweren, in Italien beim %s."
 
 #: src/LegalPage.php:131
 msgid "Last updated: September 2026"
@@ -546,7 +465,7 @@ msgstr "© %1$s Dennis Plötner, USt-IdNr. %2$s"
 msgid "Legal notice & privacy"
 msgstr "Impressum & Datenschutz"
 
-#: src/PostTypes/AdminList.php:96
+#: src/PostTypes/AdminList.php:91
 msgid "Order"
 msgstr "Reihenfolge"
 
@@ -586,12 +505,14 @@ msgstr "Tech-Tags"
 msgid "Separated by · (middot)."
 msgstr "Getrennt durch · (Mittelpunkt)."
 
-#: src/PostTypes/PostTypes.php:71 src/PostTypes/PostTypes.php:91
+#: src/PostTypes/PostTypes.php:71
+#: src/PostTypes/PostTypes.php:91
 #: src/PostTypes/PostTypes.php:105
 msgid "Link URL"
 msgstr "Link-URL"
 
-#: src/PostTypes/PostTypes.php:77 src/PostTypes/PostTypes.php:111
+#: src/PostTypes/PostTypes.php:77
+#: src/PostTypes/PostTypes.php:111
 msgid "Link text"
 msgstr "Linktext"
 
@@ -616,158 +537,98 @@ msgid "Short label shown above the card title."
 msgstr "Kurzes Label über dem Kartentitel."
 
 #. translators: %s: singular post type name.
-#: src/PostTypes/PostTypes.php:142
+#: src/PostTypes/PostTypes.php:157
 #, php-format
 msgid "Add %s"
 msgstr "%s hinzufügen"
 
 #. translators: %s: singular post type name.
-#: src/PostTypes/PostTypes.php:144
+#: src/PostTypes/PostTypes.php:159
 #, php-format
 msgid "Edit %s"
 msgstr "%s bearbeiten"
 
-#: src/Seeder.php:190
-msgid ""
-"Complex multisite architectures for enterprise clients. Multi-network "
-"installations, network management, automated site provisioning, cross-site "
-"data strategies."
-msgstr ""
-"Komplexe Multisite-Architekturen für Enterprise-Kunden. Multi-Network-"
-"Installationen, Netzwerkverwaltung, automatisierte Site-Erstellung, "
-"Datenstrategien über Sites hinweg."
+#: src/Seeder.php:187
+msgid "Complex multisite architectures for enterprise clients. Multi-network installations, network management, automated site provisioning, cross-site data strategies."
+msgstr "Komplexe Multisite-Architekturen für Enterprise-Kunden. Multi-Network-Installationen, Netzwerkverwaltung, automatisierte Site-Erstellung, Datenstrategien über Sites hinweg."
 
-#: src/Seeder.php:195
-msgid ""
-"Scalable plugin architectures that stay maintainable for years. Modular, "
-"testable, extensible. REST APIs, Block Editor integration, custom database "
-"layers, extension systems."
-msgstr ""
-"Skalierbare Plugin-Architekturen, die über Jahre wartbar bleiben. Modular, "
-"testbar, erweiterbar. REST-APIs, Block-Editor-Integration, eigene "
-"Datenbankschichten, Erweiterungssysteme."
+#: src/Seeder.php:192
+msgid "Scalable plugin architectures that stay maintainable for years. Modular, testable, extensible. REST APIs, Block Editor integration, custom database layers, extension systems."
+msgstr "Skalierbare Plugin-Architekturen, die über Jahre wartbar bleiben. Modular, testbar, erweiterbar. REST-APIs, Block-Editor-Integration, eigene Datenbankschichten, Erweiterungssysteme."
 
-#: src/Seeder.php:200
-msgid ""
-"Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging "
-"PHP backends with modern JavaScript frontends."
-msgstr ""
-"Dynamische Blöcke, DataViews, DataForms und maßgeschneiderte Oberflächen im "
-"Editor. PHP im Backend und modernes JavaScript im Frontend, sauber "
-"verbunden."
+#: src/Seeder.php:197
+msgid "Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging PHP backends with modern JavaScript frontends."
+msgstr "Dynamische Blöcke, DataViews, DataForms und maßgeschneiderte Oberflächen im Editor. PHP im Backend und modernes JavaScript im Frontend, sauber verbunden."
 
-#: src/Seeder.php:204
+#: src/Seeder.php:201
 msgid "Code Quality & CI/CD"
 msgstr "Codequalität & CI/CD"
 
-#: src/Seeder.php:205
-msgid ""
-"Static analysis with PHPStan, coding standards with PHPCS/WPCS, tests with "
-"PHPUnit, automation with GitHub Actions and Composer. Pipelines that catch "
-"problems before they ship."
-msgstr ""
-"Statische Analyse mit PHPStan, Coding Standards mit PHPCS/WPCS, Tests mit "
-"PHPUnit, Automatisierung mit GitHub Actions und Composer. Pipelines, die "
-"Probleme finden, bevor sie live gehen."
+#: src/Seeder.php:202
+msgid "Static analysis with PHPStan, coding standards with PHPCS/WPCS, tests with PHPUnit, automation with GitHub Actions and Composer. Pipelines that catch problems before they ship."
+msgstr "Statische Analyse mit PHPStan, Coding Standards mit PHPCS/WPCS, Tests mit PHPUnit, Automatisierung mit GitHub Actions und Composer. Pipelines, die Probleme finden, bevor sie live gehen."
 
-#: src/Seeder.php:209
+#: src/Seeder.php:206
 msgid "SSO & Authentication"
 msgstr "SSO & Authentifizierung"
 
-#: src/Seeder.php:210
-msgid ""
-"Single sign-on for WordPress in the enterprise. OpenID Connect and OAuth "
-"2.0, connected to existing identity providers. Secure, centrally managed, no"
-" extra passwords."
-msgstr ""
-"Single Sign-on für WordPress im Unternehmen. OpenID Connect und OAuth 2.0, "
-"angebunden an bestehende Identity Provider. Sicher, zentral verwaltet, ohne "
-"zusätzliche Passwörter."
+#: src/Seeder.php:207
+msgid "Single sign-on for WordPress in the enterprise. OpenID Connect and OAuth 2.0, connected to existing identity providers. Secure, centrally managed, no extra passwords."
+msgstr "Single Sign-on für WordPress im Unternehmen. OpenID Connect und OAuth 2.0, angebunden an bestehende Identity Provider. Sicher, zentral verwaltet, ohne zusätzliche Passwörter."
 
-#: src/Seeder.php:214
+#: src/Seeder.php:211
 msgid "Open-Source Maintenance"
 msgstr "Open-Source-Pflege"
 
-#: src/Seeder.php:215
-msgid ""
-"Maintaining public plugins used by thousands of sites since 2011. Updates "
-"that don't break things, an open ear for the community and releases you can "
-"rely on."
-msgstr ""
-"Seit 2011 pflege ich öffentliche Plugins, die tausende Websites nutzen. "
-"Updates, die nichts kaputt machen, ein offenes Ohr für die Community und "
-"Releases, auf die man sich verlassen kann."
+#: src/Seeder.php:212
+msgid "Maintaining public plugins used by thousands of sites since 2011. Updates that don't break things, an open ear for the community and releases you can rely on."
+msgstr "Seit 2011 pflege ich öffentliche Plugins, die tausende Websites nutzen. Updates, die nichts kaputt machen, ein offenes Ohr für die Community und Releases, auf die man sich verlassen kann."
 
-#: src/Seeder.php:222
-msgid ""
-"A multilingual plugin for WordPress Multisite, actively maintained since "
-"2011. Helps thousands of sites run in multiple languages."
-msgstr ""
-"Ein Mehrsprachigkeits-Plugin für WordPress Multisite, aktiv gepflegt seit "
-"2011. Tausende Websites laufen damit in mehreren Sprachen."
+#: src/Seeder.php:219
+msgid "A multilingual plugin for WordPress Multisite, actively maintained since 2011. Helps thousands of sites run in multiple languages."
+msgstr "Ein Mehrsprachigkeits-Plugin für WordPress Multisite, aktiv gepflegt seit 2011. Tausende Websites laufen damit in mehreren Sprachen."
 
-#: src/Seeder.php:227
+#: src/Seeder.php:224
 msgid "View on WordPress.org ↗"
 msgstr "Auf WordPress.org ansehen ↗"
 
-#: src/Seeder.php:232
-msgid ""
-"A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n "
-"commands directly through Composer scripts."
-msgstr ""
-"Ein Composer-Plugin rund um wp-cli/i18n-command. Stellt die "
-"WordPress-i18n-Befehle direkt als Composer-Scripts bereit."
+#: src/Seeder.php:229
+msgid "A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n commands directly through Composer scripts."
+msgstr "Ein Composer-Plugin rund um wp-cli/i18n-command. Stellt die WordPress-i18n-Befehle direkt als Composer-Scripts bereit."
 
-#: src/Seeder.php:237 src/Seeder.php:247
+#: src/Seeder.php:234
+#: src/Seeder.php:244
 msgid "View on GitHub ↗"
 msgstr "Auf GitHub ansehen ↗"
 
-#: src/Seeder.php:242
-msgid ""
-"Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple "
-"networks within a single WordPress installation."
-msgstr ""
-"Contributor. PHPStan Level 8 und PHPCS-Konformität. Mehrere Netzwerke in "
-"einer einzigen WordPress-Installation."
+#: src/Seeder.php:239
+msgid "Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple networks within a single WordPress installation."
+msgstr "Contributor. PHPStan Level 8 und PHPCS-Konformität. Mehrere Netzwerke in einer einzigen WordPress-Installation."
 
-#: src/Seeder.php:291
+#: src/Seeder.php:288
 msgid "WordPress Meetup Milan"
 msgstr "WordPress Meetup Mailand"
 
-#: src/Seeder.php:292
-msgid ""
-"Co-organizing the local WordPress community in Milan. Regular events, "
-"knowledge sharing, and connecting developers with the broader ecosystem."
-msgstr ""
-"Mitorganisator der lokalen WordPress-Community in Mailand. Regelmäßige "
-"Events, Wissensaustausch und die Vernetzung von Entwicklern mit dem großen "
-"Ökosystem."
+#: src/Seeder.php:289
+msgid "Co-organizing the local WordPress community in Milan. Regular events, knowledge sharing, and connecting developers with the broader ecosystem."
+msgstr "Mitorganisator der lokalen WordPress-Community in Mailand. Regelmäßige Events, Wissensaustausch und die Vernetzung von Entwicklern mit dem großen Ökosystem."
 
-#: src/Seeder.php:295
+#: src/Seeder.php:292
 msgid "Meetup Organizer"
 msgstr "Meetup-Organisator"
 
-#: src/Seeder.php:300
-msgid ""
-"Co-founder of an Italian-language blog for WordPress developers. Technical "
-"article series covering Git, Composer, CI/CD, static analysis, and testing."
-msgstr ""
-"Mitgründer eines italienischsprachigen Blogs für WordPress-Entwickler. "
-"Technische Artikelserien zu Git, Composer, CI/CD, statischer Analyse und "
-"Testing."
+#: src/Seeder.php:297
+msgid "Co-founder of an Italian-language blog for WordPress developers. Technical article series covering Git, Composer, CI/CD, static analysis, and testing."
+msgstr "Mitgründer eines italienischsprachigen Blogs für WordPress-Entwickler. Technische Artikelserien zu Git, Composer, CI/CD, statischer Analyse und Testing."
 
-#: src/Seeder.php:303
+#: src/Seeder.php:300
 msgid "Education"
 msgstr "Bildung"
 
-#: src/Seeder.php:308
-msgid ""
-"Advanced Professional WordPress Developer Certification. Recognized "
-"expertise in enterprise-grade WordPress development."
-msgstr ""
-"Zertifizierung als Advanced Professional WordPress Developer. Anerkannte "
-"Expertise in WordPress-Entwicklung auf Enterprise-Niveau."
+#: src/Seeder.php:305
+msgid "Advanced Professional WordPress Developer Certification. Recognized expertise in enterprise-grade WordPress development."
+msgstr "Zertifizierung als Advanced Professional WordPress Developer. Anerkannte Expertise in WordPress-Entwicklung auf Enterprise-Niveau."
 
-#: src/Seeder.php:311
+#: src/Seeder.php:308
 msgid "Certification"
 msgstr "Zertifizierung"

@@ -30,20 +30,30 @@ class Assets {
 	}
 
 	/**
+	 * URL and cache-busting version of a file shipped with the plugin.
+	 *
+	 * @param string $path Path relative to the plugin root (e.g. "assets/blocks.css").
+	 *
+	 * @return array{0: string, 1: string|false} URL and filemtime version (false when unreadable).
+	 */
+	public static function asset( string $path ): array {
+		$root = dirname( __DIR__ );
+		$file = $root . '/' . $path;
+
+		return array(
+			plugins_url( $path, $root . '/ploetner-dev-blocks.php' ),
+			is_readable( $file ) ? (string) filemtime( $file ) : false,
+		);
+	}
+
+	/**
 	 * Enqueue the block stylesheet.
 	 *
 	 * @return void
 	 */
 	public function enqueue(): void {
-		$main = dirname( __DIR__ ) . '/ploetner-dev-blocks.php';
-		$file = dirname( __DIR__ ) . '/assets/blocks.css';
-		$ver  = is_readable( $file ) ? (string) filemtime( $file ) : false;
+		list( $url, $ver ) = self::asset( 'assets/blocks.css' );
 
-		wp_enqueue_style(
-			self::HANDLE,
-			plugins_url( 'assets/blocks.css', $main ),
-			array(),
-			$ver
-		);
+		wp_enqueue_style( self::HANDLE, $url, array(), $ver );
 	}
 }

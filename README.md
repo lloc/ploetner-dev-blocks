@@ -168,15 +168,17 @@ option records what has been written. Bump `Seeder::SEED_VERSION` when the
 sample data changes; every site picks up missing items on its next admin load.
 The data lives in one place, `src/Seeder.php`.
 
-The WP-CLI seeders remain available for re-seeding or CI. Each is a thin wrapper
-over `Seeder` and runs only its own post type:
+The WP-CLI seeder remains available for re-seeding or CI. It is a thin wrapper
+over `Seeder` and covers every post type, or just one when given its slug:
 
 ```bash
-wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed-expertise.php
-wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed-open-source.php
-wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed-speaking.php
-wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed-community.php
+wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed.php
+wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed.php pd_expertise
+wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed.php pd_project
+wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed.php pd_talk
+wp eval-file wp-content/plugins/ploetner-dev-blocks/tools/seed.php pd_community
 ```
+
 ## Branching and releases
 
 Development happens on `dev` (the default branch). Features land via pull

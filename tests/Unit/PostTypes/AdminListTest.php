@@ -160,6 +160,7 @@ class AdminListTest extends TestCase {
 	 * @covers ::render_column
 	 */
 	public function test_render_column_outputs_meta_and_order(): void {
+		Functions\when( 'get_post_type' )->justReturn( 'pd_talk' );
 		Functions\expect( 'get_post_meta' )->once()->with( 7, '_pd_talk_event', true )->andReturn( 'WordCamp Europe' );
 		Functions\expect( 'get_post_field' )->once()->with( 'menu_order', 7 )->andReturn( 3 );
 
@@ -167,5 +168,20 @@ class AdminListTest extends TestCase {
 
 		$this->list->render_column( 'pd_talk_event', 7 );
 		$this->list->render_column( 'pd_order', 7 );
+	}
+
+	/**
+	 * A column key only resolves for the post type that declares it, so two post
+	 * types sharing a key cannot read each other's meta.
+	 *
+	 * @covers ::render_column
+	 */
+	public function test_render_column_ignores_column_of_another_post_type(): void {
+		Functions\when( 'get_post_type' )->justReturn( 'pd_project' );
+		Functions\expect( 'get_post_meta' )->never();
+
+		$this->expectOutputString( '' );
+
+		$this->list->render_column( 'pd_talk_event', 7 );
 	}
 }

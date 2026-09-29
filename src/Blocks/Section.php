@@ -18,6 +18,16 @@ use WP_Query;
 class Section {
 
 	/**
+	 * Item ordering, shared by the section blocks and the admin list tables.
+	 *
+	 * @var array<string, string>
+	 */
+	public const ORDER_BY = array(
+		'menu_order' => 'ASC',
+		'date'       => 'ASC',
+	);
+
+	/**
 	 * Attribute defaults shared by every section block (section label, heading, intro, max items).
 	 *
 	 * @param string $section_label Default section label (e.g. "01 / Expertise").
@@ -147,6 +157,23 @@ HTML;
 	}
 
 	/**
+	 * Wrap concatenated card columns in the standard columns block.
+	 *
+	 * @param string $cards Concatenated wp:column markup.
+	 *
+	 * @return string
+	 */
+	public static function columns( string $cards ): string {
+		return <<<HTML
+<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-columns">
+{$cards}
+</div>
+<!-- /wp:columns -->
+HTML;
+	}
+
+	/**
 	 * Shared query for a section's items, ordered by menu_order.
 	 *
 	 * @param string $post_type Post type slug.
@@ -160,10 +187,7 @@ HTML;
 				'post_type'              => $post_type,
 				'post_status'            => 'publish',
 				'posts_per_page'         => $max_items > 0 ? $max_items : -1,
-				'orderby'                => array(
-					'menu_order' => 'ASC',
-					'date'       => 'ASC',
-				),
+				'orderby'                => self::ORDER_BY,
 				'no_found_rows'          => true,
 				'ignore_sticky_posts'    => true,
 				'update_post_term_cache' => false,

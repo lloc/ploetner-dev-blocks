@@ -98,6 +98,30 @@ class MetaBoxTest extends TestCase {
 	}
 
 	/**
+	 * An array value would be silently blanked by sanitize_text_field() and
+	 * would fatal in esc_url_raw(), so it must never reach the sanitizer.
+	 *
+	 * @covers ::save
+	 */
+	public function test_save_skips_non_scalar_values(): void {
+		$_POST = array(
+			'pd_meta_nonce' => 'nonce',
+			'_pd_talk_year' => array( '2026' ),
+			'_pd_talk_url'  => 'https://example.test/',
+		);
+
+		Functions\when( 'wp_verify_nonce' )->justReturn( true );
+		Functions\when( 'current_user_can' )->justReturn( true );
+		Functions\when( 'esc_url_raw' )->returnArg();
+
+		Functions\expect( 'update_post_meta' )->never()->with( 5, '_pd_talk_year', Mockery::any() );
+		Functions\expect( 'update_post_meta' )->once()->with( 5, '_pd_talk_url', 'https://example.test/' );
+
+		$post = new WP_Post( array( 'post_type' => 'pd_talk' ) );
+		( new MetaBox() )->save( 5, $post );
+	}
+
+	/**
 	 * @covers ::save
 	 */
 	public function test_save_bails_without_capability(): void {

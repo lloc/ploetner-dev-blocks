@@ -56,7 +56,13 @@ class LegalPage {
 					. esc_html( sprintf( __( 'VAT number (Partita IVA): %s', 'ploetner-dev-blocks' ), Contact::VAT ) )
 				),
 				self::paragraph(
-					esc_html( __( 'Responsible for the content of this website: Dennis Plötner, address as above.', 'ploetner-dev-blocks' ) )
+					esc_html(
+						sprintf(
+							/* translators: %s: name of the provider. */
+							__( 'Responsible for the content of this website: %s, address as above.', 'ploetner-dev-blocks' ),
+							Contact::NAME
+						)
+					)
 				),
 			)
 		);
@@ -78,8 +84,14 @@ class LegalPage {
 
 				self::heading( __( 'Controller', 'ploetner-dev-blocks' ), 3 ),
 				self::paragraph(
-					/* translators: %s: email address link. */
-					sprintf( esc_html( __( 'The controller within the meaning of the GDPR is Dennis Plötner, address as in the legal notice above, email %s.', 'ploetner-dev-blocks' ) ), $email )
+					sprintf(
+						esc_html(
+							/* translators: 1: name of the controller, 2: email address link. */
+							__( 'The controller within the meaning of the GDPR is %1$s, address as in the legal notice above, email %2$s.', 'ploetner-dev-blocks' )
+						),
+						esc_html( Contact::NAME ),
+						$email
+					)
 				),
 
 				self::heading( __( 'Visiting this website: server logs', 'ploetner-dev-blocks' ), 3 ),

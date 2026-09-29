@@ -104,7 +104,7 @@ class PatternsTest extends TestCase {
 	public function test_footer_copyright_is_translatable(): void {
 		Functions\when( '__' )->justReturn( '© %1$s %2$s, USt-IdNr. %3$s' );
 
-		$this->assertStringContainsString( '© ' . gmdate( 'Y' ) . ' <a href="mailto:re@lloc.de">Dennis Plötner</a>, USt-IdNr. IT13913110964', ( new Patterns() )->footer() );
+		$this->assertStringContainsString( '© ' . gmdate( 'Y' ) . ' <a href="mailto:re@lloc.de">Dennis Ploetner</a>, USt-IdNr. IT13913110964', ( new Patterns() )->footer() );
 	}
 
 	/**
@@ -133,7 +133,7 @@ class PatternsTest extends TestCase {
 	public function test_footer_has_email_and_legal_link(): void {
 		$html = ( new Patterns() )->footer();
 
-		$this->assertStringContainsString( '<a href="mailto:re@lloc.de">Dennis Plötner</a>', $html );
+		$this->assertStringContainsString( '<a href="mailto:re@lloc.de">Dennis Ploetner</a>', $html );
 		$this->assertStringNotContainsString( '>re@lloc.de</a>', $html );
 		$this->assertStringContainsString( '<a href="https://ploetner.dev/legal/">Legal notice & privacy</a>', $html );
 	}

@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-29T11:31:33+00:00\n"
+"PO-Revision-Date: 2026-09-29T11:40:14+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -315,8 +315,18 @@ msgstr ""
 msgid "(opens in a new tab)"
 msgstr ""
 
+#. translators: 1: hosting provider, 2: server location.
+#: src/Contact.php:48
+#, php-format
+msgid "%1$s (server location: %2$s)"
+msgstr ""
+
+#: src/Contact.php:50
+msgid "Frankfurt am Main, Germany"
+msgstr ""
+
 #. translators: Slug of the page with legal notice and privacy policy on the site in your language.
-#: src/Contact.php:47
+#: src/Contact.php:61
 msgctxt "legal page slug"
 msgid "legal"
 msgstr ""

@@ -92,7 +92,7 @@ class LegalPage {
 							/* translators: 1: number of days, 2: hosting provider and country. */
 							__( 'The logs are deleted after %1$d days at the latest, unless an incident has to be investigated. The server is operated by %2$s, which processes the data on my behalf (Art. 28 GDPR).', 'ploetner-dev-blocks' ),
 							Contact::LOG_DAYS,
-							Contact::HOSTING
+							Contact::hosting()
 						)
 					)
 				),

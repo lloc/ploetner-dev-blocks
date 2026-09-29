@@ -16,7 +16,7 @@ final class Contact {
 
 	public const NAME = 'Dennis Plötner';
 
-	public const ADDRESS = '[STREET NO.], [POSTCODE] [CITY] ([PROVINCE])';
+	public const ADDRESS = 'Via della Pace, 4, 26839 Zelo Buon Persico (LO)';
 
 	public const COUNTRY_CODE = 'IT';
 
@@ -24,7 +24,7 @@ final class Contact {
 
 	public const VAT = 'IT13913110964';
 
-	public const HOSTING = '[HOSTING PROVIDER, COUNTRY]';
+	public const HOSTING = 'Hostinger';
 
 	public const LOG_DAYS = 14;
 
@@ -35,6 +35,20 @@ final class Contact {
 	 */
 	public static function country(): string {
 		return __( 'Italy', 'ploetner-dev-blocks' );
+	}
+
+	/**
+	 * Hosting provider with server location, in the site language.
+	 *
+	 * @return string
+	 */
+	public static function hosting(): string {
+		return sprintf(
+			/* translators: 1: hosting provider, 2: server location. */
+			__( '%1$s (server location: %2$s)', 'ploetner-dev-blocks' ),
+			self::HOSTING,
+			__( 'Frankfurt am Main, Germany', 'ploetner-dev-blocks' )
+		);
 	}
 
 	/**

@@ -46,7 +46,7 @@ class LegalPageTest extends TestCase {
 	public function test_privacy_covers_logs_cloudflare_cookies_and_rights(): void {
 		$html = ( new LegalPage() )->privacy();
 
-		foreach ( array( 'server logs', 'Cloudflare', 'technically necessary cookies', 'Art. 15 to 21 GDPR', 'garanteprivacy.it', Contact::HOSTING ) as $needle ) {
+		foreach ( array( 'server logs', 'Cloudflare', 'technically necessary cookies', 'Art. 15 to 21 GDPR', 'garanteprivacy.it', Contact::HOSTING, 'Frankfurt am Main' ) as $needle ) {
 			$this->assertStringContainsString( $needle, $html );
 		}
 		$this->assertStringContainsString( (string) Contact::LOG_DAYS . ' days', $html );

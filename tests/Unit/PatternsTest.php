@@ -57,6 +57,16 @@ class PatternsTest extends TestCase {
 	}
 
 	/**
+	 * A postTypes restriction hides the pattern in the page editor while
+	 * "Show template" is on (the editor filters against wp_template).
+	 *
+	 * @covers ::patterns
+	 */
+	public function test_legal_pattern_is_not_restricted_to_post_types(): void {
+		$this->assertArrayNotHasKey( 'postTypes', ( new Patterns() )->patterns()['legal'] );
+	}
+
+	/**
 	 * @covers ::register_patterns
 	 */
 	public function test_register_patterns_registers_category_and_each_pattern(): void {

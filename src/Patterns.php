@@ -79,10 +79,11 @@ class Patterns {
 				'categories' => array( self::CATEGORY ),
 				'content'    => $this->front_page(),
 			),
+			// No postTypes restriction: with "Show template" on, the page editor
+			// filters patterns against wp_template, which would hide this one.
 			'legal'      => array(
 				'title'      => __( 'Legal notice and privacy policy', 'ploetner-dev-blocks' ),
 				'categories' => array( self::CATEGORY ),
-				'postTypes'  => array( 'page' ),
 				'content'    => ( new LegalPage() )->content(),
 			),
 		);

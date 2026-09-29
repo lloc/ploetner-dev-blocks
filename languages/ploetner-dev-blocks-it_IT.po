@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-29T13:11:22+00:00\n"
+"PO-Revision-Date: 2026-09-29T13:41:22+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -41,7 +41,7 @@ msgid "ploetner.dev"
 msgstr ""
 
 #: src/Blocks/Community.php:32
-#: src/Patterns.php:155
+#: src/Patterns.php:156
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr ""
@@ -97,7 +97,7 @@ msgstr ""
 
 #. translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists.
 #: src/Blocks/CtaBanner.php:49
-#: src/Patterns.php:114
+#: src/Patterns.php:115
 msgctxt "ploetner.cloud URL"
 msgid "https://ploetner.cloud/"
 msgstr ""
@@ -107,7 +107,7 @@ msgid "Button URL"
 msgstr ""
 
 #: src/Blocks/Expertise.php:33
-#: src/Patterns.php:152
+#: src/Patterns.php:153
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr ""
@@ -250,7 +250,7 @@ msgid "Choose language"
 msgstr ""
 
 #: src/Blocks/OpenSource.php:29
-#: src/Patterns.php:153
+#: src/Patterns.php:154
 msgid "Open Source"
 msgstr ""
 
@@ -295,7 +295,7 @@ msgid "(opens in a new tab)"
 msgstr ""
 
 #: src/Blocks/Speaking.php:31
-#: src/Patterns.php:154
+#: src/Patterns.php:155
 msgid "Speaking"
 msgstr ""
 
@@ -449,21 +449,21 @@ msgstr ""
 msgid "Front page sections"
 msgstr ""
 
-#: src/Patterns.php:83
+#: src/Patterns.php:85
 msgid "Legal notice and privacy policy"
 msgstr ""
 
-#: src/Patterns.php:111
+#: src/Patterns.php:112
 msgid "Need help? →"
 msgstr ""
 
 #. translators: 1: year, 2: name (linked to the email address), 3: VAT number.
-#: src/Patterns.php:187
+#: src/Patterns.php:188
 #, php-format
 msgid "© %1$s %2$s, VAT number %3$s"
 msgstr ""
 
-#: src/Patterns.php:197
+#: src/Patterns.php:198
 msgid "Legal notice & privacy"
 msgstr ""
 

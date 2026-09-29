@@ -171,22 +171,27 @@ HTML;
 	}
 
 	/**
-	 * Footer: social links, copyright with VAT number, email and legal page link.
+	 * Footer: social links, copyright (name linked to the email address) with VAT
+	 * number and legal page link.
 	 *
 	 * @return string
 	 */
 	public function footer(): string {
-		$new_tab   = Section::new_tab_hint();
-		$copyright = esc_html(
-			sprintf(
-				/* translators: 1: year, 2: VAT number. */
-				__( '© %1$s Dennis Plötner, VAT number %2$s', 'ploetner-dev-blocks' ),
-				gmdate( 'Y' ),
-				Contact::VAT
-			)
+		$new_tab = Section::new_tab_hint();
+		$name    = sprintf(
+			'<a href="mailto:%1$s">%2$s</a>',
+			esc_attr( Contact::EMAIL ),
+			esc_html( Contact::NAME )
 		);
-		$mail  = LegalPage::mailto( Contact::EMAIL );
-		$legal = sprintf(
+		/* translators: 1: year, 2: name (linked to the email address), 3: VAT number. */
+		$format    = __( '© %1$s %2$s, VAT number %3$s', 'ploetner-dev-blocks' );
+		$copyright = sprintf(
+			esc_html( $format ),
+			gmdate( 'Y' ),
+			$name,
+			esc_html( Contact::VAT )
+		);
+		$legal     = sprintf(
 			'<a href="%1$s">%2$s</a>',
 			esc_url( Contact::legal_url() ),
 			esc_html( __( 'Legal notice & privacy', 'ploetner-dev-blocks' ) )
@@ -216,7 +221,7 @@ HTML;
 	<!-- /wp:group -->
 
 	<!-- wp:paragraph {"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
-	<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size">{$copyright} · {$mail} · {$legal}</p>
+	<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size">{$copyright} · {$legal}</p>
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

@@ -8,30 +8,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-29T11:40:14+00:00\n"
+"PO-Revision-Date: 2026-09-29T13:11:22+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
 
 #. Plugin Name of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:3
 msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:4
+#: ploetner-dev-blocks.php:10
 msgid "https://ploetner.dev"
 msgstr ""
 
 #. Description of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:5
 msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
 msgstr ""
 
 #. Author of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:9
 msgid "Dennis Ploetner"
+msgstr ""
+
+#: src/Blocks/BlockCategory.php:41
+#: src/Patterns.php:45
+msgid "ploetner.dev"
+msgstr ""
+
+#: src/Blocks/Community.php:32
+#: src/Patterns.php:155
+#: src/PostTypes/PostTypes.php:48
+msgid "Community"
+msgstr ""
+
+#: src/Blocks/Community.php:40
+msgid "04 / Community"
+msgstr ""
+
+#: src/Blocks/Community.php:41
+msgid "Building together"
+msgstr ""
+
+#: src/Blocks/Community.php:42
+msgid "WordPress is open source, and so is how I work."
+msgstr ""
+
+#: src/Blocks/Community.php:50
+msgid "Add community items in the dashboard."
+msgstr ""
+
+#: src/Blocks/Community.php:68
+msgid "Learn more ↗"
 msgstr ""
 
 #: src/Blocks/CtaBanner.php:27
@@ -72,6 +104,28 @@ msgstr ""
 
 #: src/Blocks/CtaBanner.php:50
 msgid "Button URL"
+msgstr ""
+
+#: src/Blocks/Expertise.php:33
+#: src/Patterns.php:152
+#: src/PostTypes/PostTypes.php:30
+msgid "Expertise"
+msgstr ""
+
+#: src/Blocks/Expertise.php:41
+msgid "01 / Expertise"
+msgstr ""
+
+#: src/Blocks/Expertise.php:42
+msgid "What I do best"
+msgstr ""
+
+#: src/Blocks/Expertise.php:43
+msgid "Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure."
+msgstr ""
+
+#: src/Blocks/Expertise.php:51
+msgid "Add expertise items in the dashboard."
 msgstr ""
 
 #: src/Blocks/Hero.php:30
@@ -155,7 +209,7 @@ msgid "Meta 2 label"
 msgstr ""
 
 #: src/Blocks/Hero.php:87
-#: src/Contact.php:37
+#: src/Contact.php:40
 msgid "Italy"
 msgstr ""
 
@@ -195,54 +249,6 @@ msgstr ""
 msgid "Choose language"
 msgstr ""
 
-#: src/Blocks/Community.php:32
-#: src/Patterns.php:155
-#: src/PostTypes/PostTypes.php:48
-msgid "Community"
-msgstr ""
-
-#: src/Blocks/Community.php:40
-msgid "04 / Community"
-msgstr ""
-
-#: src/Blocks/Community.php:41
-msgid "Building together"
-msgstr ""
-
-#: src/Blocks/Community.php:42
-msgid "WordPress is open source, and so is how I work."
-msgstr ""
-
-#: src/Blocks/Community.php:50
-msgid "Add community items in the dashboard."
-msgstr ""
-
-#: src/Blocks/Community.php:68
-msgid "Learn more ↗"
-msgstr ""
-
-#: src/Blocks/Expertise.php:33
-#: src/Patterns.php:152
-#: src/PostTypes/PostTypes.php:30
-msgid "Expertise"
-msgstr ""
-
-#: src/Blocks/Expertise.php:41
-msgid "01 / Expertise"
-msgstr ""
-
-#: src/Blocks/Expertise.php:42
-msgid "What I do best"
-msgstr ""
-
-#: src/Blocks/Expertise.php:43
-msgid "Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure."
-msgstr ""
-
-#: src/Blocks/Expertise.php:51
-msgid "Add expertise items in the dashboard."
-msgstr ""
-
 #: src/Blocks/OpenSource.php:29
 #: src/Patterns.php:153
 msgid "Open Source"
@@ -268,6 +274,26 @@ msgstr ""
 msgid "View project ↗"
 msgstr ""
 
+#: src/Blocks/Section.php:43
+msgid "Section label"
+msgstr ""
+
+#: src/Blocks/Section.php:51
+msgid "Intro text"
+msgstr ""
+
+#: src/Blocks/Section.php:55
+msgid "Max items (0 = all)"
+msgstr ""
+
+#: src/Blocks/Section.php:82
+msgid "Back to top"
+msgstr ""
+
+#: src/Blocks/Section.php:131
+msgid "(opens in a new tab)"
+msgstr ""
+
 #: src/Blocks/Speaking.php:31
 #: src/Patterns.php:154
 msgid "Speaking"
@@ -289,43 +315,18 @@ msgstr ""
 msgid "Add talks in the dashboard."
 msgstr ""
 
-#: src/Blocks/BlockCategory.php:41
-#: src/Patterns.php:45
-msgid "ploetner.dev"
-msgstr ""
-
-#: src/Blocks/Section.php:43
-msgid "Section label"
-msgstr ""
-
-#: src/Blocks/Section.php:51
-msgid "Intro text"
-msgstr ""
-
-#: src/Blocks/Section.php:55
-msgid "Max items (0 = all)"
-msgstr ""
-
-#: src/Blocks/Section.php:82
-msgid "Back to top"
-msgstr ""
-
-#: src/Blocks/Section.php:131
-msgid "(opens in a new tab)"
-msgstr ""
-
 #. translators: 1: hosting provider, 2: server location.
-#: src/Contact.php:48
+#: src/Contact.php:51
 #, php-format
 msgid "%1$s (server location: %2$s)"
 msgstr ""
 
-#: src/Contact.php:50
+#: src/Contact.php:53
 msgid "Frankfurt am Main, Germany"
 msgstr ""
 
 #. translators: Slug of the page with legal notice and privacy policy on the site in your language.
-#: src/Contact.php:61
+#: src/Contact.php:64
 msgctxt "legal page slug"
 msgid "legal"
 msgstr ""
@@ -346,87 +347,89 @@ msgstr ""
 msgid "VAT number (Partita IVA): %s"
 msgstr ""
 
-#: src/LegalPage.php:59
-msgid "Responsible for the content of this website: Dennis Plötner, address as above."
+#. translators: %s: name of the provider.
+#: src/LegalPage.php:62
+#, php-format
+msgid "Responsible for the content of this website: %s, address as above."
 msgstr ""
 
-#: src/LegalPage.php:77
+#: src/LegalPage.php:83
 msgid "Privacy policy"
 msgstr ""
 
-#: src/LegalPage.php:79
+#: src/LegalPage.php:85
 msgid "Controller"
 msgstr ""
 
-#. translators: %s: email address link.
-#: src/LegalPage.php:82
+#. translators: 1: name of the controller, 2: email address link.
+#: src/LegalPage.php:90
 #, php-format
-msgid "The controller within the meaning of the GDPR is Dennis Plötner, address as in the legal notice above, email %s."
+msgid "The controller within the meaning of the GDPR is %1$s, address as in the legal notice above, email %2$s."
 msgstr ""
 
-#: src/LegalPage.php:85
+#: src/LegalPage.php:97
 msgid "Visiting this website: server logs"
 msgstr ""
 
-#: src/LegalPage.php:87
+#: src/LegalPage.php:99
 msgid "Each time you open a page, the web server records technical data: IP address, date and time, the requested address, the referring page, browser and operating system (user agent) and the status code. This is needed to deliver the website and to keep it secure (Art. 6(1)(f) GDPR, legitimate interest)."
 msgstr ""
 
 #. translators: 1: number of days, 2: hosting provider and country.
-#: src/LegalPage.php:93
+#: src/LegalPage.php:105
 #, php-format
 msgid "The logs are deleted after %1$d days at the latest, unless an incident has to be investigated. The server is operated by %2$s, which processes the data on my behalf (Art. 28 GDPR)."
 msgstr ""
 
-#: src/LegalPage.php:100
+#: src/LegalPage.php:112
 msgid "Cloudflare"
 msgstr ""
 
-#: src/LegalPage.php:102
+#: src/LegalPage.php:114
 msgid "The website is delivered through Cloudflare (Cloudflare, Inc., San Francisco, USA), which protects it against attacks and speeds up delivery. Cloudflare processes your IP address and technical request data and may set technically necessary cookies to tell people from bots. Legal basis is Art. 6(1)(f) GDPR. Cloudflare is certified under the EU-U.S. Data Privacy Framework; transfers to the USA are based on it."
 msgstr ""
 
-#: src/LegalPage.php:105
+#: src/LegalPage.php:117
 msgid "Cookies and tracking"
 msgstr ""
 
-#: src/LegalPage.php:107
+#: src/LegalPage.php:119
 msgid "This website only uses technically necessary cookies (see Cloudflare). There is no analytics, no tracking and no advertising, which is why you do not see a cookie banner. Fonts are served from this server; no third-party content is loaded."
 msgstr ""
 
-#: src/LegalPage.php:110
+#: src/LegalPage.php:122
 msgid "External links"
 msgstr ""
 
-#: src/LegalPage.php:112
+#: src/LegalPage.php:124
 msgid "Links to other websites (e.g. GitHub, LinkedIn, Mastodon) only transfer data once you click them. From then on, the privacy policy of that website applies."
 msgstr ""
 
-#: src/LegalPage.php:115
+#: src/LegalPage.php:127
 msgid "Contact by email"
 msgstr ""
 
-#: src/LegalPage.php:117
+#: src/LegalPage.php:129
 msgid "If you write to me, I use your address and message only to answer and to handle your request (Art. 6(1)(b) and (f) GDPR). I delete them when they are no longer needed, unless legal retention periods apply."
 msgstr ""
 
-#: src/LegalPage.php:120
+#: src/LegalPage.php:132
 msgid "Your rights"
 msgstr ""
 
 #. translators: %s: email address link.
-#: src/LegalPage.php:123
+#: src/LegalPage.php:135
 #, php-format
 msgid "You have the right to access, rectification, erasure, restriction of processing, data portability and to object to processing (Art. 15 to 21 GDPR). Just write to %s."
 msgstr ""
 
 #. translators: %s: name and link of the Italian data protection authority.
-#: src/LegalPage.php:127
+#: src/LegalPage.php:139
 #, php-format
 msgid "You can also lodge a complaint with a supervisory authority, in Italy the %s."
 msgstr ""
 
-#: src/LegalPage.php:131
+#: src/LegalPage.php:143
 msgid "Last updated: September 2026"
 msgstr ""
 
@@ -454,13 +457,13 @@ msgstr ""
 msgid "Need help? →"
 msgstr ""
 
-#. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:183
+#. translators: 1: year, 2: name (linked to the email address), 3: VAT number.
+#: src/Patterns.php:187
 #, php-format
-msgid "© %1$s Dennis Plötner, VAT number %2$s"
+msgid "© %1$s %2$s, VAT number %3$s"
 msgstr ""
 
-#: src/Patterns.php:192
+#: src/Patterns.php:197
 msgid "Legal notice & privacy"
 msgstr ""
 

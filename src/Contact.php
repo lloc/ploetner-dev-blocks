@@ -14,7 +14,10 @@ namespace lloc\PloetnerDevBlocks;
  */
 final class Contact {
 
-	public const NAME = 'Dennis Plötner';
+	/**
+	 * Name as registered for the VAT number (Partita IVA).
+	 */
+	public const NAME = 'Dennis Ploetner';
 
 	public const ADDRESS = 'Via della Pace, 4, 26839 Zelo Buon Persico (LO)';
 

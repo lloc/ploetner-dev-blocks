@@ -454,10 +454,10 @@ msgstr ""
 msgid "Need help? →"
 msgstr ""
 
-#. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:183
+#. translators: 1: year, 2: name (linked to the email address), 3: VAT number.
+#: src/Patterns.php:187
 #, php-format
-msgid "© %1$s Dennis Plötner, VAT number %2$s"
+msgid "© %1$s %2$s, VAT number %3$s"
 msgstr ""
 
 #: src/Patterns.php:192

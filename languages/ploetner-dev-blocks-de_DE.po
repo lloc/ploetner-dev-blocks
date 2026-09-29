@@ -455,13 +455,13 @@ msgstr "Impressum und Datenschutzerklärung"
 msgid "Need help? →"
 msgstr "Hilfe gebraucht? →"
 
-#. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:183
+#. translators: 1: year, 2: name (linked to the email address), 3: VAT number.
+#: src/Patterns.php:187
 #, php-format
-msgid "© %1$s Dennis Plötner, VAT number %2$s"
-msgstr "© %1$s Dennis Plötner, USt-IdNr. %2$s"
+msgid "© %1$s %2$s, VAT number %3$s"
+msgstr "© %1$s %2$s, USt-IdNr. %3$s"
 
-#: src/Patterns.php:192
+#: src/Patterns.php:197
 msgid "Legal notice & privacy"
 msgstr "Impressum & Datenschutz"
 

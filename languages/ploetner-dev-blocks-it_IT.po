@@ -8,29 +8,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-29T10:50:01+00:00\n"
+"PO-Revision-Date: 2026-09-29T11:31:33+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
 
 #. Plugin Name of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:3
 msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:4
+#: ploetner-dev-blocks.php:10
 msgid "https://ploetner.dev"
 msgstr ""
 
 #. Description of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:5
 msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
 msgstr ""
 
 #. Author of the plugin
-#: ploetner-dev-blocks.php
+#: ploetner-dev-blocks.php:9
 msgid "Dennis Ploetner"
 msgstr ""
 
@@ -65,7 +66,7 @@ msgstr ""
 
 #. translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists.
 #: src/Blocks/Block/CtaBanner.php:49
-#: src/Patterns.php:108
+#: src/Patterns.php:114
 msgctxt "ploetner.cloud URL"
 msgid "https://ploetner.cloud/"
 msgstr ""
@@ -155,6 +156,7 @@ msgid "Meta 2 label"
 msgstr ""
 
 #: src/Blocks/Block/Hero.php:87
+#: src/Contact.php:37
 msgid "Italy"
 msgstr ""
 
@@ -195,7 +197,7 @@ msgid "Choose language"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Community.php:32
-#: src/Patterns.php:149
+#: src/Patterns.php:155
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr ""
@@ -221,7 +223,7 @@ msgid "Learn more ↗"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Expertise.php:33
-#: src/Patterns.php:146
+#: src/Patterns.php:152
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr ""
@@ -243,7 +245,7 @@ msgid "Add expertise items in the dashboard."
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/OpenSource.php:29
-#: src/Patterns.php:147
+#: src/Patterns.php:153
 msgid "Open Source"
 msgstr ""
 
@@ -268,7 +270,7 @@ msgid "View project ↗"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Speaking.php:31
-#: src/Patterns.php:148
+#: src/Patterns.php:154
 msgid "Speaking"
 msgstr ""
 
@@ -313,6 +315,112 @@ msgstr ""
 msgid "(opens in a new tab)"
 msgstr ""
 
+#. translators: Slug of the page with legal notice and privacy policy on the site in your language.
+#: src/Contact.php:47
+msgctxt "legal page slug"
+msgid "legal"
+msgstr ""
+
+#: src/LegalPage.php:46
+msgid "Legal notice"
+msgstr ""
+
+#. translators: %s: email address link.
+#: src/LegalPage.php:54
+#, php-format
+msgid "Email: %s"
+msgstr ""
+
+#. translators: %s: VAT number.
+#: src/LegalPage.php:56
+#, php-format
+msgid "VAT number (Partita IVA): %s"
+msgstr ""
+
+#: src/LegalPage.php:59
+msgid "Responsible for the content of this website: Dennis Plötner, address as above."
+msgstr ""
+
+#: src/LegalPage.php:77
+msgid "Privacy policy"
+msgstr ""
+
+#: src/LegalPage.php:79
+msgid "Controller"
+msgstr ""
+
+#. translators: %s: email address link.
+#: src/LegalPage.php:82
+#, php-format
+msgid "The controller within the meaning of the GDPR is Dennis Plötner, address as in the legal notice above, email %s."
+msgstr ""
+
+#: src/LegalPage.php:85
+msgid "Visiting this website: server logs"
+msgstr ""
+
+#: src/LegalPage.php:87
+msgid "Each time you open a page, the web server records technical data: IP address, date and time, the requested address, the referring page, browser and operating system (user agent) and the status code. This is needed to deliver the website and to keep it secure (Art. 6(1)(f) GDPR, legitimate interest)."
+msgstr ""
+
+#. translators: 1: number of days, 2: hosting provider and country.
+#: src/LegalPage.php:93
+#, php-format
+msgid "The logs are deleted after %1$d days at the latest, unless an incident has to be investigated. The server is operated by %2$s, which processes the data on my behalf (Art. 28 GDPR)."
+msgstr ""
+
+#: src/LegalPage.php:100
+msgid "Cloudflare"
+msgstr ""
+
+#: src/LegalPage.php:102
+msgid "The website is delivered through Cloudflare (Cloudflare, Inc., San Francisco, USA), which protects it against attacks and speeds up delivery. Cloudflare processes your IP address and technical request data and may set technically necessary cookies to tell people from bots. Legal basis is Art. 6(1)(f) GDPR. Cloudflare is certified under the EU-U.S. Data Privacy Framework; transfers to the USA are based on it."
+msgstr ""
+
+#: src/LegalPage.php:105
+msgid "Cookies and tracking"
+msgstr ""
+
+#: src/LegalPage.php:107
+msgid "This website only uses technically necessary cookies (see Cloudflare). There is no analytics, no tracking and no advertising, which is why you do not see a cookie banner. Fonts are served from this server; no third-party content is loaded."
+msgstr ""
+
+#: src/LegalPage.php:110
+msgid "External links"
+msgstr ""
+
+#: src/LegalPage.php:112
+msgid "Links to other websites (e.g. GitHub, LinkedIn, Mastodon) only transfer data once you click them. From then on, the privacy policy of that website applies."
+msgstr ""
+
+#: src/LegalPage.php:115
+msgid "Contact by email"
+msgstr ""
+
+#: src/LegalPage.php:117
+msgid "If you write to me, I use your address and message only to answer and to handle your request (Art. 6(1)(b) and (f) GDPR). I delete them when they are no longer needed, unless legal retention periods apply."
+msgstr ""
+
+#: src/LegalPage.php:120
+msgid "Your rights"
+msgstr ""
+
+#. translators: %s: email address link.
+#: src/LegalPage.php:123
+#, php-format
+msgid "You have the right to access, rectification, erasure, restriction of processing, data portability and to object to processing (Art. 15 to 21 GDPR). Just write to %s."
+msgstr ""
+
+#. translators: %s: name and link of the Italian data protection authority.
+#: src/LegalPage.php:127
+#, php-format
+msgid "You can also lodge a complaint with a supervisory authority, in Italy the %s."
+msgstr ""
+
+#: src/LegalPage.php:131
+msgid "Last updated: September 2026"
+msgstr ""
+
 #: src/Patterns.php:61
 msgid "Section separator"
 msgstr ""
@@ -329,14 +437,22 @@ msgstr ""
 msgid "Front page sections"
 msgstr ""
 
-#: src/Patterns.php:105
+#: src/Patterns.php:83
+msgid "Legal notice and privacy policy"
+msgstr ""
+
+#: src/Patterns.php:111
 msgid "Need help? →"
 msgstr ""
 
 #. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:177
+#: src/Patterns.php:183
 #, php-format
 msgid "© %1$s Dennis Plötner, VAT number %2$s"
+msgstr ""
+
+#: src/Patterns.php:192
+msgid "Legal notice & privacy"
 msgstr ""
 
 #: src/PostTypes/AdminList.php:96

@@ -69,6 +69,20 @@ language is marked with `aria-current`.
   (Settings > General), per language site. Skipped when Yoast, Rank Math,
   AIOSEO, SEOPress or The SEO Framework is active.
 
+### Contact, legal notice and privacy policy
+
+Provider details live in one place, `src/Contact.php` (name, address, email,
+VAT number, hosting provider, log retention). They feed:
+
+- the footer pattern: copyright with VAT number, `mailto:` link and a link to
+  the legal page (`/legal/`, translated slug, `/rechtliches/` on the German site);
+- the `ploetner-dev/legal` pattern (pages only): legal notice (Art. 7 D.Lgs.
+  70/2003) and privacy policy (Art. 13 GDPR) describing the actual setup: server
+  logs, Cloudflare, technically necessary cookies only, local fonts, no tracking.
+
+Create a page per site with the translated slug and insert the pattern. Update
+`Contact.php` and the texts when the setup changes (e.g. analytics).
+
 ## Custom post types
 
 `pd_expertise`, `pd_project`, `pd_talk`, `pd_community` — all non-public (no archive,

@@ -24,7 +24,8 @@ class PatternsTest extends TestCase {
 	 */
 	protected function setUp(): void {
 		parent::setUp();
-		Functions\stubs( array( '__', 'esc_html', 'esc_url' ) );
+		Functions\stubs( array( '__', 'esc_html', 'esc_url', 'esc_attr' ) );
+		Functions\when( 'home_url' )->alias( static fn ( string $path = '' ): string => 'https://ploetner.dev' . $path );
 		Functions\when( '_x' )->returnArg();
 		Functions\when( 'wp_json_encode' )->alias( 'json_encode' );
 	}
@@ -43,11 +44,11 @@ class PatternsTest extends TestCase {
 	/**
 	 * @covers ::patterns
 	 */
-	public function test_patterns_expose_the_four_slugs(): void {
+	public function test_patterns_expose_the_five_slugs(): void {
 		$patterns = ( new Patterns() )->patterns();
 
 		$this->assertSame(
-			array( 'separator', 'header', 'footer', 'front-page' ),
+			array( 'separator', 'header', 'footer', 'front-page', 'legal' ),
 			array_keys( $patterns )
 		);
 		foreach ( $patterns as $pattern ) {
@@ -62,7 +63,7 @@ class PatternsTest extends TestCase {
 		Functions\expect( 'register_block_pattern_category' )
 			->once()
 			->with( 'ploetner-dev', Mockery::type( 'array' ) );
-		Functions\expect( 'register_block_pattern' )->times( 4 );
+		Functions\expect( 'register_block_pattern' )->times( 5 );
 
 		( new Patterns() )->register_patterns();
 	}
@@ -124,5 +125,15 @@ class PatternsTest extends TestCase {
 		$html = ( new Patterns() )->footer();
 
 		$this->assertSame( 5, substr_count( $html, '<span class="ploetner-sr-only">(opens in a new tab)</span></a>' ) );
+	}
+
+	/**
+	 * @covers ::footer
+	 */
+	public function test_footer_has_email_and_legal_link(): void {
+		$html = ( new Patterns() )->footer();
+
+		$this->assertStringContainsString( '<a href="mailto:re@lloc.de">re@lloc.de</a>', $html );
+		$this->assertStringContainsString( '<a href="https://ploetner.dev/legal/">Legal notice & privacy</a>', $html );
 	}
 }

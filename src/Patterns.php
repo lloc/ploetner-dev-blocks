@@ -79,6 +79,12 @@ class Patterns {
 				'categories' => array( self::CATEGORY ),
 				'content'    => $this->front_page(),
 			),
+			'legal'      => array(
+				'title'      => __( 'Legal notice and privacy policy', 'ploetner-dev-blocks' ),
+				'categories' => array( self::CATEGORY ),
+				'postTypes'  => array( 'page' ),
+				'content'    => ( new LegalPage() )->content(),
+			),
 		);
 	}
 
@@ -165,7 +171,7 @@ HTML;
 	}
 
 	/**
-	 * Footer: social links and copyright.
+	 * Footer: social links, copyright with VAT number, email and legal page link.
 	 *
 	 * @return string
 	 */
@@ -176,8 +182,14 @@ HTML;
 				/* translators: 1: year, 2: VAT number. */
 				__( '© %1$s Dennis Plötner, VAT number %2$s', 'ploetner-dev-blocks' ),
 				'2026',
-				'IT13913110964'
+				Contact::VAT
 			)
+		);
+		$mail  = LegalPage::mailto( Contact::EMAIL );
+		$legal = sprintf(
+			'<a href="%1$s">%2$s</a>',
+			esc_url( Contact::legal_url() ),
+			esc_html( __( 'Legal notice & privacy', 'ploetner-dev-blocks' ) )
 		);
 
 		return <<<HTML
@@ -204,7 +216,7 @@ HTML;
 	<!-- /wp:group -->
 
 	<!-- wp:paragraph {"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
-	<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size">{$copyright}</p>
+	<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size">{$copyright} · {$mail} · {$legal}</p>
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

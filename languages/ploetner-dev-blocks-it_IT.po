@@ -8,30 +8,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-28T15:51:49+00:00\n"
+"PO-Revision-Date: 2026-09-29T10:50:01+00:00\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ploetner-dev-blocks\n"
 
 #. Plugin Name of the plugin
-#: ploetner-dev-blocks.php:3
+#: ploetner-dev-blocks.php
 msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: ploetner-dev-blocks.php:4
-#: ploetner-dev-blocks.php:10
+#: ploetner-dev-blocks.php
 msgid "https://ploetner.dev"
 msgstr ""
 
 #. Description of the plugin
-#: ploetner-dev-blocks.php:5
+#: ploetner-dev-blocks.php
 msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
 msgstr ""
 
 #. Author of the plugin
-#: ploetner-dev-blocks.php:9
+#: ploetner-dev-blocks.php
 msgid "Dennis Ploetner"
 msgstr ""
 
@@ -64,10 +63,9 @@ msgstr ""
 msgid "Button text"
 msgstr ""
 
-#. translators: Default link target of the CTA banner. Point it to the ploetner.cloud version in your language once it exists.
 #. translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists.
 #: src/Blocks/Block/CtaBanner.php:49
-#: src/Patterns.php:106
+#: src/Patterns.php:108
 msgctxt "ploetner.cloud URL"
 msgid "https://ploetner.cloud/"
 msgstr ""
@@ -197,7 +195,7 @@ msgid "Choose language"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Community.php:32
-#: src/Patterns.php:147
+#: src/Patterns.php:149
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr ""
@@ -222,30 +220,30 @@ msgstr ""
 msgid "Learn more ↗"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:32
-#: src/Patterns.php:144
+#: src/Blocks/Block/SectionBlock/Expertise.php:33
+#: src/Patterns.php:146
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:40
+#: src/Blocks/Block/SectionBlock/Expertise.php:41
 msgid "01 / Expertise"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:41
+#: src/Blocks/Block/SectionBlock/Expertise.php:42
 msgid "What I do best"
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:42
+#: src/Blocks/Block/SectionBlock/Expertise.php:43
 msgid "Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure."
 msgstr ""
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:50
+#: src/Blocks/Block/SectionBlock/Expertise.php:51
 msgid "Add expertise items in the dashboard."
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/OpenSource.php:29
-#: src/Patterns.php:145
+#: src/Patterns.php:147
 msgid "Open Source"
 msgstr ""
 
@@ -270,7 +268,7 @@ msgid "View project ↗"
 msgstr ""
 
 #: src/Blocks/Block/SectionBlock/Speaking.php:31
-#: src/Patterns.php:146
+#: src/Patterns.php:148
 msgid "Speaking"
 msgstr ""
 
@@ -291,7 +289,7 @@ msgid "Add talks in the dashboard."
 msgstr ""
 
 #: src/Blocks/BlockCategory.php:41
-#: src/Patterns.php:43
+#: src/Patterns.php:45
 msgid "ploetner.dev"
 msgstr ""
 
@@ -311,28 +309,32 @@ msgstr ""
 msgid "Back to top"
 msgstr ""
 
-#: src/Patterns.php:59
+#: src/Blocks/Section.php:121
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: src/Patterns.php:61
 msgid "Section separator"
 msgstr ""
 
-#: src/Patterns.php:64
+#: src/Patterns.php:66
 msgid "Header"
 msgstr ""
 
-#: src/Patterns.php:70
+#: src/Patterns.php:72
 msgid "Footer"
 msgstr ""
 
-#: src/Patterns.php:76
+#: src/Patterns.php:78
 msgid "Front page sections"
 msgstr ""
 
-#: src/Patterns.php:103
+#: src/Patterns.php:105
 msgid "Need help? →"
 msgstr ""
 
 #. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:174
+#: src/Patterns.php:177
 #, php-format
 msgid "© %1$s Dennis Plötner, VAT number %2$s"
 msgstr ""

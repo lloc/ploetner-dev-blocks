@@ -60,8 +60,8 @@ class CommunityTest extends TestCase {
 		$custom   = $this->block->community_card( 'Label', 'Title', '', 'https://scuolawp.it', 'Visit ↗' );
 		$fallback = $this->block->community_card( 'Label', 'Title', '', 'https://scuolawp.it' );
 
-		$this->assertStringContainsString( '<a href="https://scuolawp.it" target="_blank" rel="noopener">Visit ↗</a>', $custom );
-		$this->assertStringContainsString( '>Learn more ↗</a>', $fallback );
+		$this->assertStringContainsString( '<a href="https://scuolawp.it" target="_blank" rel="noopener">Visit ↗ <span class="ploetner-sr-only">(opens in a new tab)</span></a>', $custom );
+		$this->assertStringContainsString( '>Learn more ↗ <span class="ploetner-sr-only">(opens in a new tab)</span></a>', $fallback );
 	}
 
 	/**

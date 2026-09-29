@@ -39,7 +39,7 @@ class ExpertiseTest extends TestCase {
 	public function test_cell_contains_accent_marker_and_title(): void {
 		$html = $this->block->cell( 'WordPress Multisite', '<p>desc</p>' );
 
-		$this->assertStringContainsString( '▸', $html );
+		$this->assertStringContainsString( 'aria-hidden="true">▸</mark>', $html );
 		$this->assertStringContainsString( 'WordPress Multisite', $html );
 		$this->assertStringContainsString( '<p>desc</p>', $html );
 	}

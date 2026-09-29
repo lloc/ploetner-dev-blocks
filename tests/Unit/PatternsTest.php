@@ -116,4 +116,13 @@ class PatternsTest extends TestCase {
 
 		$this->assertStringContainsString( 'href="https://ploetner.cloud/de/"', ( new Patterns() )->header() );
 	}
+
+	/**
+	 * @covers ::footer
+	 */
+	public function test_footer_social_links_announce_new_tab(): void {
+		$html = ( new Patterns() )->footer();
+
+		$this->assertSame( 5, substr_count( $html, '<span class="ploetner-sr-only">(opens in a new tab)</span></a>' ) );
+	}
 }

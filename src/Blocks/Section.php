@@ -112,6 +112,16 @@ HTML;
 	}
 
 	/**
+	 * Visually hidden hint for links that open in a new tab, so screen reader
+	 * users are not surprised by the context change.
+	 *
+	 * @return string
+	 */
+	public static function new_tab_hint(): string {
+		return ' <span class="ploetner-sr-only">' . esc_html( __( '(opens in a new tab)', 'ploetner-dev-blocks' ) ) . '</span>';
+	}
+
+	/**
 	 * Build a card link paragraph (block markup). Empty URL yields no markup.
 	 *
 	 * @param string $url      Link URL.
@@ -127,10 +137,11 @@ HTML;
 
 		$href = esc_url( $url );
 		$text = esc_html( '' !== $text ? $text : $fallback );
+		$hint = self::new_tab_hint();
 
 		return <<<HTML
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><a href="{$href}" target="_blank" rel="noopener">{$text}</a></p>
+<p class="has-small-font-size"><a href="{$href}" target="_blank" rel="noopener">{$text}{$hint}</a></p>
 <!-- /wp:paragraph -->
 HTML;
 	}

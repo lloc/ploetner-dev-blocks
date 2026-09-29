@@ -14,24 +14,23 @@ msgstr ""
 "X-Domain: ploetner-dev-blocks\n"
 
 #. Plugin Name of the plugin
-#: ploetner-dev-blocks.php:3
+#: ploetner-dev-blocks.php
 msgid "Ploetner Dev Blocks"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: ploetner-dev-blocks.php:4
-#: ploetner-dev-blocks.php:10
+#: ploetner-dev-blocks.php
 msgid "https://ploetner.dev"
 msgstr ""
 
 #. Description of the plugin
-#: ploetner-dev-blocks.php:5
+#: ploetner-dev-blocks.php
 msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
 msgstr ""
 
 #. Author of the plugin
-#: ploetner-dev-blocks.php:9
+#: ploetner-dev-blocks.php
 msgid "Dennis Ploetner"
 msgstr ""
 
@@ -64,7 +63,6 @@ msgstr ""
 msgid "Button text"
 msgstr ""
 
-#. translators: Default link target of the CTA banner. Point it to the ploetner.cloud version in your language once it exists.
 #. translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists.
 #: src/Blocks/Block/CtaBanner.php:49
 #: src/Patterns.php:108

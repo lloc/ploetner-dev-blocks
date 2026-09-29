@@ -66,7 +66,7 @@ class Speaking extends SectionBlock {
 		$event = esc_html( $event );
 
 		if ( '' !== $url ) {
-			$title = sprintf( '<a href="%1$s" target="_blank" rel="noopener">%2$s</a>', esc_url( $url ), $title );
+			$title = sprintf( '<a href="%1$s" target="_blank" rel="noopener">%2$s%3$s</a>', esc_url( $url ), $title, Section::new_tab_hint() );
 		}
 
 		if ( $last ) {

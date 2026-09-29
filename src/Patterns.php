@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace lloc\PloetnerDevBlocks;
 
+use lloc\PloetnerDevBlocks\Blocks\Section;
+
 /**
  * Registers the "ploetner.dev" pattern category and its patterns.
  */
@@ -168,6 +170,7 @@ HTML;
 	 * @return string
 	 */
 	public function footer(): string {
+		$new_tab   = Section::new_tab_hint();
 		$copyright = esc_html(
 			sprintf(
 				/* translators: 1: year, 2: VAT number. */
@@ -180,22 +183,22 @@ HTML;
 		return <<<HTML
 <!-- wp:group {"align":"full","style":{"border":{"top":{"color":"var:preset|color|border","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"},"className":"ploetner-footer"} -->
 <div class="wp-block-group alignfull ploetner-footer" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
-		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://profiles.wordpress.org/realloc/" target="_blank" rel="noopener">WordPress</a></p>
+		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://profiles.wordpress.org/realloc/" target="_blank" rel="noopener">WordPress{$new_tab}</a></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
-		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://github.com/lloc" target="_blank" rel="noopener">GitHub</a></p>
+		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://github.com/lloc" target="_blank" rel="noopener">GitHub{$new_tab}</a></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
-		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://www.linkedin.com/in/dploetner/" target="_blank" rel="noopener">LinkedIn</a></p>
+		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://www.linkedin.com/in/dploetner/" target="_blank" rel="noopener">LinkedIn{$new_tab}</a></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
-		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://mastodon.social/@realloc" target="_blank" rel="me noopener">Mastodon</a></p>
+		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://mastodon.social/@realloc" target="_blank" rel="me noopener">Mastodon{$new_tab}</a></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"fontSize":"tiny","fontFamily":"mono","textColor":"dim"} -->
-		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://x.com/realloc" target="_blank" rel="noopener">X</a></p>
+		<p class="has-dim-color has-text-color has-mono-font-family has-tiny-font-size"><a href="https://x.com/realloc" target="_blank" rel="noopener">X{$new_tab}</a></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

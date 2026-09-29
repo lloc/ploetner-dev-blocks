@@ -59,6 +59,16 @@ language is marked with `aria-current`.
 - MLS is an optional runtime dependency. PHPStan reads its API from
   `tests/phpstan/msls-stubs.php`.
 
+### Accessibility and front-page meta
+
+- Links that open a new tab carry a visually hidden hint, "(opens in a new tab)"
+  (`.ploetner-sr-only`).
+- The accent "▸" in Expertise headings is `aria-hidden`.
+- Footer social links wrap on narrow screens; the header CTA stays on one line.
+- The front page gets `<meta name="description">` from the site tagline
+  (Settings > General), per language site. Skipped when Yoast, Rank Math,
+  AIOSEO, SEOPress or The SEO Framework is active.
+
 ## Custom post types
 
 `pd_expertise`, `pd_project`, `pd_talk`, `pd_community` — all non-public (no archive,

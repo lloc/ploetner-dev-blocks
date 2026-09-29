@@ -44,8 +44,8 @@ class PluginTest extends TestCase {
 	 */
 	public function test_register_wires_hooks(): void {
 		// 2 (post types) + 2 (meta box: add_meta_boxes + save_post) + 5 (admin list: pre_get_posts + 4 custom columns)
-		// + 1 (admin_init seed catch-up) + 7 (blocks) + 1 (assets) + 1 (patterns) = 19 add_action calls.
-		Functions\expect( 'add_action' )->times( 19 );
+		// + 1 (admin_init seed catch-up) + 7 (blocks) + 1 (assets) + 1 (patterns) + 1 (meta description) = 20 add_action calls.
+		Functions\expect( 'add_action' )->times( 20 );
 		Functions\expect( 'add_filter' )->once()->with( 'block_categories_all', \Mockery::type( 'array' ) );
 		// Admin list: columns + sortable columns for each of the 4 post types.
 		Functions\expect( 'add_filter' )->times( 8 )->with( \Mockery::pattern( '/^manage_(edit-)?pd_\w+_(posts_)?(sortable_)?columns$/' ), \Mockery::any() );

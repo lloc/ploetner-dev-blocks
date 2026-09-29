@@ -57,6 +57,7 @@ class Plugin {
 		( new BlockCategory() )->register();
 		( new Assets() )->register();
 		( new Patterns() )->register();
+		( new MetaDescription() )->register();
 
 		// Seeding runs on admin_init, not on the activation hook: during the
 		// activation request the plugin is not active yet, so its post types are

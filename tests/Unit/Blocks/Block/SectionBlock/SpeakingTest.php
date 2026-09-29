@@ -52,7 +52,7 @@ class SpeakingTest extends TestCase {
 		$linked = $this->block->speaking_row( '2026', 'Talk', 'WordCamp', false, 'https://example.com/slides' );
 
 		$this->assertStringNotContainsString( '<a ', $plain );
-		$this->assertStringContainsString( '<a href="https://example.com/slides" target="_blank" rel="noopener">Talk</a>', $linked );
+		$this->assertStringContainsString( '<a href="https://example.com/slides" target="_blank" rel="noopener">Talk <span class="ploetner-sr-only">(opens in a new tab)</span></a>', $linked );
 	}
 
 	/**

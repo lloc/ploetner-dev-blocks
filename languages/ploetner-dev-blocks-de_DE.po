@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Ploetner Dev Blocks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ploetner-dev-blocks\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-28T15:51:49+00:00\n"
+"PO-Revision-Date: 2026-09-29T10:50:01+00:00\n"
 "Last-Translator: Dennis Plötner <re@lloc.de>\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -78,7 +78,7 @@ msgstr "Button-Text"
 #. ploetner.cloud version in your language once it exists.
 #. translators: Link target of the header button. Point it to the
 #. ploetner.cloud version in your language once it exists.
-#: src/Blocks/Block/CtaBanner.php:49 src/Patterns.php:106
+#: src/Blocks/Block/CtaBanner.php:49 src/Patterns.php:108
 msgctxt "ploetner.cloud URL"
 msgid "https://ploetner.cloud/"
 msgstr "https://ploetner.cloud/"
@@ -211,7 +211,7 @@ msgstr "Sprachumschalter"
 msgid "Choose language"
 msgstr "Sprache wählen"
 
-#: src/Blocks/Block/SectionBlock/Community.php:32 src/Patterns.php:147
+#: src/Blocks/Block/SectionBlock/Community.php:32 src/Patterns.php:149
 #: src/PostTypes/PostTypes.php:48
 msgid "Community"
 msgstr "Community"
@@ -236,20 +236,20 @@ msgstr "Community-Einträge im Dashboard anlegen."
 msgid "Learn more ↗"
 msgstr "Mehr erfahren ↗"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:32 src/Patterns.php:144
+#: src/Blocks/Block/SectionBlock/Expertise.php:33 src/Patterns.php:146
 #: src/PostTypes/PostTypes.php:30
 msgid "Expertise"
 msgstr "Expertise"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:40
+#: src/Blocks/Block/SectionBlock/Expertise.php:41
 msgid "01 / Expertise"
 msgstr "01 / Expertise"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:41
+#: src/Blocks/Block/SectionBlock/Expertise.php:42
 msgid "What I do best"
 msgstr "Was ich am besten kann"
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:42
+#: src/Blocks/Block/SectionBlock/Expertise.php:43
 msgid ""
 "Deep specialization in WordPress at enterprise scale, from plugin "
 "architecture to multisite infrastructure."
@@ -257,11 +257,11 @@ msgstr ""
 "Spezialisierung auf WordPress im Enterprise-Maßstab, von der Plugin-"
 "Architektur bis zur Multisite-Infrastruktur."
 
-#: src/Blocks/Block/SectionBlock/Expertise.php:50
+#: src/Blocks/Block/SectionBlock/Expertise.php:51
 msgid "Add expertise items in the dashboard."
 msgstr "Expertise-Einträge im Dashboard anlegen."
 
-#: src/Blocks/Block/SectionBlock/OpenSource.php:29 src/Patterns.php:145
+#: src/Blocks/Block/SectionBlock/OpenSource.php:29 src/Patterns.php:147
 msgid "Open Source"
 msgstr "Open Source"
 
@@ -285,7 +285,7 @@ msgstr "Projekte im Dashboard anlegen."
 msgid "View project ↗"
 msgstr "Projekt ansehen ↗"
 
-#: src/Blocks/Block/SectionBlock/Speaking.php:31 src/Patterns.php:146
+#: src/Blocks/Block/SectionBlock/Speaking.php:31 src/Patterns.php:148
 msgid "Speaking"
 msgstr "Vorträge"
 
@@ -305,7 +305,7 @@ msgstr "Wissen teilen auf WordCamps und Meetups in Europa und den USA."
 msgid "Add talks in the dashboard."
 msgstr "Vorträge im Dashboard anlegen."
 
-#: src/Blocks/BlockCategory.php:41 src/Patterns.php:43
+#: src/Blocks/BlockCategory.php:41 src/Patterns.php:45
 msgid "ploetner.dev"
 msgstr "ploetner.dev"
 
@@ -325,28 +325,32 @@ msgstr "Max. Einträge (0 = alle)"
 msgid "Back to top"
 msgstr "Nach oben"
 
-#: src/Patterns.php:59
+#: src/Blocks/Section.php:121
+msgid "(opens in a new tab)"
+msgstr "(öffnet in neuem Tab)"
+
+#: src/Patterns.php:61
 msgid "Section separator"
 msgstr "Abschnittstrenner"
 
-#: src/Patterns.php:64
+#: src/Patterns.php:66
 msgid "Header"
 msgstr "Header"
 
-#: src/Patterns.php:70
+#: src/Patterns.php:72
 msgid "Footer"
 msgstr "Footer"
 
-#: src/Patterns.php:76
+#: src/Patterns.php:78
 msgid "Front page sections"
 msgstr "Startseiten-Abschnitte"
 
-#: src/Patterns.php:103
+#: src/Patterns.php:105
 msgid "Need help? →"
 msgstr "Hilfe gebraucht? →"
 
 #. translators: 1: year, 2: VAT number.
-#: src/Patterns.php:174
+#: src/Patterns.php:177
 #, php-format
 msgid "© %1$s Dennis Plötner, VAT number %2$s"
 msgstr "© %1$s Dennis Plötner, USt-IdNr. %2$s"

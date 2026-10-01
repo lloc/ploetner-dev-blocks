@@ -55,11 +55,33 @@ class LegalPageTest extends TestCase {
 	/**
 	 * @covers ::content
 	 */
-	public function test_content_is_valid_block_markup(): void {
+	public function test_content_is_balanced_block_markup(): void {
 		$html = ( new LegalPage() )->content();
 
-		$this->assertSame( substr_count( $html, '<!-- wp:heading' ), substr_count( $html, '<!-- /wp:heading -->' ) );
-		$this->assertSame( substr_count( $html, '<!-- wp:paragraph -->' ), substr_count( $html, '<!-- /wp:paragraph -->' ) );
-		$this->assertStringContainsString( '<!-- wp:heading {"level":3} -->', $html );
+		foreach ( array( 'group', 'heading', 'paragraph' ) as $block ) {
+			$this->assertSame(
+				preg_match_all( '/<!-- wp:' . $block . '[ -]/', $html ),
+				substr_count( $html, '<!-- /wp:' . $block . ' -->' ),
+				"Unbalanced {$block} blocks"
+			);
+		}
+		$this->assertSame( substr_count( $html, '<div' ), substr_count( $html, '</div>' ) );
+	}
+
+	/**
+	 * @covers ::content
+	 * @covers ::notice
+	 * @covers ::privacy
+	 */
+	public function test_content_uses_the_styled_layout(): void {
+		$html = ( new LegalPage() )->content();
+
+		$this->assertStringStartsWith( '<!-- wp:group {"className":"ploetner-legal"} -->', $html );
+		$this->assertSame( 5, substr_count( $html, '<div class="wp-block-group ploetner-legal-row">' ) );
+		$this->assertSame( 7, substr_count( $html, '<div class="wp-block-group ploetner-legal-section">' ) );
+		$this->assertStringContainsString( '01 / Legal notice', $html );
+		$this->assertStringContainsString( '02 / Privacy policy', $html );
+		$this->assertStringContainsString( 'id="legal-notice"', $html );
+		$this->assertStringContainsString( 'id="privacy"', $html );
 	}
 }

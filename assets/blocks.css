@@ -273,3 +273,114 @@ mark.has-inline-color.has-accent-color {
 		padding: 0.35rem 0.6rem !important;
 	}
 }
+
+/* Legal page (ploetner-dev/legal pattern): numbered labels, provider details
+   as a key/value card, privacy topics as rows like the Speaking list. */
+.ploetner-legal {
+	--ploetner-legal-key: 13rem;
+}
+
+.ploetner-legal > .ploetner-section-label {
+	margin-top: var(--wp--preset--spacing--70);
+	margin-bottom: 0;
+}
+
+.ploetner-legal > .ploetner-section-label:first-child {
+	margin-top: var(--wp--preset--spacing--40);
+}
+
+.ploetner-legal > .wp-block-heading {
+	margin-top: 0.5rem;
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.ploetner-legal-facts {
+	padding: 0.25rem var(--wp--preset--spacing--40);
+	background: var(--wp--preset--color--surface);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 3px;
+}
+
+.ploetner-legal-row,
+.ploetner-legal-section {
+	display: grid;
+	grid-template-columns: var(--ploetner-legal-key) minmax(0, 1fr);
+	gap: 0.35rem 2rem;
+	align-items: baseline;
+	margin: 0 !important;
+}
+
+.ploetner-legal-row {
+	padding: 0.9rem 0;
+}
+
+.ploetner-legal-row + .ploetner-legal-row {
+	border-top: 1px solid var(--wp--preset--color--border);
+}
+
+.ploetner-legal-row > p,
+.ploetner-legal-text > p,
+.ploetner-legal-title {
+	margin: 0;
+}
+
+.ploetner-legal-key {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--tiny);
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--wp--preset--color--dim);
+}
+
+.ploetner-legal-value {
+	color: var(--wp--preset--color--contrast);
+}
+
+.ploetner-legal-section {
+	padding: var(--wp--preset--spacing--40) 0;
+	border-top: 1px solid var(--wp--preset--color--border);
+}
+
+.ploetner-legal-section:last-of-type {
+	border-bottom: 1px solid var(--wp--preset--color--border);
+}
+
+.ploetner-legal-title {
+	font-size: var(--wp--preset--font-size--medium);
+	line-height: 1.4;
+}
+
+/* Small accent triangle, like the expertise card titles (no text for screen readers) */
+.ploetner-legal-title::before {
+	content: "";
+	display: inline-block;
+	margin-right: 0.5rem;
+	vertical-align: 0.1em;
+	border-top: 0.3em solid transparent;
+	border-bottom: 0.3em solid transparent;
+	border-left: 0.4em solid var(--wp--preset--color--accent);
+}
+
+.ploetner-legal-text {
+	color: var(--wp--preset--color--muted);
+	font-weight: 300;
+	line-height: 1.7;
+}
+
+.ploetner-legal-text > p + p {
+	margin-top: 0.9rem;
+}
+
+.ploetner-legal-updated {
+	margin-top: var(--wp--preset--spacing--50) !important;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--tiny);
+	color: var(--wp--preset--color--dim);
+}
+
+@media (max-width: 782px) {
+	.ploetner-legal-row,
+	.ploetner-legal-section {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

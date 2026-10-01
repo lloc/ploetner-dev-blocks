@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-09-29T15:23:33+00:00\n"
+"PO-Revision-Date: 2026-10-01T14:02:52+00:00\n"
 "Language: it_IT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -332,105 +332,109 @@ msgctxt "legal page slug"
 msgid "legal"
 msgstr "note-legali"
 
-#: src/LegalPage.php:46
+#: src/LegalPage.php:41
+msgid "Provider"
+msgstr "Titolare del sito"
+
+#: src/LegalPage.php:42
+msgid "Address"
+msgstr "Indirizzo"
+
+#: src/LegalPage.php:43
+msgid "Email"
+msgstr "Email"
+
+#: src/LegalPage.php:44
+msgid "VAT number"
+msgstr "Partita IVA"
+
+#: src/LegalPage.php:45
+msgid "Responsible for content"
+msgstr "Responsabile dei contenuti"
+
+#: src/LegalPage.php:59
+#: src/LegalPage.php:60
 msgid "Legal notice"
 msgstr "Note legali"
 
-#. translators: %s: email address link.
-#: src/LegalPage.php:54
-#, php-format
-msgid "Email: %s"
-msgstr "Email: %s"
-
-#. translators: %s: VAT number.
-#: src/LegalPage.php:56
-#, php-format
-msgid "VAT number (Partita IVA): %s"
-msgstr "Partita IVA: %s"
-
-#. translators: %s: name of the provider.
-#: src/LegalPage.php:62
-#, php-format
-msgid "Responsible for the content of this website: %s, address as above."
-msgstr "Responsabile dei contenuti di questo sito: %s, indirizzo come sopra."
-
-#: src/LegalPage.php:83
+#: src/LegalPage.php:78
+#: src/LegalPage.php:79
 msgid "Privacy policy"
 msgstr "Informativa sulla privacy"
 
-#: src/LegalPage.php:85
+#: src/LegalPage.php:82
 msgid "Controller"
 msgstr "Titolare del trattamento"
 
 #. translators: 1: name of the controller, 2: email address link.
-#: src/LegalPage.php:90
+#: src/LegalPage.php:86
 #, php-format
 msgid "The controller within the meaning of the GDPR is %1$s, address as in the legal notice above, email %2$s."
 msgstr "Il titolare del trattamento ai sensi del GDPR è %1$s, indirizzo come nelle note legali qui sopra, email %2$s."
 
-#: src/LegalPage.php:97
+#: src/LegalPage.php:94
 msgid "Visiting this website: server logs"
 msgstr "Visita del sito: log del server"
 
-#: src/LegalPage.php:99
-msgid "Each time you open a page, the web server records technical data: IP address, date and time, the requested address, the referring page, browser and operating system (user agent) and the status code. This is needed to deliver the website and to keep it secure (Art. 6(1)(f) GDPR, legitimate interest)."
+#: src/LegalPage.php:95
+msgid "Each time you open a page, the web server records technical data: IP address, date and time, the requested address, the referring page, browser and operating system (user agent), and the status code. This is needed to deliver the website and to keep it secure (Art. 6(1)(f) GDPR, legitimate interest)."
 msgstr "A ogni apertura di una pagina il server web registra dati tecnici: indirizzo IP, data e ora, l'indirizzo richiesto, la pagina di provenienza, browser e sistema operativo (user agent) e il codice di stato. Servono per fornire il sito e mantenerlo sicuro (art. 6, par. 1, lett. f GDPR, legittimo interesse)."
 
 #. translators: 1: number of days, 2: hosting provider and country.
-#: src/LegalPage.php:105
+#: src/LegalPage.php:99
 #, php-format
-msgid "The logs are deleted after %1$d days at the latest, unless an incident has to be investigated. The server is operated by %2$s, which processes the data on my behalf (Art. 28 GDPR)."
+msgid "We delete the logs after %1$d days at the latest, unless we need to investigate an incident. The server is operated by %2$s, which processes the data on my behalf (Art. 28 GDPR)."
 msgstr "I log vengono cancellati al più tardi dopo %1$d giorni, salvo che si debba analizzare un incidente. Il server è gestito da %2$s, che tratta i dati per mio conto (art. 28 GDPR)."
 
-#: src/LegalPage.php:112
+#: src/LegalPage.php:107
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
-#: src/LegalPage.php:114
-msgid "The website is delivered through Cloudflare (Cloudflare, Inc., San Francisco, USA), which protects it against attacks and speeds up delivery. Cloudflare processes your IP address and technical request data and may set technically necessary cookies to tell people from bots. Legal basis is Art. 6(1)(f) GDPR. Cloudflare is certified under the EU-U.S. Data Privacy Framework; transfers to the USA are based on it."
+#: src/LegalPage.php:108
+msgid "The website is delivered through Cloudflare (Cloudflare, Inc., San Francisco, USA), which protects it against attacks and speeds up delivery. Cloudflare processes your IP address and technical request data and may set technically necessary cookies to distinguish people from bots. The legal basis is Art. 6(1)(f) GDPR. Cloudflare is certified under the EU-U.S. Data Privacy Framework; transfers to the USA are based on it."
 msgstr "Il sito viene distribuito tramite Cloudflare (Cloudflare, Inc., San Francisco, USA), che lo protegge dagli attacchi e ne velocizza la consegna. Cloudflare tratta il tuo indirizzo IP e i dati tecnici della richiesta e può impostare cookie tecnici necessari per distinguere le persone dai bot. La base giuridica è l'art. 6, par. 1, lett. f GDPR. Cloudflare è certificata nell'ambito dell'EU-U.S. Data Privacy Framework, su cui si basano i trasferimenti verso gli USA."
 
-#: src/LegalPage.php:117
+#: src/LegalPage.php:112
 msgid "Cookies and tracking"
 msgstr "Cookie e tracciamento"
 
-#: src/LegalPage.php:119
-msgid "This website only uses technically necessary cookies (see Cloudflare). There is no analytics, no tracking and no advertising, which is why you do not see a cookie banner. Fonts are served from this server; no third-party content is loaded."
+#: src/LegalPage.php:113
+msgid "This website only uses technically necessary cookies (see Cloudflare). There is no analytics, no tracking, and no advertising, which is why you do not see a cookie banner. Fonts are served from this server; no third-party content is loaded."
 msgstr "Questo sito usa solo cookie tecnici necessari (vedi Cloudflare). Non ci sono analytics, tracciamento o pubblicità, per questo non vedi nessun banner dei cookie. I font vengono serviti da questo server e non vengono caricati contenuti di terze parti."
 
-#: src/LegalPage.php:122
+#: src/LegalPage.php:117
 msgid "External links"
 msgstr "Link esterni"
 
-#: src/LegalPage.php:124
+#: src/LegalPage.php:118
 msgid "Links to other websites (e.g. GitHub, LinkedIn, Mastodon) only transfer data once you click them. From then on, the privacy policy of that website applies."
 msgstr "I link ad altri siti (ad es. GitHub, LinkedIn, Mastodon) trasmettono dati solo quando ci clicchi sopra. Da quel momento vale l'informativa sulla privacy del sito in questione."
 
-#: src/LegalPage.php:127
+#: src/LegalPage.php:122
 msgid "Contact by email"
 msgstr "Contatto via email"
 
-#: src/LegalPage.php:129
+#: src/LegalPage.php:123
 msgid "If you write to me, I use your address and message only to answer and to handle your request (Art. 6(1)(b) and (f) GDPR). I delete them when they are no longer needed, unless legal retention periods apply."
 msgstr "Se mi scrivi, uso il tuo indirizzo e il tuo messaggio solo per risponderti e gestire la tua richiesta (art. 6, par. 1, lett. b e f GDPR). Li cancello quando non servono più, salvo obblighi di conservazione previsti dalla legge."
 
-#: src/LegalPage.php:132
+#: src/LegalPage.php:127
 msgid "Your rights"
 msgstr "I tuoi diritti"
 
 #. translators: %s: email address link.
-#: src/LegalPage.php:135
+#: src/LegalPage.php:131
 #, php-format
 msgid "You have the right to access, rectification, erasure, restriction of processing, data portability and to object to processing (Art. 15 to 21 GDPR). Just write to %s."
 msgstr "Hai diritto di accesso, rettifica, cancellazione, limitazione del trattamento, portabilità dei dati e opposizione al trattamento (artt. 15-21 GDPR). Scrivimi semplicemente a %s."
 
 #. translators: %s: name and link of the Italian data protection authority.
-#: src/LegalPage.php:139
+#: src/LegalPage.php:138
 #, php-format
-msgid "You can also lodge a complaint with a supervisory authority, in Italy the %s."
+msgid "You can also lodge a complaint with a supervisory authority; in Italy, the %s."
 msgstr "Puoi anche proporre reclamo a un'autorità di controllo, in Italia al %s."
 
-#: src/LegalPage.php:143
+#: src/LegalPage.php:144
 msgid "Last updated: September 2026"
 msgstr "Ultimo aggiornamento: settembre 2026"
 

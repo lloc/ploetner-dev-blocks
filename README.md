@@ -75,8 +75,9 @@ Provider details live in one place, `src/Contact.php` (name, address, email,
 VAT number, hosting provider, log retention). They feed:
 
 - the footer pattern: copyright with VAT number, `mailto:` link and a link to
-  the legal page (`/legal/`, translated slug, `/rechtliches/` on the German site);
-- the `ploetner-dev/legal` pattern (pages only): legal notice (Art. 7 D.Lgs.
+  the legal page (`/legal/`, translated slug: `/rechtliches/` on the German,
+  `/note-legali/` on the Italian site);
+- the `ploetner-dev/legal` pattern: legal notice (Art. 7 D.Lgs.
   70/2003) and privacy policy (Art. 13 GDPR) describing the actual setup: server
   logs, Cloudflare, technically necessary cookies only, local fonts, no tracking.
 
@@ -105,7 +106,7 @@ their year and event.
 ## Languages / Multisite
 
 All user-facing strings use the `ploetner-dev-blocks` text domain. The plugin
-ships German translations (`languages/*-de_DE.{po,mo,l10n.php}`). The main
+ships German and Italian translations (`languages/*-{de_DE,it_IT}.{po,mo,l10n.php}`). The main
 plugin file calls `load_plugin_textdomain()` to register the `languages/` path.
 WordPress 6.8+ derives it from the `Domain Path` header on its own, but only for
 plugins activated per site. When the plugin is **network-activated**, core
@@ -114,7 +115,7 @@ path; strings are still loaded just in time. Keep all `__()` calls on or after
 `init`, otherwise core triggers a "called too early" notice.
 
 What follows the **site language** of each network site (e.g. `ploetner.dev/de/`
-with `de_DE`):
+with `de_DE`, `ploetner.dev/it/` with `it_IT`):
 
 - Block attribute defaults (Hero, section labels/headings/intros, CTA banner).
   Blocks inserted without custom attributes render in the site language.
@@ -122,8 +123,9 @@ with `de_DE`):
   section anchors (`#expertise`, `#open-source`, `#speaking`, `#community`) stay
   identical in every language.
 - Sample content from the seeder. Seeding switches to the site locale, so a
-  German site gets German titles and texts even when the admin user runs
-  WordPress in English. Slugs derive from the translated titles; items seeded
+  German or Italian site gets its titles and texts in that language even when
+  the admin user runs WordPress in English. The site language must be
+  installed (Settings → General), otherwise `switch_to_locale()` refuses it. Slugs derive from the translated titles; items seeded
   earlier in another language are not replaced.
 
 Header, footer and front page live in the Site Editor per site. On a new

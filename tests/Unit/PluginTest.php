@@ -47,9 +47,17 @@ class PluginTest extends TestCase {
 		// + 1 (admin_init seed catch-up) + 7 (blocks) + 1 (assets) + 1 (patterns) + 1 (meta description) = 20 add_action calls.
 		Functions\expect( 'add_action' )->times( 20 );
 		Functions\expect( 'add_filter' )->once()->with( 'block_categories_all', \Mockery::type( 'array' ) );
+		Functions\expect( 'add_filter' )->once()->with( 'ploetner_theme_favicon', \Mockery::type( 'array' ) );
 		// Admin list: columns + sortable columns for each of the 4 post types.
 		Functions\expect( 'add_filter' )->times( 8 )->with( \Mockery::pattern( '/^manage_(edit-)?pd_\w+_(posts_)?(sortable_)?columns$/' ), \Mockery::any() );
 
 		( new Plugin() )->register();
+	}
+
+	/**
+	 * @covers ::favicon
+	 */
+	public function test_favicon_is_the_dev_brand(): void {
+		$this->assertSame( 'dev', ( new Plugin() )->favicon() );
 	}
 }

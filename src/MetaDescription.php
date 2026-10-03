@@ -10,9 +10,11 @@ declare(strict_types=1);
 namespace lloc\PloetnerDevBlocks;
 
 /**
- * Prints <meta name="description"> on the front page, taken from the site
- * tagline (Settings > General), so every language site of the network gets its
- * own description. Steps aside when an SEO plugin handles it.
+ * Meta description for the front page (the site tagline, Settings > General,
+ * so every language site of the network gets its own) and the legal page.
+ *
+ * Without an SEO plugin it prints the tag itself. With Yoast SEO it only fills
+ * in the description (and og:description) where Yoast has none.
  */
 class MetaDescription {
 
@@ -34,6 +36,25 @@ class MetaDescription {
 	 */
 	public function register(): void {
 		add_action( 'wp_head', array( $this, 'render' ), 1 );
+		add_filter( 'wpseo_metadesc', array( $this, 'fill' ) );
+		add_filter( 'wpseo_opengraph_desc', array( $this, 'fill' ) );
+	}
+
+	/**
+	 * Yoast filter: keep a description set in Yoast, otherwise use ours.
+	 *
+	 * @param mixed $description Description from Yoast.
+	 *
+	 * @return mixed
+	 */
+	public function fill( $description ) {
+		if ( is_string( $description ) && '' !== trim( $description ) ) {
+			return $description;
+		}
+
+		$ours = $this->description();
+
+		return '' === $ours ? $description : $ours;
 	}
 
 	/**
@@ -56,11 +77,28 @@ class MetaDescription {
 	 * @return string
 	 */
 	public function content(): string {
-		if ( ! is_front_page() || $this->seo_plugin_active() ) {
+		if ( $this->seo_plugin_active() ) {
 			return '';
 		}
 
-		return trim( wp_strip_all_tags( (string) get_bloginfo( 'description' ) ) );
+		return $this->description();
+	}
+
+	/**
+	 * Description for the current page, or an empty string.
+	 *
+	 * @return string
+	 */
+	public function description(): string {
+		if ( is_front_page() ) {
+			return trim( wp_strip_all_tags( (string) get_bloginfo( 'description' ) ) );
+		}
+
+		if ( is_page( _x( 'legal', 'legal page slug', 'ploetner-dev-blocks' ) ) ) {
+			return __( 'Legal notice and privacy policy: who runs this website, which data is processed (server logs, Cloudflare) and your rights under the GDPR.', 'ploetner-dev-blocks' );
+		}
+
+		return '';
 	}
 
 	/**

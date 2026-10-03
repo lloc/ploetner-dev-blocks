@@ -60,6 +60,7 @@ class Plugin {
 		( new Assets() )->register();
 		( new Patterns() )->register();
 		( new MetaDescription() )->register();
+		( new Seo() )->register();
 
 		// Not on activation: post types and translations are not available yet
 		// there. Runs on the redirect to plugins.php instead, guarded by an option.

@@ -32,6 +32,22 @@ final class Contact {
 	public const LOG_DAYS = 14;
 
 	/**
+	 * Public profiles: label => [URL, rel]. Footer links and schema.org sameAs.
+	 */
+	public const PROFILES = array(
+		'WordPress' => array( 'https://profiles.wordpress.org/realloc/', 'noopener' ),
+		'GitHub'    => array( 'https://github.com/lloc', 'noopener' ),
+		'LinkedIn'  => array( 'https://www.linkedin.com/in/dploetner/', 'noopener' ),
+		'Mastodon'  => array( 'https://mastodon.social/@realloc', 'me noopener' ),
+		'X'         => array( 'https://x.com/realloc', 'noopener' ),
+	);
+
+	/**
+	 * Other spellings of the name (umlaut, handle), for schema.org alternateName.
+	 */
+	public const ALTERNATE_NAMES = array( 'Dennis Plötner', 'realloc' );
+
+	/**
 	 * Country name in the site language.
 	 *
 	 * @return string

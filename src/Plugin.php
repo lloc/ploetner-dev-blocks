@@ -51,6 +51,8 @@ class Plugin {
 	 * @return void
 	 */
 	public function register(): void {
+		add_filter( 'ploetner_theme_favicon', array( $this, 'favicon' ) );
+
 		( new PostTypes() )->register();
 		( new MetaBox() )->register();
 		( new AdminList() )->register();
@@ -58,6 +60,7 @@ class Plugin {
 		( new Assets() )->register();
 		( new Patterns() )->register();
 		( new MetaDescription() )->register();
+		( new Seo() )->register();
 
 		// Not on activation: post types and translations are not available yet
 		// there. Runs on the redirect to plugins.php instead, guarded by an option.
@@ -66,5 +69,14 @@ class Plugin {
 		foreach ( $this->blocks() as $block ) {
 			$block->register();
 		}
+	}
+
+	/**
+	 * Brand favicon of ploetner-theme for sites running this plugin.
+	 *
+	 * @return string
+	 */
+	public function favicon(): string {
+		return 'dev';
 	}
 }

@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-03T09:10:52+00:00\n"
-"PO-Revision-Date: 2026-10-01T14:02:52+00:00\n"
+"PO-Revision-Date: 2026-10-03T15:25:58+00:00\n"
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -210,7 +210,7 @@ msgid "Meta 2 label"
 msgstr "Meta 2 Bezeichnung"
 
 #: src/Blocks/Hero.php:87
-#: src/Contact.php:40
+#: src/Contact.php:56
 msgid "Italy"
 msgstr "Italien"
 
@@ -317,17 +317,18 @@ msgid "Add talks in the dashboard."
 msgstr "Vorträge im Dashboard anlegen."
 
 #. translators: 1: hosting provider, 2: server location.
-#: src/Contact.php:51
+#: src/Contact.php:67
 #, php-format
 msgid "%1$s (server location: %2$s)"
 msgstr "%1$s (Serverstandort: %2$s)"
 
-#: src/Contact.php:53
+#: src/Contact.php:69
 msgid "Frankfurt am Main, Germany"
 msgstr "Frankfurt am Main, Deutschland"
 
 #. translators: Slug of the page with legal notice and privacy policy on the site in your language.
-#: src/Contact.php:64
+#: src/Contact.php:80
+#: src/MetaDescription.php:97
 msgctxt "legal page slug"
 msgid "legal"
 msgstr "rechtliches"
@@ -437,6 +438,10 @@ msgstr "Außerdem kannst du dich bei einer Aufsichtsbehörde beschweren, in Ital
 #: src/LegalPage.php:144
 msgid "Last updated: September 2026"
 msgstr "Stand: September 2026"
+
+#: src/MetaDescription.php:98
+msgid "Legal notice and privacy policy: who runs this website, which data is processed (server logs, Cloudflare) and your rights under the GDPR."
+msgstr "Impressum und Datenschutzerklärung: wer diese Website betreibt, welche Daten verarbeitet werden (Server-Logs, Cloudflare) und welche Rechte du nach der DSGVO hast."
 
 #: src/Patterns.php:61
 msgid "Section separator"

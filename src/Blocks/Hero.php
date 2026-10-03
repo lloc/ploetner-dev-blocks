@@ -167,6 +167,39 @@ HTML;
 	}
 
 	/**
+	 * Portrait <img>. It is the largest element above the fold (LCP), so it
+	 * loads with high priority and, for a Media Library image, with width,
+	 * height and srcset so the browser reserves the space and picks a size.
+	 *
+	 * @param string $url Image URL.
+	 * @param string $alt Alt text.
+	 *
+	 * @return string
+	 */
+	public function portrait( string $url, string $alt ): string {
+		$id = attachment_url_to_postid( $url );
+		if ( $id > 0 ) {
+			$img = wp_get_attachment_image(
+				$id,
+				'large',
+				false,
+				array(
+					'alt'           => $alt,
+					'sizes'         => '(max-width: 781px) 100vw, 460px',
+					'fetchpriority' => 'high',
+					'decoding'      => 'async',
+					'loading'       => false,
+				)
+			);
+			if ( '' !== $img ) {
+				return $img;
+			}
+		}
+
+		return sprintf( '<img src="%1$s" alt="%2$s" fetchpriority="high" decoding="async"/>', esc_url( $url ), esc_attr( $alt ) );
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	public function render( array $attributes ): string {
@@ -198,7 +231,7 @@ HTML;
 
 		// With a portrait, put the intro and the photo side by side.
 		if ( '' !== $image ) {
-			$alt   = esc_attr( (string) ( $attributes['imageAlt'] ?? '' ) );
+			$img   = $this->portrait( (string) ( $attributes['image'] ?? '' ), (string) ( $attributes['imageAlt'] ?? '' ) );
 			$intro = <<<HTML
 <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|60"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center">
@@ -210,7 +243,7 @@ HTML;
 <!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
 <!-- wp:image {"className":"ploetner-hero-photo"} -->
-<figure class="wp-block-image ploetner-hero-photo"><img src="{$image}" alt="{$alt}"/></figure>
+<figure class="wp-block-image ploetner-hero-photo">{$img}</figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->

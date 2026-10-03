@@ -23,7 +23,9 @@ class MetaDescriptionTest extends TestCase {
 	 */
 	protected function setUp(): void {
 		parent::setUp();
-		Functions\stubs( array( 'esc_attr', 'wp_strip_all_tags' ) );
+		Functions\stubs( array( 'esc_attr', 'wp_strip_all_tags', '__' ) );
+		Functions\when( '_x' )->returnArg();
+		Functions\when( 'is_page' )->justReturn( false );
 	}
 
 	/**
@@ -60,5 +62,31 @@ class MetaDescriptionTest extends TestCase {
 		Functions\when( 'get_bloginfo' )->justReturn( '' );
 		$this->expectOutputString( '' );
 		( new MetaDescription() )->render();
+	}
+
+	/**
+	 * @covers ::description
+	 */
+	public function test_legal_page_gets_a_description(): void {
+		Functions\when( 'is_front_page' )->justReturn( false );
+		Functions\when( 'is_page' )->alias( static fn ( $slug ): bool => 'legal' === $slug );
+
+		$this->assertStringStartsWith( 'Legal notice and privacy policy', ( new MetaDescription() )->description() );
+	}
+
+	/**
+	 * @covers ::fill
+	 */
+	public function test_fill_keeps_yoast_description_and_fills_empty_ones(): void {
+		Functions\when( 'is_front_page' )->justReturn( true );
+		Functions\when( 'get_bloginfo' )->justReturn( 'Tagline' );
+		$meta = new MetaDescription();
+
+		$this->assertSame( 'From Yoast', $meta->fill( 'From Yoast' ) );
+		$this->assertSame( 'Tagline', $meta->fill( '' ) );
+		$this->assertSame( 'Tagline', $meta->fill( null ) );
+
+		Functions\when( 'is_front_page' )->justReturn( false );
+		$this->assertSame( '', $meta->fill( '' ) );
 	}
 }

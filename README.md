@@ -59,15 +59,28 @@ language is marked with `aria-current`.
 - MLS is an optional runtime dependency. PHPStan reads its API from
   `tests/phpstan/msls-stubs.php`.
 
-### Accessibility and front-page meta
+### Accessibility
 
 - Links that open a new tab carry a visually hidden hint, "(opens in a new tab)"
   (`.ploetner-sr-only`).
 - The accent "▸" in Expertise headings is `aria-hidden`.
 - Footer social links wrap on narrow screens; the header CTA stays on one line.
-- The front page gets `<meta name="description">` from the site tagline
-  (Settings > General), per language site. Skipped when Yoast, Rank Math,
-  AIOSEO, SEOPress or The SEO Framework is active.
+
+### SEO
+
+- Meta description: the front page uses the site tagline (Settings >
+  General), the legal page a translated summary. Without an SEO plugin the
+  plugin prints the tag. With Yoast it fills `wpseo_metadesc` and
+  `wpseo_opengraph_desc` only where Yoast has no description of its own. Other
+  SEO plugins (Rank Math, AIOSEO, SEOPress, The SEO Framework) are left alone.
+- hreflang `x-default` points to the English site (`Seo::DEFAULT_LANGUAGE`),
+  added to the Multisite Language Switcher links.
+- Yoast's schema.org Person gets `alternateName` (other spellings of the
+  name) and `sameAs` (the profiles in `Contact::PROFILES`, also used for the
+  footer links).
+- The WordPress generator tag is removed.
+- The Hero portrait loads with `fetchpriority="high"`; for a Media Library
+  image also with width, height and srcset.
 
 ### Contact, legal notice and privacy policy
 

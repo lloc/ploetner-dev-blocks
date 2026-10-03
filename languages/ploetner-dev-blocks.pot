@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-01T14:02:52+00:00\n"
+"POT-Creation-Date: 2026-10-03T15:25:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ploetner-dev-blocks\n"
@@ -210,7 +210,7 @@ msgid "Meta 2 label"
 msgstr ""
 
 #: src/Blocks/Hero.php:87
-#: src/Contact.php:40
+#: src/Contact.php:56
 msgid "Italy"
 msgstr ""
 
@@ -317,17 +317,18 @@ msgid "Add talks in the dashboard."
 msgstr ""
 
 #. translators: 1: hosting provider, 2: server location.
-#: src/Contact.php:51
+#: src/Contact.php:67
 #, php-format
 msgid "%1$s (server location: %2$s)"
 msgstr ""
 
-#: src/Contact.php:53
+#: src/Contact.php:69
 msgid "Frankfurt am Main, Germany"
 msgstr ""
 
 #. translators: Slug of the page with legal notice and privacy policy on the site in your language.
-#: src/Contact.php:64
+#: src/Contact.php:80
+#: src/MetaDescription.php:97
 msgctxt "legal page slug"
 msgid "legal"
 msgstr ""
@@ -436,6 +437,10 @@ msgstr ""
 
 #: src/LegalPage.php:144
 msgid "Last updated: September 2026"
+msgstr ""
+
+#: src/MetaDescription.php:98
+msgid "Legal notice and privacy policy: who runs this website, which data is processed (server logs, Cloudflare) and your rights under the GDPR."
 msgstr ""
 
 #: src/Patterns.php:61

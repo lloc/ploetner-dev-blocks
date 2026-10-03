@@ -26,6 +26,7 @@ class HeroTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 		Functions\stubs( array( 'esc_html', 'esc_url', 'esc_attr', 'do_blocks', '__' ) );
+		Functions\when( 'attachment_url_to_postid' )->justReturn( 0 );
 		$this->hero = new Hero();
 	}
 
@@ -104,5 +105,19 @@ class HeroTest extends TestCase {
 		$this->assertStringContainsString( 'ploetner-hero-photo', $html );
 		$this->assertStringContainsString( 'https://ploetner.dev/me.jpg', $html );
 		$this->assertStringContainsString( 'wp:columns', $html );
+		$this->assertStringContainsString( 'fetchpriority="high"', $html );
+	}
+
+	/**
+	 * @covers ::portrait
+	 */
+	public function test_portrait_uses_the_media_library_image(): void {
+		Functions\when( 'attachment_url_to_postid' )->justReturn( 42 );
+		Functions\expect( 'wp_get_attachment_image' )
+			->once()
+			->with( 42, 'large', false, \Mockery::on( static fn ( array $attr ): bool => 'high' === $attr['fetchpriority'] && 'Dennis' === $attr['alt'] && false === $attr['loading'] ) )
+			->andReturn( '<img src="me-768.jpg" width="768" height="768" srcset="…" />' );
+
+		$this->assertSame( '<img src="me-768.jpg" width="768" height="768" srcset="…" />', $this->hero->portrait( 'https://ploetner.dev/me.jpg', 'Dennis' ) );
 	}
 }

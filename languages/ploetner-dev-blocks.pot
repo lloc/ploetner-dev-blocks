@@ -1,0 +1,646 @@
+# Copyright (C) 2026 Dennis Ploetner
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ploetner Dev Blocks 1.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ploetner-dev-blocks\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-03T15:25:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: ploetner-dev-blocks\n"
+
+#. Plugin Name of the plugin
+#: ploetner-dev-blocks.php:3
+msgid "Ploetner Dev Blocks"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: ploetner-dev-blocks.php:4
+#: ploetner-dev-blocks.php:10
+msgid "https://ploetner.dev"
+msgstr ""
+
+#. Description of the plugin
+#: ploetner-dev-blocks.php:5
+msgid "Dynamic content blocks (Hero, Expertise, Open Source, Speaking, Community, CTA Banner) and their backing custom post types for the Ploetner Dev site."
+msgstr ""
+
+#. Author of the plugin
+#: ploetner-dev-blocks.php:9
+msgid "Dennis Ploetner"
+msgstr ""
+
+#: src/Blocks/BlockCategory.php:41
+#: src/Patterns.php:45
+msgid "ploetner.dev"
+msgstr ""
+
+#: src/Blocks/Community.php:32
+#: src/Patterns.php:156
+#: src/PostTypes/PostTypes.php:48
+msgid "Community"
+msgstr ""
+
+#: src/Blocks/Community.php:40
+msgid "04 / Community"
+msgstr ""
+
+#: src/Blocks/Community.php:41
+msgid "Building together"
+msgstr ""
+
+#: src/Blocks/Community.php:42
+msgid "WordPress is open source, and so is how I work."
+msgstr ""
+
+#: src/Blocks/Community.php:50
+msgid "Add community items in the dashboard."
+msgstr ""
+
+#: src/Blocks/Community.php:68
+msgid "Learn more ↗"
+msgstr ""
+
+#: src/Blocks/CtaBanner.php:27
+msgid "CTA Banner"
+msgstr ""
+
+#: src/Blocks/CtaBanner.php:36
+msgid "Need a WordPress technical audit?"
+msgstr ""
+
+#: src/Blocks/CtaBanner.php:37
+#: src/Blocks/Section.php:47
+msgid "Heading"
+msgstr ""
+
+#: src/Blocks/CtaBanner.php:40
+msgid "I help enterprise teams find and fix critical issues in their WordPress infrastructure. Fast turnaround, structured results."
+msgstr ""
+
+#: src/Blocks/CtaBanner.php:41
+msgid "Text"
+msgstr ""
+
+#: src/Blocks/CtaBanner.php:44
+msgid "Learn more at ploetner.cloud →"
+msgstr ""
+
+#: src/Blocks/CtaBanner.php:45
+msgid "Button text"
+msgstr ""
+
+#. translators: Link target of the header button. Point it to the ploetner.cloud version in your language once it exists.
+#: src/Blocks/CtaBanner.php:49
+#: src/Patterns.php:115
+msgctxt "ploetner.cloud URL"
+msgid "https://ploetner.cloud/"
+msgstr ""
+
+#: src/Blocks/CtaBanner.php:50
+msgid "Button URL"
+msgstr ""
+
+#: src/Blocks/Expertise.php:33
+#: src/Patterns.php:153
+#: src/PostTypes/PostTypes.php:30
+msgid "Expertise"
+msgstr ""
+
+#: src/Blocks/Expertise.php:41
+msgid "01 / Expertise"
+msgstr ""
+
+#: src/Blocks/Expertise.php:42
+msgid "What I do best"
+msgstr ""
+
+#: src/Blocks/Expertise.php:43
+msgid "Deep specialization in WordPress at enterprise scale, from plugin architecture to multisite infrastructure."
+msgstr ""
+
+#: src/Blocks/Expertise.php:51
+msgid "Add expertise items in the dashboard."
+msgstr ""
+
+#: src/Blocks/Hero.php:30
+msgid "Hero"
+msgstr ""
+
+#: src/Blocks/Hero.php:40
+msgid "Tagline"
+msgstr ""
+
+#: src/Blocks/Hero.php:43
+msgid "Born in Germany."
+msgstr ""
+
+#: src/Blocks/Hero.php:44
+msgid "Heading line 1"
+msgstr ""
+
+#: src/Blocks/Hero.php:47
+msgid "Reborn in Italy."
+msgstr ""
+
+#: src/Blocks/Hero.php:48
+msgid "Heading line 2"
+msgstr ""
+
+#: src/Blocks/Hero.php:51
+msgid "I’m"
+msgstr ""
+
+#: src/Blocks/Hero.php:52
+msgid "Heading lead-in"
+msgstr ""
+
+#: src/Blocks/Hero.php:56
+msgid "Highlighted name"
+msgstr ""
+
+#: src/Blocks/Hero.php:60
+msgid "Phonetic"
+msgstr ""
+
+#: src/Blocks/Hero.php:63
+msgid "I build enterprise WordPress solutions, maintain open-source projects used by thousands, and help teams ship robust, scalable architectures."
+msgstr ""
+
+#: src/Blocks/Hero.php:64
+msgid "Bio"
+msgstr ""
+
+#: src/Blocks/Hero.php:68
+msgid "Portrait image URL"
+msgstr ""
+
+#: src/Blocks/Hero.php:72
+msgid "Portrait alt text"
+msgstr ""
+
+#: src/Blocks/Hero.php:75
+msgid "Current role"
+msgstr ""
+
+#: src/Blocks/Hero.php:76
+msgid "Meta 1 label"
+msgstr ""
+
+#: src/Blocks/Hero.php:79
+msgid "Senior Web Engineer at Syde"
+msgstr ""
+
+#: src/Blocks/Hero.php:80
+msgid "Meta 1 value"
+msgstr ""
+
+#: src/Blocks/Hero.php:83
+msgid "Based in"
+msgstr ""
+
+#: src/Blocks/Hero.php:84
+msgid "Meta 2 label"
+msgstr ""
+
+#: src/Blocks/Hero.php:87
+#: src/Contact.php:56
+msgid "Italy"
+msgstr ""
+
+#: src/Blocks/Hero.php:88
+msgid "Meta 2 value"
+msgstr ""
+
+#: src/Blocks/Hero.php:91
+msgid "Languages"
+msgstr ""
+
+#: src/Blocks/Hero.php:92
+msgid "Meta 3 label"
+msgstr ""
+
+#: src/Blocks/Hero.php:96
+msgid "Meta 3 value"
+msgstr ""
+
+#: src/Blocks/Hero.php:99
+msgid "Building since"
+msgstr ""
+
+#: src/Blocks/Hero.php:100
+msgid "Meta 4 label"
+msgstr ""
+
+#: src/Blocks/Hero.php:104
+msgid "Meta 4 value"
+msgstr ""
+
+#: src/Blocks/LanguageSwitcher.php:49
+msgid "Language switcher"
+msgstr ""
+
+#: src/Blocks/LanguageSwitcher.php:83
+msgid "Choose language"
+msgstr ""
+
+#: src/Blocks/OpenSource.php:29
+#: src/Patterns.php:154
+msgid "Open Source"
+msgstr ""
+
+#: src/Blocks/OpenSource.php:37
+msgid "02 / Open Source"
+msgstr ""
+
+#: src/Blocks/OpenSource.php:38
+msgid "Projects I work on"
+msgstr ""
+
+#: src/Blocks/OpenSource.php:39
+msgid "Code I build and share with the community."
+msgstr ""
+
+#: src/Blocks/OpenSource.php:47
+msgid "Add projects in the dashboard."
+msgstr ""
+
+#: src/Blocks/OpenSource.php:74
+msgid "View project ↗"
+msgstr ""
+
+#: src/Blocks/Section.php:43
+msgid "Section label"
+msgstr ""
+
+#: src/Blocks/Section.php:51
+msgid "Intro text"
+msgstr ""
+
+#: src/Blocks/Section.php:55
+msgid "Max items (0 = all)"
+msgstr ""
+
+#: src/Blocks/Section.php:82
+msgid "Back to top"
+msgstr ""
+
+#: src/Blocks/Section.php:131
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: src/Blocks/Speaking.php:31
+#: src/Patterns.php:155
+msgid "Speaking"
+msgstr ""
+
+#: src/Blocks/Speaking.php:39
+msgid "03 / Speaking"
+msgstr ""
+
+#: src/Blocks/Speaking.php:40
+msgid "Talks & appearances"
+msgstr ""
+
+#: src/Blocks/Speaking.php:41
+msgid "Sharing knowledge at WordCamps and meetups across Europe and the US."
+msgstr ""
+
+#: src/Blocks/Speaking.php:49
+msgid "Add talks in the dashboard."
+msgstr ""
+
+#. translators: 1: hosting provider, 2: server location.
+#: src/Contact.php:67
+#, php-format
+msgid "%1$s (server location: %2$s)"
+msgstr ""
+
+#: src/Contact.php:69
+msgid "Frankfurt am Main, Germany"
+msgstr ""
+
+#. translators: Slug of the page with legal notice and privacy policy on the site in your language.
+#: src/Contact.php:80
+#: src/MetaDescription.php:97
+msgctxt "legal page slug"
+msgid "legal"
+msgstr ""
+
+#: src/LegalPage.php:41
+msgid "Provider"
+msgstr ""
+
+#: src/LegalPage.php:42
+msgid "Address"
+msgstr ""
+
+#: src/LegalPage.php:43
+msgid "Email"
+msgstr ""
+
+#: src/LegalPage.php:44
+msgid "VAT number"
+msgstr ""
+
+#: src/LegalPage.php:45
+msgid "Responsible for content"
+msgstr ""
+
+#: src/LegalPage.php:59
+#: src/LegalPage.php:60
+msgid "Legal notice"
+msgstr ""
+
+#: src/LegalPage.php:78
+#: src/LegalPage.php:79
+msgid "Privacy policy"
+msgstr ""
+
+#: src/LegalPage.php:82
+msgid "Controller"
+msgstr ""
+
+#. translators: 1: name of the controller, 2: email address link.
+#: src/LegalPage.php:86
+#, php-format
+msgid "The controller within the meaning of the GDPR is %1$s, address as in the legal notice above, email %2$s."
+msgstr ""
+
+#: src/LegalPage.php:94
+msgid "Visiting this website: server logs"
+msgstr ""
+
+#: src/LegalPage.php:95
+msgid "Each time you open a page, the web server records technical data: IP address, date and time, the requested address, the referring page, browser and operating system (user agent), and the status code. This is needed to deliver the website and to keep it secure (Art. 6(1)(f) GDPR, legitimate interest)."
+msgstr ""
+
+#. translators: 1: number of days, 2: hosting provider and country.
+#: src/LegalPage.php:99
+#, php-format
+msgid "We delete the logs after %1$d days at the latest, unless we need to investigate an incident. The server is operated by %2$s, which processes the data on my behalf (Art. 28 GDPR)."
+msgstr ""
+
+#: src/LegalPage.php:107
+msgid "Cloudflare"
+msgstr ""
+
+#: src/LegalPage.php:108
+msgid "The website is delivered through Cloudflare (Cloudflare, Inc., San Francisco, USA), which protects it against attacks and speeds up delivery. Cloudflare processes your IP address and technical request data and may set technically necessary cookies to distinguish people from bots. The legal basis is Art. 6(1)(f) GDPR. Cloudflare is certified under the EU-U.S. Data Privacy Framework; transfers to the USA are based on it."
+msgstr ""
+
+#: src/LegalPage.php:112
+msgid "Cookies and tracking"
+msgstr ""
+
+#: src/LegalPage.php:113
+msgid "This website only uses technically necessary cookies (see Cloudflare). There is no analytics, no tracking, and no advertising, which is why you do not see a cookie banner. Fonts are served from this server; no third-party content is loaded."
+msgstr ""
+
+#: src/LegalPage.php:117
+msgid "External links"
+msgstr ""
+
+#: src/LegalPage.php:118
+msgid "Links to other websites (e.g. GitHub, LinkedIn, Mastodon) only transfer data once you click them. From then on, the privacy policy of that website applies."
+msgstr ""
+
+#: src/LegalPage.php:122
+msgid "Contact by email"
+msgstr ""
+
+#: src/LegalPage.php:123
+msgid "If you write to me, I use your address and message only to answer and to handle your request (Art. 6(1)(b) and (f) GDPR). I delete them when they are no longer needed, unless legal retention periods apply."
+msgstr ""
+
+#: src/LegalPage.php:127
+msgid "Your rights"
+msgstr ""
+
+#. translators: %s: email address link.
+#: src/LegalPage.php:131
+#, php-format
+msgid "You have the right to access, rectification, erasure, restriction of processing, data portability and to object to processing (Art. 15 to 21 GDPR). Just write to %s."
+msgstr ""
+
+#. translators: %s: name and link of the Italian data protection authority.
+#: src/LegalPage.php:138
+#, php-format
+msgid "You can also lodge a complaint with a supervisory authority; in Italy, the %s."
+msgstr ""
+
+#: src/LegalPage.php:144
+msgid "Last updated: September 2026"
+msgstr ""
+
+#: src/MetaDescription.php:98
+msgid "Legal notice and privacy policy: who runs this website, which data is processed (server logs, Cloudflare) and your rights under the GDPR."
+msgstr ""
+
+#: src/Patterns.php:61
+msgid "Section separator"
+msgstr ""
+
+#: src/Patterns.php:66
+msgid "Header"
+msgstr ""
+
+#: src/Patterns.php:72
+msgid "Footer"
+msgstr ""
+
+#: src/Patterns.php:78
+msgid "Front page sections"
+msgstr ""
+
+#: src/Patterns.php:85
+msgid "Legal notice and privacy policy"
+msgstr ""
+
+#: src/Patterns.php:112
+msgid "Need help? →"
+msgstr ""
+
+#. translators: 1: year, 2: name (linked to the email address), 3: VAT number.
+#: src/Patterns.php:188
+#, php-format
+msgid "© %1$s %2$s, VAT number %3$s"
+msgstr ""
+
+#: src/Patterns.php:198
+msgid "Legal notice & privacy"
+msgstr ""
+
+#: src/PostTypes/AdminList.php:91
+msgid "Order"
+msgstr ""
+
+#: src/PostTypes/MetaBox.php:45
+msgid "Details"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:29
+msgid "Expertise Item"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:35
+msgid "Project"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:36
+msgid "Projects"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:41
+msgid "Talk"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:42
+msgid "Talks"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:47
+msgid "Community Item"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:66
+msgid "Tech tags"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:68
+msgid "Separated by · (middot)."
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:71
+#: src/PostTypes/PostTypes.php:91
+#: src/PostTypes/PostTypes.php:105
+msgid "Link URL"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:77
+#: src/PostTypes/PostTypes.php:111
+msgid "Link text"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:83
+msgid "Year"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:87
+msgid "Event"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:94
+msgid "Links the talk title (slides, video, event page)."
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:100
+msgid "Card Label"
+msgstr ""
+
+#: src/PostTypes/PostTypes.php:102
+msgid "Short label shown above the card title."
+msgstr ""
+
+#. translators: %s: singular post type name.
+#: src/PostTypes/PostTypes.php:157
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#. translators: %s: singular post type name.
+#: src/PostTypes/PostTypes.php:159
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: src/Seeder.php:187
+msgid "Complex multisite architectures for enterprise clients. Multi-network installations, network management, automated site provisioning, cross-site data strategies."
+msgstr ""
+
+#: src/Seeder.php:192
+msgid "Scalable plugin architectures that stay maintainable for years. Modular, testable, extensible. REST APIs, Block Editor integration, custom database layers, extension systems."
+msgstr ""
+
+#: src/Seeder.php:197
+msgid "Dynamic blocks, DataViews, DataForms, custom editor experiences. Bridging PHP backends with modern JavaScript frontends."
+msgstr ""
+
+#: src/Seeder.php:201
+msgid "Code Quality & CI/CD"
+msgstr ""
+
+#: src/Seeder.php:202
+msgid "Static analysis with PHPStan, coding standards with PHPCS/WPCS, tests with PHPUnit, automation with GitHub Actions and Composer. Pipelines that catch problems before they ship."
+msgstr ""
+
+#: src/Seeder.php:206
+msgid "SSO & Authentication"
+msgstr ""
+
+#: src/Seeder.php:207
+msgid "Single sign-on for WordPress in the enterprise. OpenID Connect and OAuth 2.0, connected to existing identity providers. Secure, centrally managed, no extra passwords."
+msgstr ""
+
+#: src/Seeder.php:211
+msgid "Open-Source Maintenance"
+msgstr ""
+
+#: src/Seeder.php:212
+msgid "Maintaining public plugins used by thousands of sites since 2011. Updates that don't break things, an open ear for the community and releases you can rely on."
+msgstr ""
+
+#: src/Seeder.php:219
+msgid "A multilingual plugin for WordPress Multisite, actively maintained since 2011. Helps thousands of sites run in multiple languages."
+msgstr ""
+
+#: src/Seeder.php:224
+msgid "View on WordPress.org ↗"
+msgstr ""
+
+#: src/Seeder.php:229
+msgid "A Composer plugin wrapping wp-cli/i18n-command. Exposes WordPress i18n commands directly through Composer scripts."
+msgstr ""
+
+#: src/Seeder.php:234
+#: src/Seeder.php:244
+msgid "View on GitHub ↗"
+msgstr ""
+
+#: src/Seeder.php:239
+msgid "Contributor. PHPStan Level 8 and PHPCS compliance. Enabling multiple networks within a single WordPress installation."
+msgstr ""
+
+#: src/Seeder.php:288
+msgid "WordPress Meetup Milan"
+msgstr ""
+
+#: src/Seeder.php:289
+msgid "Co-organizing the local WordPress community in Milan. Regular events, knowledge sharing, and connecting developers with the broader ecosystem."
+msgstr ""
+
+#: src/Seeder.php:292
+msgid "Meetup Organizer"
+msgstr ""
+
+#: src/Seeder.php:297
+msgid "Co-founder of an Italian-language blog for WordPress developers. Technical article series covering Git, Composer, CI/CD, static analysis, and testing."
+msgstr ""
+
+#: src/Seeder.php:300
+msgid "Education"
+msgstr ""
+
+#: src/Seeder.php:305
+msgid "Advanced Professional WordPress Developer Certification. Recognized expertise in enterprise-grade WordPress development."
+msgstr ""
+
+#: src/Seeder.php:308
+msgid "Certification"
+msgstr ""

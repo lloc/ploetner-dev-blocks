@@ -35,7 +35,7 @@ class SeoTest extends TestCase {
 	 */
 	public function test_register_hooks_filters_and_cleans_up_head(): void {
 		Functions\expect( 'remove_action' )->once()->with( 'wp_head', 'wp_generator' );
-		Functions\expect( 'remove_action' )->times( 6 ); // The other removals in CleanUp.
+		Functions\expect( 'remove_action' )->times( 4 ); // The other removals in CleanUp.
 
 		$this->seo()->register();
 

@@ -13,6 +13,7 @@ use Brain\Monkey\Functions;
 use lloc\PloetnerDevBlocks\Contact;
 use lloc\PloetnerDevBlocks\Seo;
 use lloc\PloetnerDevBlocks\Tests\TestCase;
+use lloc\SEO\Meta\Description as MetaDescription;
 
 /**
  * @coversDefaultClass \lloc\PloetnerDevBlocks\Seo
@@ -20,16 +21,49 @@ use lloc\PloetnerDevBlocks\Tests\TestCase;
 class SeoTest extends TestCase {
 
 	/**
+	 * Seo with the real meta description.
+	 *
+	 * @return Seo
+	 */
+	private function seo(): Seo {
+		return new Seo( new MetaDescription() );
+	}
+
+	/**
+	 * @covers ::__construct
 	 * @covers ::register
 	 */
-	public function test_register_hooks_filters_and_drops_generator(): void {
+	public function test_register_hooks_filters_and_cleans_up_head(): void {
 		Functions\expect( 'remove_action' )->once()->with( 'wp_head', 'wp_generator' );
+		Functions\expect( 'remove_action' )->times( 6 ); // The other removals in CleanUp.
 
-		( new Seo() )->register();
+		$this->seo()->register();
 
+		$this->assertNotFalse( has_filter( MetaDescription::META_DESCRIPTION_FILTER, Seo::class . '->description()' ) );
+		$this->assertNotFalse( has_filter( 'wpseo_metadesc', MetaDescription::class . '->fill()' ) );
 		$this->assertNotFalse( has_filter( 'msls_output_get_alternate_links_arr', Seo::class . '->x_default()' ) );
 		$this->assertNotFalse( has_filter( 'wpseo_schema_person', Seo::class . '->person()' ) );
 		$this->assertNotFalse( has_filter( 'the_generator', '__return_empty_string' ) );
+	}
+
+	/**
+	 * @covers ::description
+	 */
+	public function test_description(): void {
+		Functions\stubs( array( 'wp_strip_all_tags', '__' ) );
+		Functions\when( '_x' )->returnArg();
+		Functions\when( 'is_page' )->alias( static fn ( $slug ): bool => 'legal' === $slug );
+		$seo = $this->seo();
+
+		Functions\when( 'is_front_page' )->justReturn( true );
+		Functions\when( 'get_bloginfo' )->justReturn( ' Enterprise WordPress, multisite & open source ' );
+		$this->assertSame( 'Enterprise WordPress, multisite & open source', $seo->description( '' ) );
+
+		Functions\when( 'is_front_page' )->justReturn( false );
+		$this->assertStringStartsWith( 'Legal notice and privacy policy', $seo->description( '' ) );
+
+		Functions\when( 'is_page' )->justReturn( false );
+		$this->assertSame( 'Kept', $seo->description( 'Kept' ) );
 	}
 
 	/**
@@ -42,7 +76,7 @@ class SeoTest extends TestCase {
 			'<link rel="alternate" href="https://ploetner.dev/it/" hreflang="it" />',
 		);
 
-		$result = ( new Seo() )->x_default( $links );
+		$result = $this->seo()->x_default( $links );
 
 		$this->assertCount( 4, $result );
 		$this->assertSame( '<link rel="alternate" href="https://ploetner.dev/" hreflang="x-default" />', $result[3] );
@@ -52,7 +86,7 @@ class SeoTest extends TestCase {
 	 * @covers ::x_default
 	 */
 	public function test_x_default_is_not_added_twice_or_without_english(): void {
-		$seo  = new Seo();
+		$seo  = $this->seo();
 		$with = array(
 			'<link rel="alternate" href="https://ploetner.dev/" hreflang="en" />',
 			'<link rel="alternate" href="https://ploetner.dev/" hreflang="x-default" />',
@@ -68,7 +102,7 @@ class SeoTest extends TestCase {
 	 * @covers ::person
 	 */
 	public function test_person_gets_alternate_names_and_profiles(): void {
-		$data = ( new Seo() )->person(
+		$data = $this->seo()->person(
 			array(
 				'name'   => Contact::NAME,
 				'sameAs' => array( 'https://ploetner.cloud', 'https://github.com/lloc' ),
@@ -85,7 +119,7 @@ class SeoTest extends TestCase {
 	 * @covers ::person
 	 */
 	public function test_person_lists_the_registered_name_when_yoast_uses_another(): void {
-		$data = ( new Seo() )->person( array( 'name' => 'realloc' ) );
+		$data = $this->seo()->person( array( 'name' => 'realloc' ) );
 
 		$this->assertSame( array( Contact::NAME, 'Dennis Plötner' ), $data['alternateName'] );
 	}

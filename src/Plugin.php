@@ -22,6 +22,7 @@ use lloc\PloetnerDevBlocks\PostTypes\AdminList;
 use lloc\PloetnerDevBlocks\PostTypes\MetaBox;
 use lloc\PloetnerDevBlocks\PostTypes\PostTypes;
 use lloc\PloetnerDevBlocks\Seeder;
+use lloc\SEO\Meta\Description as MetaDescription;
 
 /**
  * Wires every component of the plugin to WordPress.
@@ -59,8 +60,7 @@ class Plugin {
 		( new BlockCategory() )->register();
 		( new Assets() )->register();
 		( new Patterns() )->register();
-		( new MetaDescription() )->register();
-		( new Seo() )->register();
+		( new Seo( new MetaDescription() ) )->register();
 
 		// Not on activation: post types and translations are not available yet
 		// there. Runs on the redirect to plugins.php instead, guarded by an option.
